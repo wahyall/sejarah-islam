@@ -36,7 +36,7 @@ interface FlowState {
 }
 
 export const useFlowStore = create<FlowState>((set) => ({
-  activeBranch: "jalur-utama",
+  activeBranch: "all",
   searchQuery: "",
   activeCategories: new Set<ChainCategory>([
     "pra-islam",
