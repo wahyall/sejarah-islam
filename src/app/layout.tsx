@@ -14,26 +14,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rantai Sebab-Akibat — Cosmological Chain Explorer",
+  title: "Sejarah Peradaban Islam — Jelajah Rantai Peristiwa & Kausalitas",
   description:
-    "Telusuri rantai kausal dari masa kini hingga Sebab Pertama dalam kerangka falsafi Islam (Al-Kindi, Ibnu Sina, Al-Ghazali).",
+    "Telusuri sejarah peradaban Islam lengkap dari era pra-kenabian, Sirah Nabawiyah, Khulafaur Rasyidin, dinasti-dinasti klasik, Islam Nusantara, hingga era modern.",
   keywords: [
-    "kosmologi",
-    "falsafi Islam",
-    "Wajib al-Wujud",
-    "Al-Kindi",
-    "Ibnu Sina",
-    "Al-Ghazali",
-    "Kalam",
-    "sebab akibat",
+    "Sejarah Islam",
+    "Peradaban Islam",
+    "Sirah Nabawiyah",
+    "Khulafaur Rasyidin",
+    "Umayyah",
+    "Abbasiyah",
+    "Andalusia",
+    "Islam Nusantara",
+    "Walisongo",
+    "Sebab Akibat Sejarah",
   ],
   authors: [{ name: "Wahyal" }],
   icons: {
     icon: "/logo.svg",
   },
   openGraph: {
-    title: "Rantai Sebab-Akibat — Cosmological Chain Explorer",
-    description: "Telusuri rantai kausal dari masa kini ke Sebab Pertama.",
+    title: "Sejarah Peradaban Islam — Jelajah Rantai Peristiwa & Kausalitas",
+    description: "Ensiklopedia Interaktif & Rantai Sebab-Akibat Peradaban Islam dari Masa Pra-Kenabian hingga Era Modern.",
     type: "website",
   },
 };
