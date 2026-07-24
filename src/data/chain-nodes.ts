@@ -14,7 +14,8 @@ export type ChainBranch =
   | "jalur-utama"
   | "jalur-sains"
   | "jalur-politik"
-  | "jalur-pemikiran";
+  | "jalur-pemikiran"
+  | "sejarah-baitul-maqdis";
 
 export interface QuranReference {
   surah: string;

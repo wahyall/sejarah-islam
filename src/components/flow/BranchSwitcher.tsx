@@ -36,6 +36,12 @@ const OPTIONS: BranchOption[] = [
     description: "Teologi, Fiqh, dan Tasawuf",
   },
   {
+    value: "sejarah-baitul-maqdis",
+    label: "E. Sejarah Baitul Maqdis",
+    short: "E",
+    description: "Khusus Perjalanan Suci & Politik Yerusalem / Al-Quds / Al-Aqsa",
+  },
+  {
     value: "all",
     label: "Semua Jalur",
     short: "★",

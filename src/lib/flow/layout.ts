@@ -66,6 +66,41 @@ export function getLayoutedElements<TNode extends Node, TEdge extends Edge>(
     };
   });
 
+  // Post-processing: Align Baitul Maqdis nodes to the exact Y level of close timeValue nodes
+  const timeYMap = new Map<number, number>();
+
+  // 1. Record Y positions of main historical nodes for each timeValue
+  layoutedNodes.forEach((node) => {
+    const timeVal = (node.data as any)?.timeValue;
+    const isBM = node.id.startsWith("h-bm-");
+    if (timeVal !== undefined && !isBM) {
+      if (!timeYMap.has(timeVal)) {
+        timeYMap.set(timeVal, node.position.y);
+      }
+    }
+  });
+
+  // 2. Adjust Y positions of Baitul Maqdis nodes to match closest timeValue node
+  layoutedNodes.forEach((node) => {
+    if (node.id.startsWith("h-bm-")) {
+      const timeVal = (node.data as any)?.timeValue;
+      if (timeVal !== undefined) {
+        let closestY: number | null = null;
+        let minDiff = Infinity;
+        timeYMap.forEach((y, t) => {
+          const diff = Math.abs(t - timeVal);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestY = y;
+          }
+        });
+        if (closestY !== null && minDiff <= 150) {
+          node.position.y = closestY;
+        }
+      }
+    }
+  });
+
   return { nodes: layoutedNodes, edges };
 }
 

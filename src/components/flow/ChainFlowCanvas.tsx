@@ -192,43 +192,81 @@ function FlowInner() {
   }, [decoratedNodes]);
 
   const rfEdges: Edge[] = useMemo(() => {
+    // Build node position map for handle assignment
+    const nodePosMap = new Map<string, { x: number; y: number }>();
+    rfNodes.forEach((n) => {
+      if (n.position) nodePosMap.get(n.id) || nodePosMap.set(n.id, n.position);
+    });
+
     return filteredEdges.map((e) => {
       const isTraversalEdge =
         traversalActive &&
         traversalIndex < TRAVERSAL_SEQUENCE.length - 1 &&
         e.source === TRAVERSAL_SEQUENCE[traversalIndex] &&
         e.target === TRAVERSAL_SEQUENCE[traversalIndex + 1];
+
+      const isCrossEdge =
+        e.id.includes("cross") ||
+        (e.source.startsWith("h-") && !e.source.startsWith("h-bm-") && e.target.startsWith("h-bm-"));
+
+      const srcPos = nodePosMap.get(e.source);
+      const tgtPos = nodePosMap.get(e.target);
+
+      let sourceHandle = "source-bottom";
+      let targetHandle = "target-top";
+
+      if (isCrossEdge) {
+        if (srcPos && tgtPos) {
+          if (srcPos.x < tgtPos.x - 30) {
+            sourceHandle = "source-right";
+            targetHandle = "target-left";
+          } else if (srcPos.x > tgtPos.x + 30) {
+            sourceHandle = "source-left";
+            targetHandle = "target-right";
+          }
+        } else {
+          sourceHandle = "source-right";
+          targetHandle = "target-left";
+        }
+      }
+
       return {
         id: e.id,
         source: e.source,
         target: e.target,
-        sourceHandle: "source-bottom",
-        targetHandle: "target-top",
+        sourceHandle,
+        targetHandle,
         label: e.causalLabel,
         type: "smoothstep",
-        animated: isTraversalEdge,
+        animated: isTraversalEdge || isCrossEdge,
         markerEnd: {
           type: MarkerType.ArrowClosed,
           width: 16,
           height: 16,
+          color: isCrossEdge ? "#0284c7" : isTraversalEdge ? "#10b981" : "#64748b",
         },
         style: {
-          stroke: isTraversalEdge ? "#10b981" : "currentColor",
-          strokeWidth: isTraversalEdge ? 2.5 : 1.5,
-          opacity: isTraversalEdge ? 1 : 0.5,
+          stroke: isTraversalEdge ? "#10b981" : isCrossEdge ? "#0284c7" : "currentColor",
+          strokeWidth: isTraversalEdge ? 2.5 : isCrossEdge ? 2 : 1.5,
+          opacity: isTraversalEdge ? 1 : isCrossEdge ? 0.85 : 0.5,
+          strokeDasharray: isCrossEdge ? "6 3" : undefined,
         },
         labelStyle: {
           fontSize: 10,
-          fill: "currentColor",
-          opacity: isTraversalEdge ? 1 : 0.7,
+          fontWeight: 600,
+          fill: isCrossEdge ? "#0369a1" : "currentColor",
+          opacity: isTraversalEdge ? 1 : 0.85,
         },
         labelBgStyle: {
           fill: "var(--background)",
-          opacity: 0.85,
+          fillOpacity: 0.95,
+          rx: 6,
+          ry: 6,
         },
+        labelBgPadding: [6, 4] as [number, number],
       };
     });
-  }, [filteredEdges, traversalActive, traversalIndex]);
+  }, [filteredEdges, rfNodes, traversalActive, traversalIndex]);
 
   const [nodes, setNodes, onNodesChange] = useNodesState<Node<ChainNodeData>>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);

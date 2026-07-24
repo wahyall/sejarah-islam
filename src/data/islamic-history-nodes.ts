@@ -1874,5 +1874,405 @@ export const islamicHistoryNodes: ChainNode[] = [
       }
     ],
     sources: ["Pew Research Center, The Future of World Religions", "John L. Esposito, The Oxford History of Islam"]
+  },
+
+  // =========================================================================
+  // CABANG KHUSUS: SEJARAH BAITUL MAQDIS / AL-QUDS / AL-AQSA (12 NODE)
+  // =========================================================================
+  {
+    id: "h-bm-fondasi-awal",
+    label: "Fondasi Awal Masjid Al-Aqsa & Hijrah Ibrahim AS",
+    category: "pra-islam",
+    timeLabel: "± 2000 SM",
+    timeValue: -2000,
+    description: "Fondasi spiritual Baitul Maqdis (Masjid Al-Aqsa) diletakkan atas perintah Allah SWT hanya 40 tahun setelah peletakan fondasi pertama Masjidil Haram di Makkah (HR. Bukhari & Muslim).\n\nKetika Nabi Ibrahim AS berhijrah dari penindasan Babilonia menuju tanah Syam yang diberkahi (QS. Al-Anbiya: 71), beliau memperbarui bangunan suci di lembah Yerusalem dan menjadikannya kiblat peradaban tauhid bagi para Nabi keturunannya (Ismail, Ishaq, Ya'qub, Yusuf, Musa, dan Isa AS).",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Anbiya",
+        ayat: 71,
+        arabicText: "وَنَجَّيْنَاهُ وَلُوطًا إِلَى الْأَرْضِ الَّتِي بَارَكْنَا فِيهَا لِلْعَالَمِينَ",
+        paraphrase: "Dan Kami selamatkan Ibrahim dan Luth ke sebuah negeri yang telah Kami berkahi untuk sekalian alam."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Bukhari & Muslim",
+        arabicText: "قُلْتُ يَا رَسُولَ اللَّهِ أَيُّ مَسْجِدٍ وُضِعَ فِي الأَرْضِ أَوَّلُ؟ قَالَ: الْمَسْجِدُ الْحَرَامُ. قُلْتُ: ثُمَّ أَيُّ؟ قَالَ: الْمَسْجِدُ الأَقْصَى. قُلْتُ: كَمْ بَيْنَهُمَا؟ قَالَ: أَرْبَعُونَ سَنَةً",
+        matan: "Qultu ya Rasulallahi ayyu masjidin wudhi'a fil ardhi awwal...",
+        terjemahan: "Aku bertanya, 'Wahai Rasulullah, masjid apakah yang pertama kali dibangun di muka bumi?' Beliau menjawab: 'Masjidil Haram'. Aku bertanya lagi: 'Kemudian masjid apa?' Beliau menjawab: 'Masjidil Aqsha'. Aku bertanya: 'Berapa jarak waktu antara keduanya?' Beliau menjawab: 'Empat puluh tahun'."
+      }
+    ],
+    refleksi: {
+      hikmah: "Baitul Maqdis adalah tempat suci tertua kedua di muka bumi yang mengikat tali ketauhidan seluruh para Nabi sejak Nabi Adam, Ibrahim, hingga Muhammad ﷺ.",
+      pertanyaanReflektif: [
+        "Mengapa hubungan spiritual antara Makkah dan Yerusalem telah diikat sejak awal sejarah peradaban tauhid?",
+        "Bagaimana pemahaman akan sejarah awal Al-Aqsa memperkuat akidah ketauhidan kita?"
+      ],
+      pesanAksi: "Mempelajari dan mengajarkan sejarah otentik Baitul Maqdis sebagai bagian tak terpisahkan dari akidah dan peradaban Islam."
+    },
+    sources: ["Ibnu Katsir, Al-Bidayah wan-Nihayah", "Dr. Raghib As-Sirjani, Baitul Maqdis"]
+  },
+  {
+    id: "h-bm-sulaiman-renovasi",
+    label: "Rekonstruksi Agung Sulaiman AS & Doa Ampunan",
+    category: "pra-islam",
+    timeLabel: "± 960 SM",
+    timeValue: -960,
+    description: "Nabi Sulaiman AS melanjutkan pembangunan dan pembaruan struktur agung Baitul Maqdis dengan arsitektur megah yang memanfaatkan potensi angin dan prajurit jin atas karunia Allah (QS. Saba': 12-13).\n\nSaat menyelesaikan pembaruan kompleks Baitul Maqdis, Nabi Sulaiman bermunajat memohon 3 doa kepada Allah: keputusan hukum yang sesuai dengan hukum Allah, kerajaan mulia yang tidak dimiliki seorang pun setelahnya, serta jaminan bahwa siapa pun yang datang ke Masjid Al-Aqsa khusus untuk shalat di dalamnya, ia keluar dari dosa-dosanya bersih seperti hari dilahirkan oleh ibunya (HR. An-Nasa'i & Ahmad).",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Saba'",
+        ayat: 13,
+        arabicText: "يَعْمَلُونَ لَهُ مَا يَشَاءُ مِن مَّحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ وَقُدُورٍ رَّاسِيَاتٍ",
+        paraphrase: "Para jin itu membuat untuk Sulaiman apa yang dikehendakinya dari gedung-gedung yang tinggi dan patung-patung dan piring-piring yang (besarnya) seperti kolam..."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. An-Nasa'i & Ahmad",
+        arabicText: "وَأَنْ لاَ يَأْتِيَ هَذَا الْمَسْجِدَ أَحَدٌ لاَ يُرِيدُ إِلاَّ الصَّلاَةَ فِيهِ إِلاَّ خَرَجَ مِنْ خَطِيئَتِهِ كَيَوْمِ وَلَدَتْهُ أُمُّهُ",
+        matan: "Wa an la ya'tiya hadhal masjida ahadun la yuridu illa as-shalah...",
+        terjemahan: "Dan agar tidak seorang pun yang datang ke Masjid Al-Aqsa ini tanpa tujuan lain kecuali untuk ruku'/shalat di dalamnya, melainkan ia keluar dari dosa-dosanya bersih seperti saat ia dilahirkan ibunya."
+      }
+    ],
+    refleksi: {
+      hikmah: "Niat ikhlas dalam mengasihi dan beribadah di Masjid Al-Aqsa mengandung keutamaan peleburan dosa yang dijanjikan Ilahi melalui doa keagungan Nabi Sulaiman AS.",
+      pertanyaanReflektif: [
+        "Bagaimana keutamaan shalat di Al-Aqsa mendorong kerinduan dan kepedulian umat Islam universal?"
+      ],
+      pesanAksi: "Mendoakan keselamatan dan kemerdekaan warga serta kompleks Masjid Al-Aqsa dalam setiap sujud."
+    },
+    sources: ["Ibnu Katsir, Qashash al-Anbiya'", "Tarikh at-Tabari"]
+  },
+  {
+    id: "h-bm-babilonia-uzair",
+    label: "Kehancuran Babilonia Nebukadnezar & Pemulihan Uzair AS",
+    category: "pra-islam",
+    timeLabel: "± 586 - 450 SM",
+    timeValue: -586,
+    description: "Setelah wafatnya Nabi Sulaiman AS, timbul kezaliman dan penyimpangan yang memicu hukuman Ilahi (QS. Al-Isra: 4-5). Raja Babilonia, Nebukadnezar II (Bukhtanashar), menginvasi Yerusalem pada 586 SM, meratakan bangunan kota, membakar naskah-naskah suci, dan menawan penduduk ke Babilonia.\n\nSatu abad kemudian, Allah menghidupkan kembali kota yang hancur dan mengutus Nabi Uzair AS (Ezra) yang ditidurkan selama 100 tahun sebagai mukjizat kebangkitan (QS. Al-Baqarah: 259). Uzair memimpin pemulihan kembali pembacaan Al-Kitab dan pemukiman Baitul Maqdis.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Isra",
+        ayat: 5,
+        arabicText: "فَإِذَا جَاءَ وَعْدُ أُولَاهُمَا بَعَثْنَا عَلَيْكُمْ عِبَادًا لَّنَا أُولِي بَأْسٍ شَدِيدٍ فَجَاسُوا خِلَالَ الدِّيَارِ",
+        paraphrase: "Maka apabila datang saat hukuman bagi kejahatan pertama dari kedua kejahatan itu, Kami datangkan kepadamu hamba-hamba Kami yang mempunyai kekuatan yang besar, lalu mereka merajalela di kampung-kampung..."
+      },
+      {
+        surah: "Al-Baqarah",
+        ayat: 259,
+        arabicText: "أَوْ كَالَّذِي مَرَّ عَلَىٰ قَرْيَةٍ وَهِيَ خَاوِيَةٌ عَلَىٰ عُرُوشِهَا قَالَ أَنَّىٰ يُحْيِي هَٰذِهِ اللَّهُ بَعْدَ مَوْتِهَا ۖ فَأَمَاتَهُ اللَّهُ مِائَةَ عَامٍ ثُمَّ بَعَثَهُ",
+        paraphrase: "Atau seperti orang yang melewati suatu negeri yang (bangunan-bangunannya) telah roboh menutupi atapnya. Dia berkata: 'Bagaimanakah Allah menghidupkan kembali negeri ini setelah hancur?' Maka Allah mematikan orang itu seratus tahun, kemudian menghidupkannya kembali."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Ibnu Abi Hatim & Ibnu Jarir",
+        matan: "Kisah pemulihan kembali naskah Taurat dan Baitul Maqdis oleh Nabi Uzair AS",
+        terjemahan: "Uzair diberi mukjizat mengingat dan membacakan kembali naskah Taurat yang lenyap setelah kehancuran Babilonia."
+      }
+    ],
+    refleksi: {
+      hikmah: "Kehancuran dan kebangkitan Baitul Maqdis mengajarkan hukum Sunnatullah: kemuliaan negeri suci tergantung pada ketaatan penghuninya kepada syariat Ilahi.",
+      pertanyaanReflektif: [
+        "Pelajaran apa yang dipetik dari mukjizat 100 tahun pemulihan Uzair AS atas puing-puing Yerusalem?"
+      ],
+      pesanAksi: "Menjadikan Kitabullah sebagai pedoman utama rekonstruksi moral bangsa."
+    },
+    sources: ["Ibnu Katsir, Qashash al-Anbiya'", "Tarikh at-Tabari"]
+  },
+  {
+    id: "h-bm-isra-miraj",
+    label: "Isra' Mi'raj & Al-Aqsa Kiblat Pertama Umat",
+    category: "kenabian",
+    timeLabel: "620 M",
+    timeValue: 620,
+    description: "Allah memuliakan Baitul Maqdis dengan menjadikannya titik tujuan perjalanan malam mukjizat (*Isra'*) Rasulullah ﷺ dari Masjidil Haram di Makkah menuju Masjidil Aqsha (QS. Al-Isra: 1).\n\nDi kompleks Al-Aqsa, Nabi Muhammad ﷺ mengimami shalat berjamaah bersama seluruh Nabi dan Rasul terdahulu, menegaskan pengoperan estafet kepemimpinan risalah tauhid universal. Al-Aqsa menjadi Kiblat Pertama umat Islam selama 16 hingga 17 bulan sebelum wahyu pemindahan kiblat ke Ka'bah Makkah diturunkan (QS. Al-Baqarah: 144).",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Isra",
+        ayat: 1,
+        arabicText: "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى الَّذِي بَارَكْنَا حَوْلَهُ",
+        paraphrase: "Maha Suci Allah, yang telah memperjalankan hamba-Nya pada suatu malam dari Masjidil Haram ke Masjidil Aqsha yang telah Kami berkahi sekelilingnya..."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Bukhari & Muslim",
+        arabicText: "صَلَّيْنَا مَعَ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَحْوَ بَيْتِ الْمَقْدِسِ سِتَّةَ عَشَرَ أَوْ سَبْعَةَ عَشَرَ شَهْرًا",
+        matan: "Shallaina ma'an-Nabiyyi nahwa Baitil Maqdisi sittata 'asyara...",
+        terjemahan: "Kami shalat bersama Nabi ﷺ menghadap ke arah Baitul Maqdis selama 16 atau 17 bulan."
+      }
+    ],
+    refleksi: {
+      hikmah: "Al-Aqsa adalah stasiun penyambung bumi dan langit dalam Isra' Mi'raj, menegaskan bahwa kesucian Yerusalem berada di jantung akidah setiap Muslim.",
+      pertanyaanReflektif: [
+        "Apa arti penting Al-Aqsa sebagai kiblat pertama dalam membentuk identitas spiritual umat Islam?"
+      ],
+      pesanAksi: "Menjaga ikatan batin dengan Al-Aqsa melalui ibadah, hafalan Al-Qur'an, dan kepedulian sosial."
+    },
+    sources: ["Safiur Rahman Mubarakpuri, Ar-Raheeq Al-Makhtum"]
+  },
+  {
+    id: "h-bm-pembebasan-umar",
+    label: "Penyerahan Yerusalem & Perjanjian Umariyyah",
+    category: "khulafaur-rasyidin",
+    timeLabel: "638 M (17 H)",
+    timeValue: 638,
+    description: "Pasca kemenangan Yarmuk, pasukan Muslimin memblokir Yerusalem. Uskup Agung Patriark Sophronius menyatakan hanya akan menyerahkan kunci Yerusalem secara langsung kepada Khalifah Umar bin Khattab.\n\nUmar berjalan kaki menempuh perjalanan jauh dari Madinah. Beliau menandatangani dokumen bersejarah **Perjanjian Umariyyah** (*Al-'Uhdah al-'Umariyyah*)—jaminan kebebasan beragama, keselamatan tempat ibadah Gereja, serta perlindungan hak sipil tanpa paksaan. Umar memimpin pembersihan sampah di kompleks Al-Aqsa yang sempat diterlantarkan Romawi dan mendirikan shalat di sana.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Isra",
+        ayat: 7,
+        arabicText: "فَإِذَا جَاءَ وَعْدُ الْآخِرَةِ لِيَسُوءُوا وُجُوهَكُمْ وَلِيَدْخُلُوا الْمَسْجِدَ كَمَا دَخَلُوهُ أَوَّلَ مَرَّةٍ",
+        paraphrase: "Dan apabila datang saat hukuman bagi kejahatan yang kedua, (Kami datangkan orang-orang lain) untuk menyuramkan muka-muka kamu dan mereka masuk ke dalam masjid (Baitul Maqdis)..."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Bukhari",
+        matan: "Nabi mendoakan pembebasan Baitul Maqdis sebagai salah satu tanda dekatnya keagungan Islam",
+        terjemahan: "Hitunglah 6 hal menjelang Kiamat: kematianku, kemudian pembebasan Baitul Maqdis..."
+      }
+    ],
+    refleksi: {
+      hikmah: "Keadilan hukum Islam saat membebaskan Yerusalem terukir dalam sejarah: tanpa pembantaian, tanpa perusakan gereja, dan menjamin hak asasi manusia seluruh warga.",
+      pertanyaanReflektif: [
+        "Bagaimana toleransi yang dicontohkan Umar bin Khattab menjadi standar emas perlindungan minoritas dunia?"
+      ],
+      pesanAksi: "Menunjukkan akhlak kesatriaan, keadilan, dan keteladanan Islam saat memegang otoritas kekuasaan."
+    },
+    sources: ["At-Tabari, Tarikh ar-Rusul wal-Muluk", "Al-Baladhuri, Futuh al-Buldan"]
+  },
+  {
+    id: "h-bm-kubah-batu-umayyah",
+    label: "Pembangunan Kubbat as-Sakhrah & Masjid Al-Qibli",
+    category: "umayyah",
+    timeLabel: "691 M (72 H)",
+    timeValue: 691,
+    description: "Pada era keemasan Dinasti Umayyah, Khalifah **Abdul Malik bin Marwan** mengalokasikan pendapatan hasil panen Mesir selama 7 tahun untuk membangun mahakarya arsitektur **Kubbat as-Sakhrah** (Dome of the Rock) yang selesai pada 691 M (72 H).\n\nKubah emas ini dibangun di atas Batu Suci (*Ash-Sakhrah*) tempat pijakan Mi'raj Nabi. Putranya, Khalifah **Walid bin Abdul Malik**, memperluas bangunan utama **Masjid Al-Qibli** di sisi selatan kompleks Al-Aqsa, menjadikan Baitul Maqdis sebagai mercusuar kebudayaan dan estetika Islam dunia.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Ar-Rahman",
+        ayat: 60,
+        arabicText: "هَلْ جَزَاءُ الْإِحْسَانِ إِلَّا الْإِحْسَانُ",
+        paraphrase: "Tidak ada balasan kebaikan selain kebaikan (pula)."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Muslim",
+        matan: "Keindahan seni dan arsitektur sebagai cermin keindahan Ilahi",
+        terjemahan: "Sesungguhnya Allah itu Maha Indah dan mencintai keindahan."
+      }
+    ],
+    refleksi: {
+      hikmah: "Pembangunan Kubbat as-Sakhrah adalah bukti dedikasi peradaban Islam dalam memuliakan simbol-simbol kesucian wahyu melalui seni arsitektur berkelas dunia.",
+      pertanyaanReflektif: [
+        "Mengapa pemeliharaan simbol peradaban Al-Aqsa menjadi cermin keagungan kebudayaan Islam?"
+      ],
+      pesanAksi: "Menjaga dan memakmurkan masjid-masjid sekitar dengan keindahan kebersihan dan kegiatan ilmu."
+    },
+    sources: ["Creswell, Early Muslim Architecture", "Ira M. Lapidus, A History of Islamic Societies"]
+  },
+  {
+    id: "h-bm-pendudukan-salib",
+    label: "Tragedi Pembantaian Perang Salib I di Al-Aqsa",
+    category: "abbasiyah",
+    timeLabel: "1099 M (492 H)",
+    timeValue: 1099,
+    description: "Memanfaatkan perpecahan politik internal kerajaan-kerajaan Muslim, pasukan Salib Eropa merebut Yerusalem pada 15 Juli 1099 M (492 H) setelah pengepungan ketat.\n\nBerbeda jauh dari kedatangan Umar, pasukan Salib melancarkan pembantaian massal yang sangat kejam selama 3 hari terhadap 70.000 warga Muslim dan Yahudi di dalam kompleks Al-Aqsa. Kubbat as-Sakhrah diubah menjadi *Templum Domini* dan Masjid Al-Qibli dijadikan markas ksatria Templar selama 88 tahun pendudukan.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Anfal",
+        ayat: 46,
+        arabicText: "وَلاَ تَنَازَعُوا فَتَفْشَلُوا وَتَذْهَبَ رِيحُكُمْ",
+        paraphrase: "Dan janganlah kamu berbantah-bantahan, yang menyebabkan kamu menjadi gentar dan hilang kekuatanmu."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Muslim",
+        matan: "Peringatan bahaya perpecahan internal di hadapan serbuan musuh",
+        terjemahan: "Bersatulah dan jangan bercerai-berai karena kehancuran diawali oleh perpecahan."
+      }
+    ],
+    refleksi: {
+      hikmah: "Jatuhnya Yerusalem pada 1099 M menjadi ikhtibar sejarah: keterpecahan politik internal umat akan mengundang penguasaan dan penderitaan dari pihak musuh.",
+      pertanyaanReflektif: [
+        "Pelajaran berharga apa yang bisa dipetik dari bahaya pertikaian sesama Muslim di masa krisis?"
+      ],
+      pesanAksi: "Mengutamakan persatuan ukhuwah Islamiyah di atas kepentingan faksi atau kelompok pribadi."
+    },
+    sources: ["Ibnu al-Athir, Al-Kamil fit-Tarikh", "Steven Runciman, A History of the Crusades"]
+  },
+  {
+    id: "h-bm-mimbar-zengi",
+    label: "Pembuatan Mimbar Nuruddin Zengi & Visi Pembebasan",
+    category: "abbasiyah",
+    timeLabel: "1168 M (564 H)",
+    timeValue: 1168,
+    description: "Di saat Yerusalem masih diduduki pasukan Salib, pahlawan persatuan Islam **Nuruddin Zengi** memerintahkan para perajin ulung Aleppo untuk membuat sebuah mimbar kayu mahakarya (*Mimbar Zengi*) tanpa paku pada 1168 M (564 H).\n\nMimbar ini dirancang khusus dengan keyakinan tauhid dan visi visioner bahwa Yerusalem pasti akan dibebaskan kembali dan mimbar tersebut akan ditempatkan di dalam Masjid Al-Aqsa. Visi Nuruddin menjadi inspirasi membara bagi muridnya, Salahuddin Al-Ayyubi.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Insyirah",
+        ayat: 5,
+        arabicText: "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+        paraphrase: "Karena sesungguhnya sesudah kesulitan itu ada kemudahan."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Tirmidzi",
+        matan: "Cita-cita dan niat ikhlas seorang pejuang mendapat pahala sempurna",
+        terjemahan: "Sesungguhnya setiap amalan tergantung pada niat dan cita-citanya."
+      }
+    ],
+    refleksi: {
+      hikmah: "Visi Mimbar Zengi mengajarkan pentingnya perencanaan strategis dan keyakinan masa depan di tengah kegelapan ujian penjajahan.",
+      pertanyaanReflektif: [
+        "Bagaimana sebuah karya fisik (mimbar) mampu menyalakan visi pembebasan suatu bangsa?"
+      ],
+      pesanAksi: "Membangun karya nyata dan fondasi keilmuan yang bermanfaat bagi generasi mendatang."
+    },
+    sources: ["Ibnu al-Athir, Al-Kamil fit-Tarikh", "Museum With No Frontiers (MWNF)"]
+  },
+  {
+    id: "h-bm-pembebasan-salahuddin",
+    label: "Pembebasan Damai Al-Aqsa oleh Salahuddin & Mimbar Zengi",
+    category: "abbasiyah",
+    timeLabel: "1187 M (27 Rajab 583 H)",
+    timeValue: 1187,
+    description: "Setelah kemenangan monumental di Pertempuran Hattin, Sultan **Salahuddin Al-Ayyubi** membebasakan Yerusalem pada 2 Oktober 1187 M (27 Rajab 583 H, bertepatan dengan malam Isra' Mi'raj).\n\nSalahuddin menunjukkan keagungan akhlak kesatriaan Islam: melarang perusakan, melarang penjarahan, membebaskan ribuan tawanan miskin tanpa tebusan, serta mengawal keselamatan pengungsi Kristen secara damai. Salahuddin memboyong Mimbar Zengi dari Aleppo dan memasangnya secara agung di dalam Masjid Al-Qibli Al-Aqsa.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Isra",
+        ayat: 105,
+        arabicText: "وَبِالْحَقِّ أَنزَلْنَاهُ وَبِالْحَقِّ نَزَلَ",
+        paraphrase: "Dan Kami turunkan (Al-Qur'an) itu dengan sebenar-benarnya dan Al-Qur'an itu telah turun dengan membawa kebenaran."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Ahmad",
+        arabicText: "لاَ تَزَالُ طَائِفَةٌ مِنْ أُمَّتِي عَلَى الْحَقِّ ظَاهِرِينَ... قَالُوا أَيْنَ هُمْ يَا رَسُولَ اللَّهِ؟ قَالَ بِبَيْتِ الْمَقْدِسِ وَأَكْنَافِ بَيْتِ الْمَقْدِسِ",
+        matan: "La tazalu tha'ifatun min ummati 'alal haqqi zhahirin...",
+        terjemahan: "Akan selalu ada sekelompok dari umatku yang memegang teguh kebenaran... Mereka bertanya: 'Di mana mereka wahai Rasulullah?' Beliau menjawab: 'Di Baitul Maqdis dan sekitar Baitul Maqdis'."
+      }
+    ],
+    refleksi: {
+      hikmah: "Pembebasan Yerusalem oleh Salahuddin membuktikan bahwa kemenangan sejati dicapai melalui integrasi persatuan umat, kesiapan militer, dan keagungan moral.",
+      pertanyaanReflektif: [
+        "Bagaimana keteladanan Salahuddin mengilhami generasi muda dalam memperjuangkan kebenaran?"
+      ],
+      pesanAksi: "Meneladani integritas moral, kerendahan hati, dan keteguhan perjuangan Salahuddin Al-Ayyubi."
+    },
+    sources: ["Baha ad-Din ibn Syaddad, Al-Nawadir as-Sultaniyya", "Ibnu Katsir, Al-Bidayah wan-Nihayah"]
+  },
+  {
+    id: "h-bm-tembok-suleiman",
+    label: "Renovasi Tembok Yerusalem oleh Suleiman I",
+    category: "tiga-kerajaan",
+    timeLabel: "1537 M (944 H)",
+    timeValue: 1537,
+    description: "Di bawah Kekaisaran Utsmani, Sultan **Suleiman Al-Qanuni** memerintahkan pembangunan dan rekonstruksi kembali tembok pelindung Kota Lama Yerusalem (*Old City Walls*) sepanjang 4 km dengan 7 pintu gerbang utama pada 1537 M.\n\nSuleiman juga memprakarsai pemasangan ubin keramik biru Iznik yang megah pada dinding luar Kubbat as-Sakhrah dan menjamin keamanan penuh peziarah tiga agama selama abad-abad kekuasaan Utsmani.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "An-Nisa",
+        ayat: 58,
+        arabicText: "إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا",
+        paraphrase: "Sesungguhnya Allah menyuruh kamu menyampaikan amanat kepada yang berhak menerimanya."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Muslim",
+        matan: "Pemimpin yang adil dan memelihara amanat kota suci mendapat perlindungan Allah",
+        terjemahan: "Pemimpin adil yang memakmurkan tempat suci berada di mimbar-mimbar cahaya."
+      }
+    ],
+    refleksi: {
+      hikmah: "Tembok megah Yerusalem Utsmani menjadi monumen fisik perlindungan dan pemeliharaan warisan suci peradaban Islam di Palestina.",
+      pertanyaanReflektif: [
+        "Bagaimana warisan arsitektur Utsmani membentengi identitas keislaman kota Al-Quds?"
+      ],
+      pesanAksi: "Mempelajari sejarah arsitektur peradaban Islam sebagai bagian dari ketahanan budaya."
+    },
+    sources: ["Halil Inalcik, The Ottoman Empire", "Suraiya Faroqhi, The Ottoman Empire and the World Around It"]
+  },
+  {
+    id: "h-bm-abdulhamid-herzl",
+    label: "Penolakan Sultan Abdul Hamid II atas Pembelian Palestina",
+    category: "modern",
+    timeLabel: "1901 M (1319 H)",
+    timeValue: 1901,
+    description: "Pada 1901 M, pendiri gerakan Zionisme **Theodor Herzl** mendatangi Khalifah Utsmani **Sultan Abdul Hamid II** menawarkan pelunasan seluruh utang luar negeri Utsmaniyah dan dana besar sebagai imbalan hak pemukiman tanah Palestina.\n\nSultan Abdul Hamid II menyampaikan penolakan sejarah yang monumental: 'Aku tidak akan menjual sejengkal pun tanah Palestina! Palestina bukan milikku pribadi melainkan milik seluruh umat Islam yang telah menyiramnya dengan darah mereka. Biarlah kekaisaran Utsmani hancur, namun aku tidak akan membiarkan Palestina dirobek!'.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Al-Baqarah",
+        ayat: 42,
+        arabicText: "وَلَا تَلْبِسُوا الْحَقَّ بِالْبَاطِلِ وَتَكْتُمُوا الْحَقَّ وَأَنتُمْ تَعْلَمُونَ",
+        paraphrase: "Dan janganlah kamu campur adukkan yang hak dengan yang bathil dan janganlah kamu sembunyikan yang hak itu, sedang kamu mengetahui."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Muslim",
+        matan: "Tugas pemimpin menjaga keutuhan tanah suci titipan amanat umat",
+        terjemahan: "Pemimpin adalah perisai pelindung yang bertindak membela kehormatan umat."
+      }
+    ],
+    refleksi: {
+      hikmah: "Keteguhan Sultan Abdul Hamid II menegaskan bahwa tanah Baitul Maqdis adalah amanat keimanan yang tidak dapat diperjualbelikan dengan materi duniawi.",
+      pertanyaanReflektif: [
+        "Mengapa penolakan Sultan Abdul Hamid II menjadi tonggak sejarah ketahanan akidah di era modern?"
+      ],
+      pesanAksi: "Menjaga integritas diri dan tidak memperjualbelikan prinsip agama demi keuntungan materi sesaat."
+    },
+    sources: ["Sultan Abdul Hamid II, Memoar Politik Sultan Abdul Hamid II", "Journal of Palestine Studies"]
+  },
+  {
+    id: "h-bm-pendudukan-modern",
+    label: "Pendudukan Modern & Ketabahan Ribat Al-Aqsa",
+    category: "modern",
+    timeLabel: "1967 M - Kontemporer",
+    timeValue: 1967,
+    description: "Pasca jatuhnya Utsmani di Perang Dunia I dan Deklarasi Balfour 1917, Yerusalem diserahkan ke Mandat Inggris dan berlanjut ke pendudukan militer Israel pada Perang Enam Hari (1967 M).\n\nKompleks Al-Aqsa menghadapi krisis penggalian bawah tanah, pembakaran (1969), dan pembatasan ibadah. Namun warga Al-Quds dan umat Islam global terus melakukan **Ribat** (ketabahan bertahan) menjaga kesucian dan keutuhan Masjid Al-Aqsa hingga hari ini.",
+    branch: "sejarah-baitul-maqdis",
+    quranRefs: [
+      {
+        surah: "Ali 'Imran",
+        ayat: 200,
+        arabicText: "يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَابِرُوا وَرَابِطُوا وَاتَّقُوا اللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
+        paraphrase: "Hai orang-orang yang beriman, bersabarlah kamu dan kuatkanlah kesabaranmu dan tetaplah bersiap siaga (di perbatasan) dan bertakwalah kepada Allah, supaya kamu beruntung."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Ahmad & Al-Tabarani",
+        arabicText: "لاَ تَزَالُ طَائِفَةٌ مِنْ أُمَّتِي عَلَى الدِّينِ ظَاهِرِينَ لِعَدُوِّهِمْ قَاهِرِينَ... بِبَيْتِ الْمَقْدِسِ وَأَكْنَافِ بَيْتِ الْمَقْدِسِ",
+        matan: "La tazalu tha'ifatun min ummati 'alad dini zhahirin...",
+        terjemahan: "Akan selalu ada sekelompok dari umatku yang tampak di atas agama ini, mengalahkan musuh-musuh mereka... di Baitul Maqdis dan di sekitar Baitul Maqdis."
+      }
+    ],
+    refleksi: {
+      hikmah: "Ketabahan warga Al-Quds menjaga Masjid Al-Aqsa adalah wujud nyata hadits kenabian tentang kelompok *Murabitun* yang tak pernah padam membela kebenaran.",
+      pertanyaanReflektif: [
+        "Apa kontribusi nyata yang dapat kita berikan untuk mendukung perjuangan dan kemerdekaan Al-Aqsa hari ini?"
+      ],
+      pesanAksi: "Terus menyuarakan kebenaran, menyalurkan bantuan kemanusiaan, dan mendoakan kebebasan Baitul Maqdis."
+    },
+    sources: ["Dr. Raghib As-Sirjani, Baitul Maqdis", "Pew Research Center / Journal of Palestine Studies"]
   }
 ];

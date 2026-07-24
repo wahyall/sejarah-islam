@@ -101,5 +101,33 @@ export const islamicHistoryEdges: ChainEdge[] = [
   { id: "e-67", source: "h-napoleon-mesir", target: "h-sykes-picot-balfour", causalLabel: "Kelemahan Utsmani di PD I dimanfaatkan Inggris-Prancis membagi wilayah", branch: "jalur-politik" },
   { id: "e-68", source: "h-sykes-picot-balfour", target: "h-runtuh-khilafah", causalLabel: "Kekalahan PD I memicu pembubaran Khilafah oleh Atatürk", branch: "jalur-utama" },
   { id: "e-69", source: "h-runtuh-khilafah", target: "h-gerakan-modern", causalLabel: "Ketiadaan lembaga pemersatu memicu bangkitnya Ormas & Pergerakan", branch: "jalur-pemikiran" },
-  { id: "e-70", source: "h-gerakan-modern", target: "h-era-kontemporer", causalLabel: "Kemerdekaan nation-state bermuara pada fenomena Ummah Digital abad 21", branch: "jalur-utama" }
+  { id: "e-70", source: "h-gerakan-modern", target: "h-era-kontemporer", causalLabel: "Kemerdekaan nation-state bermuara pada fenomena Ummah Digital abad 21", branch: "jalur-utama" },
+
+  // ==========================================
+  // CABANG KHUSUS: SEJARAH BAITUL MAQDIS (12 NODE)
+  // ==========================================
+  { id: "e-bm-1", source: "h-ibrahim-kabah", target: "h-bm-fondasi-awal", causalLabel: "Hijrah Nabi Ibrahim AS mendirikan fondasi suci Al-Aqsa 40 tahun pasca Ka'bah", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-2", source: "h-bm-fondasi-awal", target: "h-bm-sulaiman-renovasi", causalLabel: "Renovasi agung Al-Aqsa & doa pengampunan dosa oleh Nabi Sulaiman AS", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-3", source: "h-bm-sulaiman-renovasi", target: "h-bm-babilonia-uzair", causalLabel: "Penghancuran Babilonia Nebukadnezar & 100 tahun pemulihan Uzair AS", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-4", source: "h-bm-babilonia-uzair", target: "h-bm-isra-miraj", causalLabel: "Al-Aqsa menjadi titik Isra' Nabi & Kiblat Pertama umat Islam", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-5", source: "h-bm-isra-miraj", target: "h-bm-pembebasan-umar", causalLabel: "Penyerahan damai Yerusalem kepada Khalifah Umar & Perjanjian Umariyyah", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-6", source: "h-bm-pembebasan-umar", target: "h-bm-kubah-batu-umayyah", causalLabel: "Pembangunan mahakarya Kubbat as-Sakhrah oleh Abdul Malik bin Marwan", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-7", source: "h-bm-kubah-batu-umayyah", target: "h-bm-pendudukan-salib", causalLabel: "Keterpecahan internal memicu jatuhnya Yerusalem & pembantaian 1099 M", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-8", source: "h-bm-pendudukan-salib", target: "h-bm-mimbar-zengi", causalLabel: "Visi strategi pembebasan Al-Aqsa melalui pembinaan Mimbar Zengi", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-9", source: "h-bm-mimbar-zengi", target: "h-bm-pembebasan-salahuddin", causalLabel: "Penempatan Mimbar Zengi di Al-Qibli pasca pembebasan", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-10", source: "h-bm-pembebasan-salahuddin", target: "h-bm-tembok-suleiman", causalLabel: "Renovasi tembok pelindung Kota Lama Yerusalem oleh Suleiman I", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-11", source: "h-bm-tembok-suleiman", target: "h-bm-abdulhamid-herzl", causalLabel: "Penolakan tegas Sultan Abdul Hamid II atas pembelian tanah Palestina", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-12", source: "h-bm-abdulhamid-herzl", target: "h-bm-pendudukan-modern", causalLabel: "Pendudukan modern 1967 & Ribat pertahanan warga Al-Quds", branch: "sejarah-baitul-maqdis" },
+
+  // ==========================================
+  // KONEKSI LINTAS SEJARAH UTAMA <-> BAITUL MAQDIS
+  // ==========================================
+  { id: "e-bm-cross-1", source: "h-isra-miraj", target: "h-bm-isra-miraj", causalLabel: "Perjumpaan Isra' Mi'raj di Al-Aqsa", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-2", source: "h-qadisiyyah-jerusalem", target: "h-bm-pembebasan-umar", causalLabel: "Yarmuk berujung Perjanjian Umariyyah 638 M", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-3", source: "h-arabisasi-dinar", target: "h-bm-kubah-batu-umayyah", causalLabel: "Pembinaan Kubbat as-Sakhrah 691 M", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-4", source: "h-manzikert-salib", target: "h-bm-pendudukan-salib", causalLabel: "Krisis Perang Salib I merebut Yerusalem", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-5", source: "h-salahuddin-hittin", target: "h-bm-pembebasan-salahuddin", causalLabel: "Kemenangan Hattin berbuah pembebasan Al-Aqsa 1187 M", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-6", source: "h-utsmani-puncak", target: "h-bm-tembok-suleiman", causalLabel: "Suleiman I membentengi Kota Lama Yerusalem", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-7", source: "h-sykes-picot-balfour", target: "h-bm-abdulhamid-herzl", causalLabel: "Penolakan Sultan Abdul Hamid II terhadap Theodor Herzl", branch: "sejarah-baitul-maqdis" },
+  { id: "e-bm-cross-8", source: "h-gerakan-modern", target: "h-bm-pendudukan-modern", causalLabel: "Krisis modern & ketabahan Murabitun", branch: "sejarah-baitul-maqdis" }
 ];
