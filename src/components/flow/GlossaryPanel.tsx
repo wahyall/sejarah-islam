@@ -1,20 +1,20 @@
 "use client";
 
 /**
- * GlossaryPanel.tsx — Panel kamus istilah Arab/falsafi/kosmologi.
+ * GlossaryPanel.tsx — Panel kamus istilah Sejarah Peradaban Islam.
  *
  * Mencakup 4 kategori:
- *  - falsafi     (wajib/mumkin/mumtani', kaun, tasalsul, dll.)
- *  - epistemologi (an-Nabhani: tafkir, maklumat asabiqah, al-asma')
- *  - kosmologi    (Big Bang, inflasi, GUT, rekombinasi, dll.)
- *  - logika       (□p, ◇p, ¬◇p, PSR, Kalam, Hilbert's Hotel)
+ *  - sirah    (Kenabian, dakwah, perang, hijrah)
+ *  - fiqh     (Hukum Islam, institusi, khilafah, tata kelola)
+ *  - sains    (Ilmuwan Muslim, Baitul Hikmah, Zaman Keemasan)
+ *  - tasawuf  (Spiritualitas, sufisme, wali songo, Baitul Maqdis)
  *
  * Fitur:
  *  - Filter kategori (chip)
  *  - Search box
  *  - Daftar istilah dengan kartu (Arab + transliterasi + definisi + penjelasan)
  *  - Klik kartu → expand detail
- *  - Hover term related → highlight
+ *  - Term terkait → link antar istilah
  */
 
 import { useState, useMemo } from "react";
@@ -27,26 +27,26 @@ const CATEGORY_META: Record<
   GlossaryCategory,
   { label: string; color: string; bg: string; text: string }
 > = {
-  falsafi: {
-    label: "Falsafi",
-    color: "amber",
-    bg: "bg-amber-50 dark:bg-amber-950/30",
-    text: "text-amber-700 dark:text-amber-300",
-  },
-  epistemologi: {
-    label: "Epistemologi",
+  sirah: {
+    label: "Sirah",
     color: "emerald",
     bg: "bg-emerald-50 dark:bg-emerald-950/30",
     text: "text-emerald-700 dark:text-emerald-300",
   },
-  kosmologi: {
-    label: "Kosmologi",
+  fiqh: {
+    label: "Fiqh",
+    color: "amber",
+    bg: "bg-amber-50 dark:bg-amber-950/30",
+    text: "text-amber-700 dark:text-amber-300",
+  },
+  sains: {
+    label: "Sains Islam",
     color: "violet",
     bg: "bg-violet-50 dark:bg-violet-950/30",
     text: "text-violet-700 dark:text-violet-300",
   },
-  logika: {
-    label: "Logika",
+  tasawuf: {
+    label: "Tasawuf",
     color: "cyan",
     bg: "bg-cyan-50 dark:bg-cyan-950/30",
     text: "text-cyan-700 dark:text-cyan-300",
@@ -87,10 +87,10 @@ export function GlossaryPanel() {
         <div>
           <h3 className="text-sm font-bold flex items-center gap-2">
             <BookMarked className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            Kamus Istilah
+            Kamus Istilah Sejarah Islam
           </h3>
           <p className="text-[10px] text-muted-foreground mt-0.5">
-            Falsafi · Epistemologi · Kosmologi · Logika
+            Sirah · Fiqh · Sains Islam · Tasawuf & Spiritualitas
           </p>
         </div>
         <button
@@ -162,9 +162,8 @@ export function GlossaryPanel() {
         <div className="flex items-start gap-1.5">
           <Sparkles className="w-3 h-3 flex-shrink-0 mt-0.5" />
           <p>
-            Klik kartu untuk membaca penjelasan lengkap. Istilah Arab ditulis dengan teks asli +
-            transliterasi Latin. Untuk penjelasan mendalam, lihat Mode Argumen dan sumber primer
-            yang dirujuk pada setiap node.
+            Klik kartu untuk membaca penjelasan lengkap. Istilah Arab ditulis dalam huruf asli + transliterasi Latin.
+            Gunakan filter kategori untuk menjelajahi: Sirah Kenabian, Fiqh & Institusi, Sains Islam, atau Tasawuf & Baitul Maqdis.
           </p>
         </div>
       </div>

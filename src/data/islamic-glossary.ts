@@ -1,33 +1,420 @@
+/**
+ * islamic-glossary.ts — Kamus Istilah Sejarah Peradaban Islam
+ *
+ * Kategori:
+ *  - sirah       : Istilah seputar kehidupan dan dakwah Nabi Muhammad ﷺ
+ *  - fiqh        : Hukum Islam, institusi, dan tata kelola kekhalifahan
+ *  - sains       : Kontribusi ilmuwan Muslim dalam sains & filsafat
+ *  - tasawuf     : Spiritualitas, sufisme, dan perkembangan keislaman
+ */
+
+export type GlossaryCategory = "sirah" | "fiqh" | "sains" | "tasawuf";
+
 export interface GlossaryTerm {
+  id: string;
+  category: GlossaryCategory;
   term: string;
-  definition: string;
-  context: string;
+  arabic?: string;
+  transliteration?: string;
+  shortDef: string;
+  explanation: string;
+  related?: string[];
 }
 
 export const glossaryTerms: GlossaryTerm[] = [
+  // =============================================
+  // KATEGORI: SIRAH (Seputar Kenabian & Dakwah)
+  // =============================================
   {
+    id: "jahiliyah",
+    category: "sirah",
     term: "Jahiliyah",
-    definition: "Secara harfiah berarti 'kebodohan'. Merujuk pada periode sejarah Arab sebelum kedatangan Islam, diwarnai penyembahan berhala dan ketiadaan pedoman wahyu.",
-    context: "Sering digunakan untuk menggambarkan kondisi masyarakat Mekkah sebelum Nabi Muhammad diangkat menjadi rasul."
+    arabic: "جَاهِلِيَّة",
+    transliteration: "Jāhiliyyah",
+    shortDef: "Era 'Kebodohan' Arab sebelum Islam, ditandai penyembahan berhala dan ketidakadilan sosial.",
+    explanation: "Jahiliyah (dari akar kata 'jahala' = bodoh/tidak tahu) adalah istilah yang digunakan untuk menggambarkan kondisi sosial, moral, dan spiritual masyarakat Arab sebelum turunnya wahyu kepada Nabi Muhammad ﷺ (sekitar abad ke-6 M). Ciri-cirinya meliputi: penyembahan 360 berhala di Ka'bah, praktik membunuh bayi perempuan hidup-hidup, perbudakan massal, kesukuan yang fanatik, dan tidak adanya hukum yang adil. Al-Qur'an menyebut istilah ini dalam QS. Al-Ahzab: 33 dan Ali 'Imran: 154.",
+    related: ["dakwah-sembunyi", "wahyu-pertama", "hijrah"],
   },
   {
+    id: "wahyu-pertama",
+    category: "sirah",
+    term: "Iqra' — Wahyu Pertama",
+    arabic: "إِقْرَأْ",
+    transliteration: "Iqra'",
+    shortDef: "Perintah 'Bacalah!' — wahyu pertama yang diturunkan kepada Nabi Muhammad ﷺ di Gua Hira.",
+    explanation: "Pada 17 Ramadhan tahun 610 M (13 tahun sebelum Hijrah), Malaikat Jibril AS memeluk dan memerintahkan Nabi Muhammad ﷺ: 'Iqra!' (Bacalah!). Ini adalah wahyu pertama, QS. Al-'Alaq: 1–5. Peristiwa ini menandai dimulainya era kenabian. Nabi yang ummi (tidak bisa membaca-menulis) menerima wahyu yang memerintahkan membaca sebagai simbol awal revolusi ilmu pengetahuan Islam. Setelah itu turun wahyu secara bertahap selama 23 tahun.",
+    related: ["jahiliyah", "sirah-nabi", "dakwah-sembunyi"],
+  },
+  {
+    id: "dakwah-sembunyi",
+    category: "sirah",
+    term: "Dakwah Sirriyyah",
+    arabic: "الدَّعْوَةُ السِّرِّيَّة",
+    transliteration: "Ad-Da'wah as-Sirriyyah",
+    shortDef: "Fase dakwah rahasia selama 3 tahun pertama di Mekkah sebelum dakwah terbuka.",
+    explanation: "Selama 3 tahun pertama (610–613 M), Nabi Muhammad ﷺ berdakwah secara sembunyi-sembunyi kepada orang-orang terdekat. Yang pertama beriman adalah: Siti Khadijah (istri), Ali bin Abi Thalib (sepupu, saat itu anak-anak), Abu Bakar Ash-Shiddiq (sahabat), dan Zaid bin Haritsah (pelayan). Kelompok awal ini dikenal sebagai As-Sabiqun al-Awwalun (Pelopor Pertama Islam).",
+    related: ["wahyu-pertama", "dakwah-terbuka"],
+  },
+  {
+    id: "dakwah-terbuka",
+    category: "sirah",
+    term: "Dakwah Jahriyyah",
+    arabic: "الدَّعْوَةُ الْجَهْرِيَّة",
+    transliteration: "Ad-Da'wah al-Jahriyyah",
+    shortDef: "Dakwah terbuka Nabi Muhammad ﷺ setelah turunnya perintah QS. Al-Hijr: 94.",
+    explanation: "Pada tahun ke-4 kenabian (613 M), Allah menurunkan QS. Al-Hijr: 94: 'Fa-shdha' bimā tu'mar' (Maka sampaikanlah apa yang diperintahkan kepadamu terang-terangan). Nabi kemudian naik ke Bukit Shafa dan berseru kepada seluruh kaum Quraisy. Fase ini memulai babak penindasan besar kaum kafir Quraisy terhadap kaum Muslimin yang lemah.",
+    related: ["dakwah-sembunyi", "penyiksaan-mekkah", "boikot-syiib"],
+  },
+  {
+    id: "penyiksaan-mekkah",
+    category: "sirah",
+    term: "Fitnah di Mekkah",
+    arabic: "الْفِتْنَةُ فِي مَكَّة",
+    transliteration: "Al-Fitnah fī Makkah",
+    shortDef: "Penindasan brutal kaum Quraisy terhadap Muslim awal setelah dakwah terbuka.",
+    explanation: "Setelah dakwah terbuka, para pemimpin Quraisy melancarkan penyiksaan brutal. Bilal bin Rabbah (budak dari Habasyah) disiksa dengan diikat dan ditindih batu besar di padang pasir panas. Sumayyah binti Khayyat adalah Syahidah pertama Islam — ditikam tombak oleh Abu Jahal. Keluarga Yasir disiksa secara kolektif. Dalam kondisi ini Nabi ﷺ hanya bisa berdoa: 'Shabran āla Yasir, inna maw'idakumul jannah' (Sabarlah, wahai keluarga Yasir, sesungguhnya janjimu adalah surga).",
+    related: ["dakwah-terbuka", "hijrah-habasyah", "boikot-syiib"],
+  },
+  {
+    id: "hijrah-habasyah",
+    category: "sirah",
+    term: "Hijrah ke Habasyah",
+    arabic: "هِجْرَةُ الْحَبَشَة",
+    transliteration: "Hijratu al-Ḥabasyah",
+    shortDef: "Migrasi pertama 15 Muslim ke Kerajaan Kristen Habasyah (Ethiopia) untuk menghindari penindasan.",
+    explanation: "Pada tahun ke-5 kenabian (615 M), Nabi ﷺ mengizinkan kaum Muslimin berhijrah ke Habasyah (Ethiopia) di bawah perlindungan Raja Najasyi (Ashhamah). Rombongan pertama: 11 pria dan 4 wanita. Najasyi menolak permintaan Quraisy untuk mengembalikan mereka setelah mendengar bacaan QS. Maryam tentang Nabi Isa AS. Ini merupakan preseden diplomatik pertama dalam sejarah Islam.",
+    related: ["penyiksaan-mekkah", "boikot-syiib"],
+  },
+  {
+    id: "boikot-syiib",
+    category: "sirah",
+    term: "Boikot Shi'b Abi Thalib",
+    arabic: "مُقَاطَعَةُ شِعْبِ أَبِي طَالِب",
+    transliteration: "Muqāṭa'ah Shi'b Abī Ṭālib",
+    shortDef: "Blokade ekonomi dan sosial selama 3 tahun terhadap Bani Hasyim di lembah sempit Mekkah.",
+    explanation: "Pada tahun ke-7 kenabian (617–620 M), kaum Quraisy memboikot Bani Hasyim (klan perlindung Nabi) dengan dokumen perjanjian yang digantung di Ka'bah. Isi: tidak boleh berjual-beli, menikah, atau berbicara dengan siapapun dari Bani Hasyim. Selama 3 tahun, kaum Muslim menderita kelaparan ekstrem. Konon anak-anak menangis kelaparan terdengar dari balik lembah. Boikot berakhir ketika dokumen tersebut ditemukan sudah dimakan rayap, kecuali tulisan 'Bismika Allahumma'.",
+    related: ["penyiksaan-mekkah", "tahun-kesedihan"],
+  },
+  {
+    id: "tahun-kesedihan",
+    category: "sirah",
+    term: "'Amul Huzn (Tahun Kesedihan)",
+    arabic: "عَامُ الْحُزْن",
+    transliteration: "'Āmul Ḥuzn",
+    shortDef: "Tahun wafatnya Khadijah dan Abu Thalib dalam satu tahun yang sama (620 M), melemahkan perlindungan Nabi.",
+    explanation: "Pada 619 M, dalam satu tahun Nabi Muhammad ﷺ kehilangan dua sosok paling penting dalam hidupnya: Siti Khadijah RA (istri tercinta, 25 tahun pendamping setia, yang pertama beriman) wafat. Kemudian paman Abu Thalib (pelindung Nabi dari serangan fisik Quraisy) juga wafat. Nabi ﷺ sangat berduka. Tanpa perlindungan Abu Thalib, Quraisy semakin berani melancarkan penghinaan langsung. Ini mendorong Isra' Mi'raj sebagai penghiburan Ilahi.",
+    related: ["boikot-syiib", "isra-miraj"],
+  },
+  {
+    id: "isra-miraj",
+    category: "sirah",
+    term: "Isra' Mi'raj",
+    arabic: "الْإِسْرَاءُ وَالْمِعْرَاج",
+    transliteration: "Al-Isrā' wal-Mi'rāj",
+    shortDef: "Perjalanan malam Nabi dari Mekkah ke Al-Aqsa (Isra') lalu naik ke langit (Mi'raj) dalam satu malam.",
+    explanation: "Pada 620 M (sekitar 27 Rajab), Allah memperjalankan Nabi Muhammad ﷺ dari Masjidil Haram ke Masjidil Aqsa dalam satu malam (Isra' — QS. Al-Isra: 1), kemudian naik ke langit (Mi'raj) mengunjungi para nabi di tiap langit dan menerima perintah shalat 5 waktu. Awalnya diperintahkan 50 waktu, lalu melalui saran Nabi Musa AS dikurangi menjadi 5 waktu dengan pahala 50. Ini adalah mukjizat terbesar yang sekaligus menguji keimanan umat.",
+    related: ["tahun-kesedihan", "baitul-aqsa"],
+  },
+  {
+    id: "hijrah",
+    category: "sirah",
+    term: "Hijrah ke Madinah",
+    arabic: "الْهِجْرَة",
+    transliteration: "Al-Hijrah",
+    shortDef: "Perpindahan Nabi Muhammad ﷺ dan kaum Muslimin dari Mekkah ke Madinah pada 622 M — menjadi titik awal kalender Hijriah.",
+    explanation: "Hijrah adalah peristiwa strategis terbesar dalam sejarah Islam. Pada 622 M, setelah mendapat izin Allah (QS. At-Taubah: 40), Nabi Muhammad ﷺ bersama Abu Bakar RA berangkat diam-diam ke Madinah setelah kafir Quraisy mengepung rumah Nabi untuk membunuhnya. Mereka bersembunyi 3 hari di Gua Tsur. Setibanya di Madinah, disambut meriah oleh kaum Anshar. Hijrah menjadi titik nol kalender Hijriah dan transformasi Islam dari gerakan dakwah menjadi entitas negara/peradaban.",
+    related: ["piagam-madinah", "ukhuwah-muakhah"],
+  },
+  {
+    id: "piagam-madinah",
+    category: "sirah",
+    term: "Piagam Madinah",
+    arabic: "صَحِيفَةُ الْمَدِينَة",
+    transliteration: "Ṣaḥīfatu al-Madīnah",
+    shortDef: "Konstitusi tertulis pertama dalam sejarah dunia, mengatur hubungan Muslim, Yahudi, dan suku-suku Madinah.",
+    explanation: "Setelah Hijrah (622 M), Nabi ﷺ menyusun Piagam Madinah (Sahifah al-Madinah) — dokumen tertulis pertama dalam sejarah yang mengatur hak dan kewajiban seluruh warga Madinah, Muslim dan non-Muslim. Isinya mencakup: persatuan dalam membela Madinah, kebebasan beragama bagi semua kaum, penyelesaian sengketa melalui musyawarah, dan posisi Nabi ﷺ sebagai pemimpin tertinggi. Banyak sarjana Barat menyebutnya sebagai konstitusi modern pertama dalam sejarah.",
+    related: ["hijrah", "ukhuwah-muakhah"],
+  },
+  {
+    id: "ukhuwah-muakhah",
+    category: "sirah",
+    term: "Ukhuwah & Mu'akhah",
+    arabic: "الْمُؤَاخَاة",
+    transliteration: "Al-Mu'ākhāh",
+    shortDef: "Persaudaraan yang dipersatukan Nabi ﷺ antara Muhajirin (pendatang Mekkah) dan Anshar (warga Madinah).",
+    explanation: "Setibanya di Madinah, Nabi ﷺ mempersaudarakan setiap seorang Muhajir (yang berhijrah dari Mekkah dan meninggalkan semua harta) dengan seorang Anshar (warga Madinah). Contoh: Sa'd bin Rabi' (Anshar) menawarkan untuk berbagi setengah harta dan rumahnya kepada Abdurrahman bin Auf (Muhajir). Abdurrahman menolak dan memulai berdagang sendiri. Ini adalah kebijakan sosial luar biasa yang berhasil mengatasi krisis ekonomi pengungsi tanpa konflik.",
+    related: ["hijrah", "piagam-madinah"],
+  },
+  {
+    id: "badr",
+    category: "sirah",
+    term: "Perang Badr",
+    arabic: "غَزْوَةُ بَدْر",
+    transliteration: "Ghazwatu Badr",
+    shortDef: "Perang pertama Islam (17 Ramadhan 624 M), 313 Muslim mengalahkan 1.000 pasukan Quraisy.",
+    explanation: "Perang Badr (624 M / 2 H) adalah pertempuran paling menentukan dalam sejarah awal Islam. 313 Muslim (kebanyakan miskin, minim senjata) menghadapi 1.000 pasukan Quraisy bersenjata lengkap. Allah menurunkan pertolongan malaikat (QS. Al-Anfal: 9). Hasilnya: 70 pemimpin Quraisy terbunuh, 70 ditawan. Abu Jahal (musuh terbesar Islam) terbunuh. Tawanan dibebaskan setelah menebus diri atau mengajarkan baca-tulis kepada 10 anak Muslim. Kemenangan ini memantapkan posisi Islam di Jazirah Arab.",
+    related: ["uhud", "khandaq", "hijrah"],
+  },
+  {
+    id: "hudaibiyyah",
+    category: "sirah",
+    term: "Perjanjian Hudaibiyyah",
+    arabic: "صُلْحُ الْحُدَيْبِيَّة",
+    transliteration: "Ṣulḥul Ḥudaybiyyah",
+    shortDef: "Perjanjian gencatan senjata 10 tahun (628 M) yang tampak merugikan Muslim, namun Al-Qur'an menyebutnya 'kemenangan nyata'.",
+    explanation: "Pada 628 M (6 H), saat Nabi ﷺ memimpin 1.400 Muslim untuk ibadah umrah ke Mekkah, Quraisy menghadang di Hudaibiyyah. Perjanjian ditandatangani: gencatan senjata 10 tahun, Muslim pulang tanpa umrah tahun ini, dan siapapun yang lari dari Quraisy ke Muslim harus dikembalikan. Para sahabat marah karena merasa perjanjian itu tidak adil. Namun Allah menyatakan: 'Innā fataḥnā laka fatḥan mubīnā' (QS. Al-Fath: 1). Terbukti: 2 tahun kemudian Islam tumbuh pesat dan Mekkah dibebaskan.",
+    related: ["fathu-makkah", "sirah-nabi"],
+  },
+  {
+    id: "fathu-makkah",
+    category: "sirah",
+    term: "Fathu Makkah",
+    arabic: "فَتْحُ مَكَّة",
+    transliteration: "Fatḥu Makkah",
+    shortDef: "Pembebasan Mekkah tanpa pertumpahan darah pada 630 M — puncak dari keberhasilan strategi Nabi ﷺ.",
+    explanation: "Pada Ramadhan 8 H (630 M), setelah Quraisy melanggar Perjanjian Hudaibiyyah, Nabi ﷺ memimpin 10.000 pasukan menuju Mekkah. Kota yang selama 20 tahun menganiaya kaum Muslim menyerah tanpa perlawanan berarti. Nabi ﷺ memasuki Mekkah dengan menundukkan kepala di atas unta, penuh kerendahan hati. Semua pemimpin Quraisy diberi amnesti umum dengan sabda: 'Izhabū fa-antum at-tulaqa'' (Pergilah! Kalian semua bebas). 360 berhala di Ka'bah dihancurkan dan Mekkah menjadi kota Islam.",
+    related: ["hudaibiyyah", "akhlak-nabi"],
+  },
+
+  // =============================================
+  // KATEGORI: FIQH (Institusi, Hukum & Tata Kelola)
+  // =============================================
+  {
+    id: "khalifah",
+    category: "fiqh",
+    term: "Khalifah / Khilafah",
+    arabic: "خَلِيفَة / خِلَافَة",
+    transliteration: "Khalīfah / Khilāfah",
+    shortDef: "Sistem kepemimpinan umat Islam pasca-wafatnya Nabi ﷺ, pemimpin disebut Khalifah (Pengganti).",
+    explanation: "Setelah Nabi Muhammad ﷺ wafat (632 M), kepemimpinan umat Islam diteruskan melalui sistem Khilafah. Khalifah bukanlah nabi, melainkan pemimpin yang menerapkan hukum Islam dan memimpin umat. Khulafaur Rasyidin (Abu Bakar, Umar, Utsman, Ali) adalah periode ideal yang berpedoman langsung pada Al-Qur'an dan Sunnah. Sistem khilafah berlanjut melalui dinasti Umayyah, Abbasiyah, dan Utsmani hingga dihapus oleh Mustafa Kemal Atatürk pada 3 Maret 1924.",
+    related: ["khulafaur-rasyidin", "syura", "diwan"],
+  },
+  {
+    id: "khulafaur-rasyidin",
+    category: "fiqh",
     term: "Khulafaur Rasyidin",
-    definition: "Para khalifah yang mendapat petunjuk. Empat khalifah pertama: Abu Bakar, Umar, Utsman, dan Ali.",
-    context: "Fase pemerintahan awal (632-661 M) yang dianggap sebagai model ideal kepemimpinan Islam."
+    arabic: "الْخُلَفَاءُ الرَّاشِدُون",
+    transliteration: "Al-Khulafā'ur Rāsyidūn",
+    shortDef: "Empat khalifah pertama Islam yang mendapatkan petunjuk (632–661 M): Abu Bakar, Umar, Utsman, dan Ali.",
+    explanation: "Khulafaur Rasyidin ('Para Khalifah yang Mendapat Petunjuk') adalah empat pemimpin Islam pasca-Nabi:\n1. Abu Bakar ash-Shiddiq (632–634): Memerangi murtad (Perang Riddah), mengumpulkan Al-Qur'an.\n2. Umar ibn Khattab (634–644): Ekspansi besar ke Suriah, Irak, Persia, Mesir; membentuk Diwan administrasi.\n3. Utsman ibn Affan (644–656): Standarisasi mushaf Al-Qur'an (Mushaf Utsmani).\n4. Ali ibn Abi Thalib (656–661): Menghadapi fitnah pertama (Perang Jamal dan Siffin).",
+    related: ["khalifah", "diwan", "mushaf-utsmani"],
   },
   {
-    term: "Baitul Hikmah",
-    definition: "Rumah Kebijaksanaan. Sebuah perpustakaan, institut terjemahan, dan akademi penelitian di Baghdad pada era Abbasiyah.",
-    context: "Pusat gerakan intelektual besar di mana naskah-naskah Yunani, Persia, dan India diterjemahkan ke bahasa Arab."
+    id: "syura",
+    category: "fiqh",
+    term: "Syura",
+    arabic: "شُورَى",
+    transliteration: "Syūrā",
+    shortDef: "Prinsip musyawarah dalam Islam, dasar pengambilan keputusan kolektif dalam pemerintahan.",
+    explanation: "Syura berasal dari QS. Asy-Syura: 38 dan Ali 'Imran: 159. Prinsip ini mewajibkan pemimpin Islam untuk bermusyawarah dengan para ahli sebelum mengambil keputusan penting. Umar bin Khattab mengembangkan institusi Majlis Syura yang terdiri dari para sahabat senior sebagai badan penasehat khalifah. Sistem ini menjadi cikal-bakal lembaga legislatif dalam pemikiran politik Islam modern.",
+    related: ["khalifah", "khulafaur-rasyidin"],
   },
   {
-    term: "Convivencia",
-    definition: "Periode ko-eksistensi dan toleransi relatif antara umat Islam, Kristen, dan Yahudi di Semenanjung Iberia (Andalusia).",
-    context: "Menandakan iklim intelektual dan sosial yang subur di Spanyol Muslim (Al-Andalus)."
-  },
-  {
+    id: "diwan",
+    category: "fiqh",
     term: "Diwan",
-    definition: "Biro administrasi atau kementerian yang mengelola urusan negara, pendapatan, dan angkatan bersenjata.",
-    context: "Diadopsi secara luas sejak era Umar bin Khattab untuk mengatur birokrasi kekhalifahan yang meluas cepat."
-  }
+    arabic: "دِيوَان",
+    transliteration: "Dīwān",
+    shortDef: "Sistem birokrasi negara Islam yang dirintis oleh Umar ibn Khattab — mendaftar tentara, mengatur gaji, dan distribusi harta.",
+    explanation: "Khalifah Umar bin Khattab (634–644 M) mendirikan sistem Diwan (catatan/buku besar pemerintahan) sebagai respons atas luasnya wilayah kekhalifahan. Diwan mencatat nama seluruh tentara dan keluarganya, mengatur tunjangan (atha') berdasarkan tingkat keislaman awal, mengelola Baitul Mal (Kas Negara). Sistem ini diadaptasi dari tradisi Persia Sassanid dan menjadi fondasi birokrasi semua kekhalifahan Muslim berikutnya.",
+    related: ["khulafaur-rasyidin", "baitul-mal"],
+  },
+  {
+    id: "baitul-mal",
+    category: "fiqh",
+    term: "Baitul Mal",
+    arabic: "بَيْتُ الْمَال",
+    transliteration: "Baitul Māl",
+    shortDef: "Kas negara Islam yang mengelola zakat, jizyah, kharaj, dan ghanimah untuk didistribusikan kepada rakyat.",
+    explanation: "Baitul Mal (Rumah Harta) adalah lembaga keuangan negara dalam sistem Islam. Sumber pemasukannya: zakat (2,5% dari kekayaan Muslim), jizyah (pajak perlindungan dari non-Muslim), kharaj (pajak tanah), ghanimah (rampasan perang), dan wakaf. Pengeluarannya: gaji pegawai negara, tunjangan fakir miskin, biaya infrastruktur, pertahanan negara. Umar bin Khattab mendistribusikan hingga ke seluruh wilayah tanpa membedakan Arab dan non-Arab.",
+    related: ["diwan", "zakat", "jizyah"],
+  },
+  {
+    id: "mushaf-utsmani",
+    category: "fiqh",
+    term: "Mushaf Utsmani",
+    arabic: "مُصْحَفُ عُثْمَانِي",
+    transliteration: "Muṣḥaf 'Utsmānī",
+    shortDef: "Kodifikasi standar Al-Qur'an yang dilakukan Khalifah Utsman ibn Affan (644–656 M) untuk menyatukan bacaan.",
+    explanation: "Setelah penaklukan Azarbaijan dan Armenia, perbedaan qira'at Al-Qur'an antara pasukan dari berbagai wilayah semakin mengkhawatirkan. Khalifah Utsman membentuk tim 4 sahabat terkemuka dipimpin Zaid bin Tsabit untuk menyalin mushaf standar dari naskah Abu Bakar yang disimpan Hafshah binti Umar. Mushaf standar ini dikirim ke seluruh provinsi: Madinah, Mekkah, Kufah, Bashrah, Suriah, dan Mesir. Semua naskah lain dibakar. Hasilnya adalah Mushaf Utsmani yang dipakai seluruh Muslim dunia hingga hari ini.",
+    related: ["khulafaur-rasyidin"],
+  },
+  {
+    id: "jizyah",
+    category: "fiqh",
+    term: "Jizyah",
+    arabic: "جِزْيَة",
+    transliteration: "Jizyah",
+    shortDef: "Pajak perlindungan yang dibayar warga non-Muslim (Ahlu Dzimmah) kepada negara Islam sebagai imbalan keamanan dan kebebasan beragama.",
+    explanation: "Jizyah (QS. At-Taubah: 29) adalah kontribusi finansial dari warga non-Muslim (Yahudi, Kristen, Zoroaster) kepada negara Islam yang memberikan mereka perlindungan militer dan kebebasan beragama. Besarnya bervariasi (biasanya 1–4 dinar/tahun) dan hanya diwajibkan kepada laki-laki dewasa yang mampu. Orang tua, perempuan, anak-anak, dan orang sakit dibebaskan. Perjanjian Umariyyah di Yerusalem adalah contoh implementasi jizyah yang adil dan manusiawi.",
+    related: ["baitul-mal", "perjanjian-umariyyah"],
+  },
+  {
+    id: "perjanjian-umariyyah",
+    category: "fiqh",
+    term: "Al-'Uhdah al-'Umariyyah",
+    arabic: "الْعَهْدَةُ الْعُمَرِيَّة",
+    transliteration: "Al-'Uhdata al-'Umariyyah",
+    shortDef: "Perjanjian tertulis Khalifah Umar ibn Khattab dengan penduduk Yerusalem (638 M) — menjamin hak warga dan kebebasan beragama.",
+    explanation: "Ketika Yerusalem menyerah kepada pasukan Islam pada 638 M (17 H), Patriark Sophronius hanya mau menyerahkan kunci kota langsung kepada khalifah. Umar ibn Khattab pun datang dari Madinah. Ia menyusun perjanjian tertulis ('Uhdah Umariyyah) yang menjamin: keselamatan jiwa dan harta warga, kebebasan beribadah di gereja dan sinagog, tidak ada paksaan pindah agama, dan hak warga untuk tetap tinggal. Umar menolak shalat di dalam Gereja Makam Suci agar tidak dijadikan alasan mengambil alih gereja tersebut. Ini diakui sejarawan Barat sebagai teladan toleransi tertinggi.",
+    related: ["jizyah", "baitul-maqdis", "umar-khattab"],
+  },
+  {
+    id: "ijtihad",
+    category: "fiqh",
+    term: "Ijtihad",
+    arabic: "اِجْتِهَاد",
+    transliteration: "Ijtihād",
+    shortDef: "Upaya sungguh-sungguh seorang mujtahid untuk menggali hukum dari dalil-dalil syariat bagi persoalan baru.",
+    explanation: "Ijtihad (dari akar 'jahada' = bersungguh-sungguh) adalah proses penggalian hukum Islam dari Al-Qur'an dan Sunnah untuk masalah yang tidak secara eksplisit diatur. Empat Imam Mazhab Fiqh (Hanafi, Maliki, Syafi'i, dan Hambali) adalah mujtahid terbesar dalam sejarah Islam. Umar ibn Khattab dikenal sebagai ijtihad-ist ulung — seperti keputusannya menghentikan pembagian ghanimah tanah Irak kepada pasukan dan menjadikannya wakaf produktif.",
+    related: ["mazhab-fiqh", "syura"],
+  },
+  {
+    id: "mazhab-fiqh",
+    category: "fiqh",
+    term: "Mazhab Fiqh",
+    arabic: "مَذَاهِبُ الْفِقْه",
+    transliteration: "Mażāhib al-Fiqh",
+    shortDef: "Empat mazhab hukum Islam utama: Hanafi, Maliki, Syafi'i, dan Hambali — masing-masing dengan metodologi ijtihad berbeda.",
+    explanation: "Empat mazhab Fiqh Sunni terbentuk pada abad ke-8–9 M:\n• Hanafi (Imam Abu Hanifah, w. 767 M, Kufah): Mengutamakan ra'yu (akal) dan qiyas. Dominan di Asia Tengah, Turki, India.\n• Maliki (Imam Malik, w. 795 M, Madinah): Mengutamakan 'amal ahli Madinah. Dominan di Afrika Utara dan Barat.\n• Syafi'i (Imam Syafi'i, w. 820 M): Mensintesis antara hadits dan ra'yu. Dominan di Asia Tenggara dan Mesir.\n• Hambali (Imam Ahmad bin Hanbal, w. 855 M): Paling ketat berpegang pada hadits. Dominan di Semenanjung Arab.",
+    related: ["ijtihad", "baitul-hikmah"],
+  },
+  {
+    id: "waqf",
+    category: "fiqh",
+    term: "Wakaf",
+    arabic: "وَقْف",
+    transliteration: "Waqf",
+    shortDef: "Aset yang diwakafkan (dilepas kepemilikannya) oleh individu untuk kepentingan publik secara permanen.",
+    explanation: "Wakaf adalah instrumen ekonomi sosial Islam yang sangat penting. Aset (tanah, bangunan, buku, sumur) diberikan atas nama Allah untuk kepentingan umum secara permanen — tidak bisa dijual, diwariskan, atau digadaikan. Pada era Abbasiyah, wakaf mendanai: rumah sakit (bimaristan), madrasah, perpustakaan (termasuk Baitul Hikmah), dan pembangunan masjid. Umar bin Khattab mewakafkan tanahnya di Khaibar atas anjuran Nabi ﷺ — menjadi wakaf pertama dalam sejarah Islam.",
+    related: ["baitul-mal", "baitul-hikmah-sains"],
+  },
+
+  // =============================================
+  // KATEGORI: SAINS (Ilmuwan Muslim & Kontribusi)
+  // =============================================
+  {
+    id: "baitul-hikmah-sains",
+    category: "sains",
+    term: "Baitul Hikmah",
+    arabic: "بَيْتُ الْحِكْمَة",
+    transliteration: "Baitul Ḥikmah",
+    shortDef: "Akademi dan perpustakaan terbesar era Abbasiyah di Baghdad — pusat penerjemahan dan penelitian ilmiah abad ke-8–13 M.",
+    explanation: "Didirikan oleh Khalifah Harun ar-Rasyid dan diperluas besar-besaran oleh al-Ma'mun (813–833 M), Baitul Hikmah menghimpun ulama dari seluruh penjuru dunia. Kegiatan utamanya: menerjemahkan karya ilmiah Yunani (Euclid, Galen, Aristoteles, Ptolemy), Persia, dan India ke bahasa Arab. Dari sini lahir kontribusi ilmiah monumental: Al-Khwarizmi menciptakan aljabar dan algoritma, Ibnu Haytham mencetuskan teori optik modern, Al-Razi mendokumentasikan penyakit cacar dan campak. Dibakar habis oleh pasukan Hulagu pada 1258 M.",
+    related: ["al-khawarizmi", "ibnu-haytham", "zaman-keemasan"],
+  },
+  {
+    id: "zaman-keemasan",
+    category: "sains",
+    term: "Zaman Keemasan Islam",
+    arabic: "الْعَصْرُ الذَّهَبِي",
+    transliteration: "Al-'Aṣruz Żahabī",
+    shortDef: "Periode kejayaan ilmu pengetahuan Islam (abad ke-8–13 M) yang mentransformasi ilmu pengetahuan dunia.",
+    explanation: "Zaman Keemasan Islam berlangsung dari era Abbasiyah (750 M) hingga invasi Mongol (1258 M). Dalam periode ini, ilmuwan Muslim memimpin dunia dalam: Matematika (al-Khwarizmi, al-Biruni), Astronomi (al-Battani, Ibnu Yunus), Kedokteran (Ibnu Sina dengan Al-Qanun fi at-Tibb, al-Razi), Kimia (Jabir ibn Hayyan), Optik (Ibnu Haytham), Geografi (al-Idrisi), dan Filsafat (al-Ghazali, Ibnu Rushd). Istilah-istilah bahasa Arab masuk ke bahasa Inggris dan Latin: algebra, algorithm, alchemy, cipher, zenith, nadir.",
+    related: ["baitul-hikmah-sains", "al-khawarizmi", "ibnu-sina"],
+  },
+  {
+    id: "al-khawarizmi",
+    category: "sains",
+    term: "Al-Khawarizmi",
+    arabic: "الْخَوَارِزْمِي",
+    transliteration: "Al-Khawārizmī",
+    shortDef: "Matematikawan Muslim abad ke-9 M, 'Bapak Aljabar' — menemukan aljabar dan aritmatika yang menjadi fondasi ilmu komputer modern.",
+    explanation: "Muhammad bin Musa al-Khwarizmi (780–850 M) adalah ilmuwan di Baitul Hikmah Baghdad. Karyanya:\n• Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabalah: mendefinisikan 'aljabar' (al-jabr) untuk pertama kali.\n• Algoritma — kata ini berasal dari Latinisasi namanya 'Algorismus'.\n• Memperkenalkan angka Hindu-Arab ke dunia Islam dan Eropa, menggantikan angka Romawi.\n• Tabel astronomi (Zij al-Sindhind) yang digunakan selama berabad-abad.\nTanpa al-Khwarizmi, tidak akan ada kalkulator, komputer, atau ilmu data modern.",
+    related: ["baitul-hikmah-sains", "zaman-keemasan"],
+  },
+  {
+    id: "ibnu-sina",
+    category: "sains",
+    term: "Ibnu Sina (Avicenna)",
+    arabic: "اِبْنُ سِينَا",
+    transliteration: "Ibn Sīnā",
+    shortDef: "Dokter dan filsuf Muslim terbesar (980–1037 M) — 'Al-Qanun fi at-Tibb'-nya menjadi buku ajar kedokteran Eropa selama 600 tahun.",
+    explanation: "Abu Ali al-Husain ibn Sina (980–1037 M) menyelesaikan hafalan Al-Qur'an pada usia 10 tahun dan menguasai kedokteran pada usia 16 tahun. Karya besarnya:\n• Al-Qanun fi at-Tibb (Canon of Medicine): ensiklopedia medis sistematis yang mencakup anatomi, farmakologi, dan penyakit. Digunakan di universitas Eropa hingga abad ke-17.\n• Kitab as-Syifa' (Book of Healing): 18 volume tentang filsafat, logika, matematika.\n• Mendeskripsikan penularan penyakit melalui udara dan air untuk pertama kali.\n• Membuat argumen keberadaan diri ('The Flying Man') mendahului Descartes 600 tahun.",
+    related: ["zaman-keemasan", "ibnu-haytham"],
+  },
+  {
+    id: "ibnu-haytham",
+    category: "sains",
+    term: "Ibnu Haytham (Alhazen)",
+    arabic: "اِبْنُ الْهَيْثَم",
+    transliteration: "Ibn al-Haytham",
+    shortDef: "Fisikawan Muslim abad ke-11 M, 'Bapak Optik Modern' — menemukan teori cahaya masuk ke mata, bukan keluar dari mata.",
+    explanation: "Abu Ali al-Hasan ibn al-Haytham (965–1040 M, Basrah-Kairo) merevolutionisasi pemahaman tentang cahaya dan penglihatan. Karya besarnya Kitab al-Manazir (Book of Optics) — diterjemahkan ke Latin sebagai De Aspectibus — membuktikan bahwa cahaya masuk ke mata dari objek eksternal (bertentangan dengan teori Euclid). Ibnu Haytham juga menemukan kamera obscura, mengembangkan metode eksperimen ilmiah yang menjadi dasar metode ilmiah modern. NASA menamakan kawah di Bulan 'Alhazen' untuk menghormatinya.",
+    related: ["zaman-keemasan", "baitul-hikmah-sains"],
+  },
+  {
+    id: "ibnu-khaldun",
+    category: "sains",
+    term: "Ibnu Khaldun",
+    arabic: "اِبْنُ خَلْدُون",
+    transliteration: "Ibn Khaldūn",
+    shortDef: "Sejarawan dan sosiolog Muslim abad ke-14 M — penemu 'Ilmu Sejarah' dan sosiologi melalui teori 'Asabiyyah'.",
+    explanation: "Abdurrahman ibn Khaldun (1332–1406 M, Tunisia) adalah pemikir Muslim yang jauh melampaui zamannya. Karyanya Muqaddimah adalah pengantar dari ensiklopedia sejarahnya (Kitab al-'Ibar). Di dalamnya ia:\n• Merumuskan 'Asabiyyah' (solidaritas kelompok) sebagai kekuatan penggerak sejarah dan siklus kebangkitan-keruntuhan peradaban.\n• Mencetuskan teori ekonomi siklus: peradaban lahir dari kehidupan sederhana, berkembang menjadi kemewahan, lalu runtuh oleh kemewahan itu sendiri.\n• Arnold Toynbee menyebutnya sebagai 'filsuf sejarah terbesar yang pernah ada'. Adam Smith mengakui teorinya tentang pembagian kerja.",
+    related: ["zaman-keemasan", "siklus-peradaban"],
+  },
+
+  // =============================================
+  // KATEGORI: TASAWUF (Spiritualitas & Pemikiran)
+  // =============================================
+  {
+    id: "tasawuf",
+    category: "tasawuf",
+    term: "Tasawuf / Sufisme",
+    arabic: "تَصَوُّف",
+    transliteration: "Taṣawwuf",
+    shortDef: "Dimensi spiritual dan batiniah Islam yang menekankan penyucian jiwa, cinta kepada Allah, dan kedekatan dengan-Nya.",
+    explanation: "Tasawuf berkembang sebagai gerakan spiritualitas dalam Islam sebagai reaksi terhadap kemewahan material era Umayyah dan Abbasiyah. Kaum sufi menekankan zikir (mengingat Allah), muhasabah (introspeksi jiwa), dan fana' (peleburan diri dalam Allah). Tokoh-tokoh besar: Hasan al-Bashri (642–728 M, Basrah), Rabia al-Adawiyya (wanita sufi pertama yang mengajarkan cinta Ilahi), al-Junayd al-Baghdadi (w. 910 M), Jalaluddin Rumi (1207–1273 M, Persia).",
+    related: ["al-ghazali", "tarikat"],
+  },
+  {
+    id: "al-ghazali",
+    category: "tasawuf",
+    term: "Al-Ghazali",
+    arabic: "الْغَزَالِي",
+    transliteration: "Al-Ghazālī",
+    shortDef: "Ulama dan sufi terbesar Islam (1058–1111 M) — karyanya 'Ihya' Ulumuddin' menyatukan syariat, tasawuf, dan filsafat.",
+    explanation: "Abu Hamid Muhammad al-Ghazali (1058–1111 M, Persia) dijuluki 'Hujjatul Islam' (Bukti/Argumen Islam). Pada puncak kariernya sebagai profesor di Nizhamiyah Baghdad, ia mengalami krisis eksistensial dan meninggalkan jabatan untuk berzuhud. Karya monumental: Ihya' Ulumuddin (Revivifikasi Ilmu-ilmu Agama) — 4 jilid yang menyatukan fiqh, akidah, dan spiritualitas. Dalam Tahafut al-Falasifah ia mengkritisi filsafat Aristotelian, yang dibalas oleh Ibnu Rushd dalam Tahafut at-Tahafut. Pemikirannya sangat mempengaruhi tradisi mistik Yahudi dan Kristen di abad pertengahan.",
+    related: ["tasawuf", "ibnu-sina", "tarikat"],
+  },
+  {
+    id: "tarikat",
+    category: "tasawuf",
+    term: "Tarikat",
+    arabic: "طَرِيقَة",
+    transliteration: "Ṭarīqah",
+    shortDef: "Ordo sufi dengan metode spiritual dan silsilah guru-murid yang digunakan untuk mencapai kedekatan dengan Allah.",
+    explanation: "Tarikat (jalan spiritual) adalah komunitas sufi yang terorganisir di sekeliling seorang syaikh (guru). Murid (murid) mengikuti wirid, zikir, dan latihan spiritual di bawah bimbingan syaikh. Tarikat-tarikat besar: Qadiriyyah (didirikan Abdul Qadir al-Jilani, Baghdad, w. 1166 M), Naqsyabandiyyah (Asia Tengah), Tijaniyyah (Afrika Barat), dan Syadziliyyah (Mesir). Di Nusantara, Tarikat Qadiriyyah-Naqsyabandiyyah dan Syattariyyah berperan besar dalam penyebaran Islam.",
+    related: ["tasawuf", "al-ghazali", "walisongo"],
+  },
+  {
+    id: "walisongo",
+    category: "tasawuf",
+    term: "Wali Songo",
+    arabic: "وَلِيُّ سَنْغُو",
+    transliteration: "Walī Songo (Jawa)",
+    shortDef: "Sembilan Wali Allah yang menyebarkan Islam di Jawa (abad ke-15–16 M) melalui pendekatan budaya dan tasawuf.",
+    explanation: "Wali Songo (Sembilan Wali) adalah nama kolektif sembilan ulama penyebar Islam di Jawa. Metode dakwahnya unik: mengadaptasi seni dan budaya lokal (wayang, gamelan, tembang) sebagai media pesan Islam. Sunan Kalijaga menggunakan wayang kulit dengan cerita Mahabharata namun disisipi nilai Islam. Sunan Kudus melarang penyembelihan sapi untuk menghormati perasaan warga Hindu-Buddha. Hasilnya: islamisasi Jawa berlangsung damai tanpa peperangan, berbeda dengan banyak daerah lain. Ini dianggap sebagai model dakwah kultural terbaik.",
+    related: ["tarikat", "dakwah-nusantara"],
+  },
+  {
+    id: "ribat",
+    category: "tasawuf",
+    term: "Ribat (المرابطة)",
+    arabic: "رِبَاط",
+    transliteration: "Ribāṭ",
+    shortDef: "Ketabahan bertahan di batas pertahanan wilayah Islam — kini digunakan untuk menyebut keteguhan menjaga Al-Aqsa.",
+    explanation: "Ribat berasal dari QS. Ali 'Imran: 200: 'wā rābiṭū' (dan tetaplah bersiap siaga di perbatasan). Secara historis, Ribat adalah benteng-benteng perbatasan yang dijaga sukarelawan Muslim untuk melindungi wilayah Islam. Dalam konteks modern, 'Ribat Al-Aqsa' merujuk pada keteguhan warga Yerusalem dan Palestina yang berjaga dan bertahan di sekitar Masjid Al-Aqsa menghadapi berbagai tekanan. Hadits Nabi menyebut: 'Akan selalu ada kelompok dari umatku di Baitul Maqdis dan sekitarnya' (HR. Ahmad).",
+    related: ["baitul-maqdis", "perjanjian-umariyyah"],
+  },
+  {
+    id: "baitul-maqdis",
+    category: "tasawuf",
+    term: "Baitul Maqdis / Al-Aqsa",
+    arabic: "بَيْتُ الْمَقْدِس",
+    transliteration: "Baitul Maqdis",
+    shortDef: "Kota Suci Yerusalem dan Masjid Al-Aqsa — tempat suci ketiga dalam Islam, titik Isra' Nabi ﷺ, dan kiblat pertama umat.",
+    explanation: "Baitul Maqdis (Rumah Suci) atau Yerusalem adalah kota paling disucikan ketiga dalam Islam setelah Mekkah dan Madinah. Signifikansinya dalam Islam: titik Isra' Nabi ﷺ (QS. Al-Isra: 1), kiblat pertama umat Islam selama 16-17 bulan, tempat shalat para nabi (HR. Bukhari: Nabi memimpin shalat seluruh para nabi di malam Isra'). Nabi Sulaiman AS membangunnya (-960 SM), Umar membebaskannnya (638 M), Salahuddin al-Ayyubi kembali membebaskannya (1187 M). Kini di bawah pendudukan dan perjuangan Ribat terus berlangsung.",
+    related: ["isra-miraj", "perjanjian-umariyyah", "ribat"],
+  },
 ];
