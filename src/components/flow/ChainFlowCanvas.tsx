@@ -349,7 +349,7 @@ function FlowInner() {
       className="bg-slate-50 dark:bg-slate-950 transition-colors"
     >
       <Background color="currentColor" className="opacity-10" gap={24} size={2} />
-      <Controls className="!mb-6 !mr-6 shadow-xl border rounded-lg bg-background" showInteractive={false} />
+      <Controls className="!mb-6 !mr-6 shadow-xl border rounded-lg bg-background" showInteractive={true} />
     </ReactFlow>
   );
 }
