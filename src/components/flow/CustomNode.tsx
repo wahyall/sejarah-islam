@@ -1,17 +1,5 @@
 "use client";
 
-/**
- * CustomNode.tsx — Node kustom untuk React Flow (layout VERTIKAL).
- *
- * - Warna background border sesuai kategori (CATEGORY_COLORS)
- * - Handle TOP  = target (incoming dari akibat di atas)
- * - Handle BOTTOM = source (outgoing ke sebab di bawah)
- * - Highlight jika: terpilih, ter-highlight timeline, cocok search, atau
- *   sedang aktif di Animasi Telusur (pulse emerald)
- * - Dim jika tidak cocok filter
- * - Badge "F" untuk node filosofis, "B" untuk node boundary
- */
-
 import { memo } from "react";
 import { Handle, Position, type NodeProps } from "@xyflow/react";
 import { cn } from "@/lib/utils";
@@ -25,23 +13,13 @@ export interface ChainNodeData extends Record<string, unknown> {
   isHighlighted?: boolean;
   isSelected?: boolean;
   isTraversalActive?: boolean;
-  simStatus?: "survives" | "altered" | "fails";
-  showContingency?: boolean;
   correlationRole?: "source" | "target" | null;
 }
 
 function CustomNodeImpl({ data, id }: NodeProps) {
   const chainData = data as unknown as ChainNodeData;
   const node = chainData.node;
-  const color = CATEGORY_COLORS[node.category];
-
-  const simStatus = chainData.simStatus;
-  const simClass =
-    simStatus === "fails"
-      ? "ring-2 ring-rose-500 saturate-50 opacity-60"
-      : simStatus === "altered"
-      ? "ring-2 ring-amber-500"
-      : "";
+  const color = CATEGORY_COLORS[node.category] || { bg: "bg-gray-100", border: "border-gray-300", text: "text-gray-900", ring: "ring-gray-300", dot: "bg-gray-500" };
 
   const correlationRole = chainData.correlationRole;
 
@@ -64,12 +42,7 @@ function CustomNodeImpl({ data, id }: NodeProps) {
   // Timeline highlight
   let timelineHighlight = false;
   if (timelineTimeValue != null) {
-    if (
-      Math.abs(
-        Math.log10(Math.max(node.timeValue, 1e-50)) -
-          Math.log10(Math.max(timelineTimeValue, 1e-50))
-      ) < 0.5
-    ) {
+    if (Math.abs(node.timeValue - timelineTimeValue) < 50) {
       timelineHighlight = true;
     }
   }
@@ -95,8 +68,7 @@ function CustomNodeImpl({ data, id }: NodeProps) {
         correlationRole === "source" && "ring-2 ring-violet-500 shadow-lg shadow-violet-500/20 scale-[1.04] z-10",
         correlationRole === "target" && "ring-2 ring-sky-500 shadow-lg shadow-sky-500/20 scale-[1.04] z-10",
         isTraversalNode &&
-          "ring-4 ring-emerald-500 shadow-lg shadow-emerald-500/30 scale-[1.06] z-10 animate-traverse-pulse",
-        simClass
+          "ring-4 ring-emerald-500 shadow-lg shadow-emerald-500/30 scale-[1.06] z-10 animate-traverse-pulse"
       )}
     >
       {/* Handle: TOP = target (incoming dari akibat) */}
@@ -119,7 +91,7 @@ function CustomNodeImpl({ data, id }: NodeProps) {
           isTraversalNode ? "!bg-emerald-500 !border-emerald-700" : "!bg-foreground/50 !border-foreground/30"
         )}
       />
-      {/* Side Handles for Correlations (prevent overlapping nodes) */}
+      {/* Side Handles for Correlations */}
       <Handle
         type="target"
         position={Position.Left}
@@ -167,34 +139,6 @@ function CustomNodeImpl({ data, id }: NodeProps) {
           {isTraversalNode && (
             <span className="text-[10px] font-bold bg-emerald-500 text-white rounded px-1 py-0.5 animate-pulse">
               ●
-            </span>
-          )}
-          {node.isPhilosophical && (
-            <span className="text-[10px] font-bold bg-yellow-400 text-yellow-950 rounded px-1 py-0.5">
-              F
-            </span>
-          )}
-          {node.isBoundary && (
-            <span className="text-[10px] font-bold bg-gray-400 text-gray-950 rounded px-1 py-0.5">
-              B
-            </span>
-          )}
-          {simStatus === "fails" && (
-            <span className="text-[10px] font-bold bg-rose-500 text-white rounded px-1 py-0.5">
-              ✕
-            </span>
-          )}
-          {simStatus === "altered" && (
-            <span className="text-[10px] font-bold bg-amber-400 text-amber-950 rounded px-1 py-0.5">
-              ≈
-            </span>
-          )}
-          {chainData.showContingency && (
-            <span
-              title="Bergantung pada ketetapan konstanta"
-              className="text-[10px] font-bold bg-violet-500 text-white rounded px-1 py-0.5"
-            >
-              ⚙
             </span>
           )}
         </div>

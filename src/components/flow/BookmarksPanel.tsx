@@ -13,7 +13,7 @@
  */
 
 import { useFlowStore } from "@/store/flow-store";
-import { chainNodes } from "@/data/chain-nodes";
+import { nodes as chainNodes } from "@/data/chain-nodes";
 import { useEffect, useState } from "react";
 import { X, Bookmark, Trash2, ArrowUpRight, StickyNote, Save } from "lucide-react";
 import { cn } from "@/lib/utils";

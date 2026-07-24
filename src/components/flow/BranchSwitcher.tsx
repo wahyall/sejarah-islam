@@ -1,11 +1,5 @@
 "use client";
 
-/**
- * BranchSwitcher.tsx — Tab/switcher untuk berpindah antar jalur.
- * Pilihan: A (Kosmologis), B (Silsilah), C (Hujan), D (Biliar),
- * E (Determinisme & Ketetapan), F (Sejarah Peradaban), All (gabungan).
- */
-
 import { useFlowStore, type ActiveBranch } from "@/store/flow-store";
 import { cn } from "@/lib/utils";
 
@@ -18,46 +12,34 @@ interface BranchOption {
 
 const OPTIONS: BranchOption[] = [
   {
-    value: "kosmologis-utama",
-    label: "A. Kosmologis Utama",
+    value: "jalur-utama",
+    label: "A. Jalur Utama",
     short: "A",
-    description: "Masa kini → Big Bang → Sebab Pertama",
+    description: "Alur Peristiwa Utama dalam Sejarah Islam",
   },
   {
-    value: "silsilah-manusia",
-    label: "B. Silsilah Manusia",
+    value: "jalur-sains",
+    label: "B. Perkembangan Sains & Ilmu",
     short: "B",
-    description: "Anda → Ortu → ... → Homo sapiens",
+    description: "Sejarah Intelektual, Penemuan, dan Filsafat",
   },
   {
-    value: "contoh-hujan",
-    label: "C. Contoh Hujan",
+    value: "jalur-politik",
+    label: "C. Dinamika Politik",
     short: "C",
-    description: "Hujan → Matahari → Fusi → Hidrogen BB",
+    description: "Perang, Dinasti, dan Kekuasaan",
   },
   {
-    value: "contoh-biliar",
-    label: "D. Contoh Biliar",
+    value: "jalur-pemikiran",
+    label: "D. Aliran Pemikiran",
     short: "D",
-    description: "Bola → Tongkat → Tangan → Niat → Fisika",
-  },
-  {
-    value: "determinisme-ketetapan",
-    label: "E. Determinisme & Ketetapan",
-    short: "E",
-    description: "Kontingensi konstanta → Lauhul Mahfuz vs determinisme → Sebab Pertama",
-  },
-  {
-    value: "sejarah-peradaban",
-    label: "F. Sejarah Peradaban",
-    short: "F",
-    description: "Homo sapiens → Neolitik → Tulisan → Salamis → Mongol 1242 → Maut Hitam",
+    description: "Teologi, Fiqh, dan Tasawuf",
   },
   {
     value: "all",
     label: "Semua Jalur",
     short: "★",
-    description: "Gabungan A+B+C+D+E+F dengan titik pertemuan",
+    description: "Gabungan seluruh cabang sejarah",
   },
 ];
 
