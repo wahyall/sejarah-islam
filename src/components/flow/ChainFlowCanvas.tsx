@@ -6,7 +6,6 @@ import {
   ReactFlowProvider,
   Background,
   Controls,
-  MiniMap,
   useNodesState,
   useEdgesState,
   useReactFlow,
@@ -18,11 +17,17 @@ import "@xyflow/react/dist/style.css";
 
 import { chainEdges as edgesData } from "@/data/chain-edges";
 import { nodes as nodesData } from "@/data/chain-nodes";
+import { CLUSTER_GROUPS, getClusterForNode } from "@/data/cluster-nodes";
 import { CustomNode, type ChainNodeData } from "./CustomNode";
-import { getLayoutedElements, CATEGORY_COLORS } from "@/lib/flow/layout";
+import { ClusterNode, type ClusterNodeData } from "./ClusterNode";
+import { ClusterBreadcrumb } from "./ClusterBreadcrumb";
+import { getLayoutedElements } from "@/lib/flow/layout";
 import { useFlowStore } from "@/store/flow-store";
 
-const nodeTypes = { custom: CustomNode };
+const nodeTypes = {
+  custom: CustomNode,
+  cluster: ClusterNode,
+};
 
 const TRAVERSAL_SEQUENCE = [
   "h-era-kontemporer",
@@ -59,7 +64,11 @@ const TRAVERSAL_SEQUENCE = [
   "h-karbala",
   "h-amul-jamaah",
   "h-syahid-ali",
+  "h-perang-nahrawan",
   "h-ali-siffin",
+  "h-perang-jamal",
+  "h-pemindahan-ibukota-kufah",
+  "h-kekhalifahan-ali-baiat",
   "h-utsman-mushaf",
   "h-reformasi-umar",
   "h-qadisiyyah-jerusalem",
@@ -108,6 +117,9 @@ function FlowInner() {
   const timelineTimeValue = useFlowStore((s) => s.timelineTimeValue);
   const setSelectedNode = useFlowStore((s) => s.setSelectedNode);
 
+  const expandedClusterId = useFlowStore((s) => s.expandedClusterId);
+  const setExpandedClusterId = useFlowStore((s) => s.setExpandedClusterId);
+
   const traversalActive = useFlowStore((s) => s.traversalActive);
   const traversalIndex = useFlowStore((s) => s.traversalIndex);
   const traversalNodeId = useFlowStore((s) => s.traversalNodeId);
@@ -118,239 +130,244 @@ function FlowInner() {
   const focusNodeId = useFlowStore((s) => s.focusNodeId);
   const setFocusNode = useFlowStore((s) => s.setFocusNode);
 
-  const { setCenter, getNode } = useReactFlow();
+  const { setCenter, getNode, fitView } = useReactFlow();
   const traversalTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const filteredNodes = useMemo(() => {
-    return nodesData.filter((n) => {
-      if (activeBranch === "all") return true;
-      if (n.branch === activeBranch) return true;
-      return false;
-    });
-  }, [activeBranch]);
-
-  const filteredEdges = useMemo(() => {
-    const visibleIds = new Set(filteredNodes.map((n) => n.id));
-    return edgesData.filter((e) => {
-      if (activeBranch === "all") {
-        return visibleIds.has(e.source) && visibleIds.has(e.target);
+  // Auto expand cluster if focusNodeId or traversal is activated
+  useEffect(() => {
+    if (focusNodeId) {
+      const nodeObj = nodesData.find((n) => n.id === focusNodeId);
+      if (nodeObj) {
+        const targetCluster = getClusterForNode(nodeObj.id, nodeObj.category);
+        if (targetCluster && expandedClusterId !== targetCluster.id && expandedClusterId !== "all") {
+          setExpandedClusterId(targetCluster.id);
+        }
       }
-      const edgeBranch = e.branch || "all";
-      if (edgeBranch === "all") {
-        return visibleIds.has(e.source) && visibleIds.has(e.target);
+    }
+  }, [focusNodeId, expandedClusterId, setExpandedClusterId]);
+
+  // Build nodes and edges based on mode: Macro Cluster vs Single Cluster Drill-Down vs Full 114+ Nodes Graph
+  const { rfNodes, rfEdges } = useMemo(() => {
+    if (expandedClusterId === null) {
+      // OVERVIEW MODE: Render 9 Cluster Nodes in a 3-column / 3-row grid layout
+      const clusterNodes: Node[] = CLUSTER_GROUPS.map((cluster, idx) => {
+        const col = idx % 3;
+        const row = Math.floor(idx / 3);
+        const x = col * 580;
+        const y = row * 410;
+
+        return {
+          id: cluster.id,
+          type: "cluster",
+          position: { x, y },
+          data: {
+            cluster,
+            eventCount: cluster.nodeIds.length,
+            isExpanded: false,
+          } as ClusterNodeData,
+        };
+      });
+
+      // Connecting edges between sequential clusters
+      const clusterEdges: Edge[] = [];
+      for (let i = 0; i < CLUSTER_GROUPS.length - 1; i++) {
+        const src = CLUSTER_GROUPS[i];
+        const tgt = CLUSTER_GROUPS[i + 1];
+        clusterEdges.push({
+          id: `edge-${src.id}-${tgt.id}`,
+          source: src.id,
+          target: tgt.id,
+          type: "smoothstep",
+          animated: true,
+          style: { stroke: src.color, strokeWidth: 3, opacity: 0.8 },
+          markerEnd: {
+            type: MarkerType.ArrowClosed,
+            width: 18,
+            height: 18,
+            color: src.color,
+          },
+        });
       }
-      return (
-        edgeBranch === activeBranch &&
-        visibleIds.has(e.source) &&
-        visibleIds.has(e.target)
-      );
-    });
-  }, [filteredNodes, activeBranch]);
 
-  const decoratedNodes = useMemo(() => {
-    return filteredNodes.map((n) => {
-      const matchesCategory = activeCategories.has(n.category);
-      const matchesSearch =
-        !searchQuery ||
-        n.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        n.description.toLowerCase().includes(searchQuery.toLowerCase());
+      return { rfNodes: clusterNodes, rfEdges: clusterEdges };
+    } else {
+      // DRILL-DOWN OR FULL GRAPH MODE
+      const isAllMode = expandedClusterId === "all";
+      const activeCluster = !isAllMode ? CLUSTER_GROUPS.find((c) => c.id === expandedClusterId) : null;
+      const activeNodeIdSet = new Set(activeCluster?.nodeIds || []);
 
-      let timelineMatch = false;
-      if (timelineTimeValue != null) {
-        if (Math.abs(n.timeValue - timelineTimeValue) < 50) timelineMatch = true;
-      }
+      const filteredChildNodes = nodesData.filter((n) => {
+        if (!isAllMode && activeNodeIdSet.size > 0) return activeNodeIdSet.has(n.id);
+        if (activeBranch === "all") return true;
+        return n.branch === activeBranch;
+      });
 
-      const isTraversalActiveNode = traversalActive && traversalNodeId === n.id;
+      const decoratedNodes = filteredChildNodes.map((n) => {
+        const matchesCategory = activeCategories.has(n.category);
+        const matchesSearch =
+          !searchQuery ||
+          n.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          n.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return {
-        ...n,
-        isDimmed: !matchesCategory || !matchesSearch,
-        isHighlighted: timelineMatch || isTraversalActiveNode,
-        isSelected: selectedNodeId === n.id,
-        isTraversalActive: isTraversalActiveNode,
-      };
-    });
+        let timelineMatch = false;
+        if (timelineTimeValue != null) {
+          if (Math.abs(n.timeValue - timelineTimeValue) < 50) timelineMatch = true;
+        }
+
+        const isTraversalActiveNode = traversalActive && traversalNodeId === n.id;
+
+        return {
+          ...n,
+          isDimmed: (!matchesCategory || !matchesSearch) && searchQuery !== "",
+          isHighlighted: timelineMatch || isTraversalActiveNode,
+          isSelected: selectedNodeId === n.id,
+          isTraversalActive: isTraversalActiveNode,
+        };
+      });
+
+      const detailNodes: Node<ChainNodeData>[] = decoratedNodes.map((n) => ({
+        id: n.id,
+        type: "custom",
+        position: { x: 0, y: 0 },
+        data: {
+          node: n,
+        } as unknown as ChainNodeData,
+      }));
+
+      const visibleChildIds = new Set(detailNodes.map((n) => n.id));
+
+      const detailEdges: Edge[] = edgesData
+        .filter((e) => visibleChildIds.has(e.source) && visibleChildIds.has(e.target))
+        .map((e) => {
+          const isTraversalEdge =
+            traversalActive &&
+            traversalIndex < TRAVERSAL_SEQUENCE.length - 1 &&
+            e.source === TRAVERSAL_SEQUENCE[traversalIndex] &&
+            e.target === TRAVERSAL_SEQUENCE[traversalIndex + 1];
+
+          const isCrossEdge =
+            e.id.includes("cross") ||
+            (e.source.startsWith("h-") && !e.source.startsWith("h-bm-") && e.target.startsWith("h-bm-"));
+
+          return {
+            id: e.id,
+            source: e.source,
+            target: e.target,
+            sourceHandle: "source-bottom",
+            targetHandle: "target-top",
+            label: e.causalLabel,
+            type: "smoothstep",
+            animated: isTraversalEdge || isCrossEdge,
+            markerEnd: {
+              type: MarkerType.ArrowClosed,
+              width: 16,
+              height: 16,
+              color: isCrossEdge ? "#0284c7" : isTraversalEdge ? "#10b981" : "#64748b",
+            },
+            style: {
+              stroke: isTraversalEdge ? "#10b981" : isCrossEdge ? "#0284c7" : "currentColor",
+              strokeWidth: isTraversalEdge ? 2.5 : isCrossEdge ? 2 : 1.5,
+              opacity: isTraversalEdge ? 1 : isCrossEdge ? 0.85 : 0.6,
+            },
+          };
+        });
+
+      return { rfNodes: detailNodes, rfEdges: detailEdges };
+    }
   }, [
-    filteredNodes,
+    expandedClusterId,
+    activeBranch,
     activeCategories,
     searchQuery,
     timelineTimeValue,
     selectedNodeId,
     traversalActive,
     traversalNodeId,
+    traversalIndex,
   ]);
 
-  const rfNodes: Node<ChainNodeData>[] = useMemo(() => {
-    return decoratedNodes.map((n) => ({
-      id: n.id,
-      type: "custom",
-      position: { x: 0, y: 0 },
-      data: {
-        node: n,
-      } as unknown as ChainNodeData,
-    }));
-  }, [decoratedNodes]);
-
-  const rfEdges: Edge[] = useMemo(() => {
-    // Build node position map for handle assignment
-    const nodePosMap = new Map<string, { x: number; y: number }>();
-    rfNodes.forEach((n) => {
-      if (n.position) nodePosMap.get(n.id) || nodePosMap.set(n.id, n.position);
-    });
-
-    return filteredEdges.map((e) => {
-      const isTraversalEdge =
-        traversalActive &&
-        traversalIndex < TRAVERSAL_SEQUENCE.length - 1 &&
-        e.source === TRAVERSAL_SEQUENCE[traversalIndex] &&
-        e.target === TRAVERSAL_SEQUENCE[traversalIndex + 1];
-
-      const isCrossEdge =
-        e.id.includes("cross") ||
-        (e.source.startsWith("h-") && !e.source.startsWith("h-bm-") && e.target.startsWith("h-bm-"));
-
-      const srcPos = nodePosMap.get(e.source);
-      const tgtPos = nodePosMap.get(e.target);
-
-      let sourceHandle = "source-bottom";
-      let targetHandle = "target-top";
-
-      if (isCrossEdge) {
-        if (srcPos && tgtPos) {
-          if (srcPos.x < tgtPos.x - 30) {
-            sourceHandle = "source-right";
-            targetHandle = "target-left";
-          } else if (srcPos.x > tgtPos.x + 30) {
-            sourceHandle = "source-left";
-            targetHandle = "target-right";
-          }
-        } else {
-          sourceHandle = "source-right";
-          targetHandle = "target-left";
-        }
-      }
-
-      return {
-        id: e.id,
-        source: e.source,
-        target: e.target,
-        sourceHandle,
-        targetHandle,
-        label: e.causalLabel,
-        type: "smoothstep",
-        animated: isTraversalEdge || isCrossEdge,
-        markerEnd: {
-          type: MarkerType.ArrowClosed,
-          width: 16,
-          height: 16,
-          color: isCrossEdge ? "#0284c7" : isTraversalEdge ? "#10b981" : "#64748b",
-        },
-        style: {
-          stroke: isTraversalEdge ? "#10b981" : isCrossEdge ? "#0284c7" : "currentColor",
-          strokeWidth: isTraversalEdge ? 2.5 : isCrossEdge ? 2 : 1.5,
-          opacity: isTraversalEdge ? 1 : isCrossEdge ? 0.85 : 0.5,
-          strokeDasharray: isCrossEdge ? "6 3" : undefined,
-        },
-        labelStyle: {
-          fontSize: 10,
-          fontWeight: 600,
-          fill: isCrossEdge ? "#0369a1" : "currentColor",
-          opacity: isTraversalEdge ? 1 : 0.85,
-        },
-        labelBgStyle: {
-          fill: "var(--background)",
-          fillOpacity: 0.95,
-          rx: 6,
-          ry: 6,
-        },
-        labelBgPadding: [6, 4] as [number, number],
-      };
-    });
-  }, [filteredEdges, rfNodes, traversalActive, traversalIndex]);
-
-  const [nodes, setNodes, onNodesChange] = useNodesState<Node<ChainNodeData>>([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
 
   useEffect(() => {
-    const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-      rfNodes as Node[],
-      rfEdges
-    );
-    setNodes(layoutedNodes as Node<ChainNodeData>[]);
-    setEdges(layoutedEdges);
-  }, [rfNodes, rfEdges, setNodes, setEdges]);
+    if (expandedClusterId === null) {
+      setNodes(rfNodes);
+      setEdges(rfEdges);
+      setTimeout(() => fitView({ duration: 600, padding: 0.2 }), 50);
+    } else {
+      const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
+        rfNodes as Node[],
+        rfEdges
+      );
+      setNodes(layoutedNodes);
+      setEdges(layoutedEdges);
+    }
+  }, [rfNodes, rfEdges, expandedClusterId, setNodes, setEdges, fitView]);
 
   useEffect(() => {
     if (focusNodeId) {
-      const node = getNode(focusNodeId);
-      if (node) {
-        setCenter(node.position.x + 130, node.position.y + 40, {
-          zoom: 1.2,
-          duration: 800,
-        });
-      }
-      setFocusNode(null);
+      // Delay slightly to ensure nodes are placed in layout
+      const timer = setTimeout(() => {
+        const node = getNode(focusNodeId);
+        if (node) {
+          setCenter(node.position.x + 190, node.position.y + 55, {
+            zoom: 1.1,
+            duration: 700,
+          });
+        }
+        setFocusNode(null);
+      }, 100);
+      return () => clearTimeout(timer);
     }
   }, [focusNodeId, getNode, setCenter, setFocusNode]);
 
-  useEffect(() => {
-    if (traversalActive) {
-      if (traversalIndex < TRAVERSAL_SEQUENCE.length) {
-        const nodeId = TRAVERSAL_SEQUENCE[traversalIndex];
-        setTraversalNodeId(nodeId);
-        const node = getNode(nodeId);
-        if (node) {
-          setCenter(node.position.x + 130, node.position.y + 40, {
-            zoom: 1.1,
-            duration: 800,
-          });
+  const onNodeClick = useCallback(
+    (_event: React.MouseEvent, node: Node) => {
+      if (node.type === "cluster") {
+        const clusterData = node.data as any;
+        const clusterId = clusterData?.cluster?.id;
+        if (clusterId) {
+          setExpandedClusterId(clusterId);
+          setTimeout(() => {
+            setCenter(node.position.x + 170, node.position.y + 80, {
+              zoom: 0.85,
+              duration: 700,
+            });
+          }, 120);
         }
-        traversalTimerRef.current = setTimeout(() => {
-          setTraversalIndex(traversalIndex + 1);
-        }, TRAVERSAL_STEP_MS);
       } else {
-        stopTraversal();
+        setSelectedNode(node.id);
+        setFocusNode(node.id);
       }
-    } else {
-      if (traversalTimerRef.current) {
-        clearTimeout(traversalTimerRef.current);
-      }
-      setTraversalNodeId(null);
-    }
-    return () => {
-      if (traversalTimerRef.current) clearTimeout(traversalTimerRef.current);
-    };
-  }, [
-    traversalActive,
-    traversalIndex,
-    getNode,
-    setCenter,
-    setTraversalNodeId,
-    setTraversalIndex,
-    stopTraversal,
-  ]);
+    },
+    [setSelectedNode, setExpandedClusterId, setFocusNode, setCenter]
+  );
 
   const onPaneClick = useCallback(() => {
     setSelectedNode(null);
   }, [setSelectedNode]);
 
   return (
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onPaneClick={onPaneClick}
-      nodeTypes={nodeTypes}
-      fitView
-      minZoom={0.1}
-      maxZoom={2}
-      proOptions={{ hideAttribution: true }}
-      className="bg-slate-50 dark:bg-slate-950 transition-colors"
-    >
-      <Background color="currentColor" className="opacity-10" gap={24} size={2} />
-      <Controls className="!mb-6 !mr-6 shadow-xl border rounded-lg bg-background" showInteractive={true} />
-    </ReactFlow>
+    <div className="relative w-full h-full">
+      <ClusterBreadcrumb />
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onNodeClick={onNodeClick}
+        onPaneClick={onPaneClick}
+        nodeTypes={nodeTypes}
+        fitView
+        minZoom={0.05}
+        maxZoom={2.2}
+        proOptions={{ hideAttribution: true }}
+        className="bg-slate-50 dark:bg-slate-950 transition-colors"
+      >
+        <Background color="currentColor" className="opacity-10" gap={24} size={2} />
+        <Controls className="!mb-6 !mr-6 shadow-xl border rounded-lg bg-background" showInteractive={true} />
+      </ReactFlow>
+    </div>
   );
 }
 

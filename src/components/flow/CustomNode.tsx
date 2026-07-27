@@ -30,6 +30,8 @@ function CustomNodeImpl({ data, id }: NodeProps) {
   const traversalActive = useFlowStore((s) => s.traversalActive);
   const traversalNodeId = useFlowStore((s) => s.traversalNodeId);
 
+  const setFocusNode = useFlowStore((s) => s.setFocusNode);
+
   const isSelected = selectedNodeId === id;
   const isTraversalNode = traversalActive && traversalNodeId === id;
 
@@ -54,11 +56,12 @@ function CustomNodeImpl({ data, id }: NodeProps) {
       onClick={(e) => {
         e.stopPropagation();
         setSelectedNode(id);
+        setFocusNode(id);
       }}
       className={cn(
         "group relative cursor-pointer rounded-lg border-2 px-3 py-2 transition-all",
         "shadow-sm hover:shadow-md hover:scale-[1.02]",
-        "w-[260px] min-h-[80px] flex flex-col justify-between",
+        "w-[360px] sm:w-[380px] min-h-[90px] flex flex-col justify-between",
         color.bg,
         color.border,
         color.text,

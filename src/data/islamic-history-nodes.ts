@@ -704,8 +704,8 @@ export const islamicHistoryNodes: ChainNode[] = [
     id: "h-surat-raja",
     label: "Diplomasi Internasional: Surat ke 8 Raja Dunia",
     category: "kenabian",
-    timeLabel: "628 M (Abad 7 M)",
-    timeValue: 628,
+    timeLabel: "629 M (Abad 7 M)",
+    timeValue: 629,
     description: "Memanfaatkan suasana damai Perjanjian Hudaibiyyah, Nabi Muhammad meluncurkan langkah diplomasi internasional secara masif. Beliau mencetak stempel cincin perak bertuliskan *Muhammad Rasul Allah* dan mengutus para diplomat sahabat membawa surat ajakan memeluk Islam kepada 8 penguasa kerajaan besar dunia:\n\n1. **Heraklius** (Kaisar Bizantium/Romawi Timur)\n2. **Khusrau Parviz** (Kisra Kekaisaran Sassanid Persia)\n3. **Muqawqis** (Gubernur Mesir/Coptik)\n4. **Raja Najasyi** (Penguasa Habasyah/Ethiopia)\n5. **Mundzir bin Sawa** (Penguasa Bahrain)\n6. **Haudzah bin Ali** (Penguasa Yamamah)\n7. **Harits bin Abi Syamir** (Raja Ghassanid Suriah)\n8. **Jaifar dan Abd** (Penguasa Oman)\n\nSurat-surat ini menandai transisi dakwah Islam dari jangkauan regional suku Arab menuju seruan peradaban global bagi seluruh umat manusia.",
     branch: "jalur-politik",
     quranRefs: [
@@ -846,7 +846,7 @@ export const islamicHistoryNodes: ChainNode[] = [
     label: "Perang Ridda & Kodifikasi Al-Qur'an Pertama",
     category: "khulafaur-rasyidin",
     timeLabel: "632 - 633 M (11 - 12 H)",
-    timeValue: 633,
+    timeValue: 632,
     description: "Kekhalifahan Abu Bakar yang baru seumur jagung langsung dihantam badai krisis eksistensial terberat: gelombang *Ridda* (kemurtadan massal dan pembangkangan zakat). Banyak kabilah di Najd, Yamamah, dan Yaman menolak tunduk pada Madinah dan menolak membayar Zakat, sementara nabi-nabi palsu bermunculan seperti Musailamah al-Kadzdzab di Yamamah, Tulaihah bin Khuwailid dari Bani Asad, dan Sajah binti al-Harits.\n\nMenghadapi saran sahabat yang meminta kelonggaran, Abu Bakar menunjukkan keteguhan baja seraya berkata: 'Demi Allah! Aku akan berperang melawan siapa pun yang memisahkan antara Shalat dan Zakat!'. Abu Bakar membagi tentara Islam menjadi 11 detasemen militer strategis yang dipimpin oleh panglima-panglima ulung seperti Khalid bin Walid, Ikrimah bin Abi Jahal, dan Syurahbil bin Hasanah.\n\nPuncak pertempuran terjadi pada **Pertempuran Yamamah** (633 M) melawan Musailamah yang membarikade 40.000 pasukannya di dalam kebun berbenteng tinggi (*Hadiqatul Maut* / Kebun Kematian). Setelah pertempuran dahsyat yang menewaskan Musailamah dan 70 sahabat penghafal Al-Qur'an (*Huffaz*), keamanan Jazirah Arab berhasil dipulihkan secara mutlak.\n\nGugurnya puluhan penghafal Al-Qur'an membuat Umar bin Khattab mendesak Abu Bakar untuk mengkodifikasikan wahyu. Abu Bakar menunjuk Zaid bin Tsabit (sekretaris utama wahyu Nabi) untuk mengumpulkan lembaran-lembaran Al-Qur'an dari pelepah kurma, batu putih, dan hafalan para sahabat menjadi satu **Mushaf Tunggal** yang disimpan di rumah Abu Bakar.",
     branch: "jalur-utama",
     quranRefs: [
@@ -968,6 +968,48 @@ export const islamicHistoryNodes: ChainNode[] = [
       }
     ],
     sources: ["At-Tabari, Tarikh ar-Rusul wal-Muluk", "Ibnu Abi Dawud, Kitab al-Masahif"]
+  },
+  {
+    id: "h-kekhalifahan-ali-baiat",
+    label: "Bai'at Khalifah Ali bin Abi Thalib di Madinah",
+    category: "khulafaur-rasyidin",
+    timeLabel: "656 M (35 H)",
+    timeValue: 656,
+    description: "Pasca keshahidan Khalifah Utsman bin Affan, kaum Muslimin dari Muhajirin dan Anshar mendatangi **Ali bin Abi Thalib** di Masjid Nabawi untuk mengucapkan bai'at kepemimpinan sebagai Khalifah keempat Khulafaur Rasyidin.\n\nKhalifah Ali mengawali kepemimpinannya dengan menegakkan kembali keadilan distritutif Baitul Mal, mengganti para gubernur provinsi yang tidak efektif, dan memulihkan tanah milik negara demi integritas pemerintahan.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "An-Nisa", ayat: 58, arabicText: "إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا", paraphrase: "Sesungguhnya Allah menyuruh kamu menyampaikan amanat kepada yang berhak mekerimanya, dan (menyuruh kamu) apabila menetapkan hukum di antara manusia supaya kamu menetapkan dengan adil." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Tirmidzi & Ahmad", matan: "Ana madinatul 'ilmi wa 'Aliyyun babuha", terjemahan: "Aku adalah kotanya ilmu pengetahuan dan Ali adalah pintu gerbangnya." }
+    ],
+    refleksi: {
+      hikmah: "Keberanian mengambil tanggung jawab di saat krisis kedaulatan negara menunjukkan pengorbanan luhur demi persatuan umat.",
+      pertanyaanReflektif: ["Mengapa Khalifah Ali mengutamakan stabilitas institusi dan keadilan Baitul Mal pada awal pembaiatannya?"],
+      pesanAksi: "Menjaga transparansi, keadilan, dan amanah dalam setiap amanah kepemimpinan."
+    },
+    sources: ["At-Tabari, Tarikh ar-Rusul wal-Muluk", "Ibnu Katsir, Al-Bidayah wan-Nihayah"]
+  },
+  {
+    id: "h-pemindahan-ibukota-kufah",
+    label: "Pemindahan Ibu Kota Khilafah ke Kufah",
+    category: "khulafaur-rasyidin",
+    timeLabel: "656 M (36 H)",
+    timeValue: 656,
+    description: "Demi efisiensi komunikasi dengan wilayah-wilayah timur yang luas serta untuk menjaga kesucian dan kedamaian Kota Madinah Al-Munawwarah dari pusaran konflik militer, Khalifah Ali bin Abi Thalib memindahkan ibu kota kekhalifahan ke **Kufah (Irak)**.\n\nKufah tumbuh menjadi pusat studi fikih, bahasa Arab, dan strategi pertahanan baru di wilayah tengah imperium Islam.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 125, paraphrase: "Dan jadikanlah sebagian maqam Ibrahim tempat shalat dan Kami perintahkan kepada Ibrahim dan Ismail: Bersihkanlah rumah-Ku." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Malik", matan: "Keutamaan dan kesucian Kota Madinah yang dilindungi dari fitnah pertumpahan darah", terjemahan: "Madinah adalah tanah suci tempat hijrah yang harus dihormati dan dijaga kedamaiannya." }
+    ],
+    refleksi: {
+      hikmah: "Kebijaksanaan memindahkan pusat administrasi demi melindungi nilai-nilai suci dan efisiensi kepemimpinan.",
+      pertanyaanReflektif: ["Bagaimana pertimbangan geopolitik Ali bin Abi Thalib dalam memilih Kufah sebagai ibu kota baru?"],
+      pesanAksi: "Mengambil keputusan fleksibel dan taktis untuk mengamankan kemaslahatan yang lebih besar."
+    },
+    sources: ["As-Suyuti, Tarikh Al-Khulafa", "Ibnu Khaldun, Al-Muqaddimah"]
   },
   {
     id: "h-ali-siffin",
@@ -2240,39 +2282,1062 @@ export const islamicHistoryNodes: ChainNode[] = [
       ],
       pesanAksi: "Menjaga integritas diri dan tidak memperjualbelikan prinsip agama demi keuntungan materi sesaat."
     },
-    sources: ["Sultan Abdul Hamid II, Memoar Politik Sultan Abdul Hamid II", "Journal of Palestine Studies"]
+    sources: ["Dr. Raghib As-Sirjani, Baitul Maqdis", "Pew Research Center / Journal of Palestine Studies"]
   },
   {
-    id: "h-bm-pendudukan-modern",
-    label: "Pendudukan Modern & Ketabahan Ribat Al-Aqsa",
-    category: "modern",
-    timeLabel: "1967 M - Kontemporer",
-    timeValue: 1967,
-    description: "Pasca jatuhnya Utsmani di Perang Dunia I dan Deklarasi Balfour 1917, Yerusalem diserahkan ke Mandat Inggris dan berlanjut ke pendudukan militer Israel pada Perang Enam Hari (1967 M).\n\nKompleks Al-Aqsa menghadapi krisis penggalian bawah tanah, pembakaran (1969), dan pembatasan ibadah. Namun warga Al-Quds dan umat Islam global terus melakukan **Ribat** (ketabahan bertahan) menjaga kesucian dan keutuhan Masjid Al-Aqsa hingga hari ini.",
-    branch: "sejarah-baitul-maqdis",
+    id: "h-sains-khawarizmi-aljabar",
+    label: "Al-Khawarizmi: Penemuan Aljabar & Sistem Angka Nol",
+    category: "abbasiyah",
+    timeLabel: "820 M (204 H)",
+    timeValue: 820,
+    description: "Muhammad ibn Musa al-Khawarizmi, ilmuwan terbesar Baitul Hikmah Baghdad, menulis kitab monumental **Al-Kitab al-mukhtasar fi hisab al-jabr wa'l-muqabala** (Buku Ringkasan Perhitungan dengan Pemulihan dan Pengurangan). Karya ini melahirkan cabang ilmu **Aljabar** (Algebra) dan memperkenalkan sistem angka desimal Hindu-Arab serta angka **Nol** (Sifr) ke dunia sains global.\n\nKata *Algorithm* (algoritma) diserap langsung dari nama beliau (Al-Khawarizmi), yang menjadi fondasi utama sains komputer dan peradaban digital modern.",
+    branch: "jalur-sains",
     quranRefs: [
       {
-        surah: "Ali 'Imran",
-        ayat: 200,
-        arabicText: "يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَابِرُوا وَرَابِطُوا وَاتَّقُوا اللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
-        paraphrase: "Hai orang-orang yang beriman, bersabarlah kamu dan kuatkanlah kesabaranmu dan tetaplah bersiap siaga (di perbatasan) dan bertakwalah kepada Allah, supaya kamu beruntung."
+        surah: "Yunus",
+        ayat: 5,
+        arabicText: "هُوَ الَّذِي جَعَلَ الشَّمْسَ ضِيَاءً وَالْقَمَرَ نُورًا وَقَدَّرَهُ مَنَازِلَ لِتَعْلَمُوا عَدَدَ السِّنِينَ وَالْحِسَابَ",
+        paraphrase: "Dia-lah yang menjadikan matahari bersinar dan bulan bercahaya, dan menetapkan tempat-tempat perjalanan bulan itu, supaya kamu mengetahui bilangan tahun dan perhitungan."
       }
     ],
     hadithRefs: [
       {
-        perawi: "HR. Ahmad & Al-Tabarani",
-        arabicText: "لاَ تَزَالُ طَائِفَةٌ مِنْ أُمَّتِي عَلَى الدِّينِ ظَاهِرِينَ لِعَدُوِّهِمْ قَاهِرِينَ... بِبَيْتِ الْمَقْدِسِ وَأَكْنَافِ بَيْتِ الْمَقْدِسِ",
-        matan: "La tazalu tha'ifatun min ummati 'alad dini zhahirin...",
-        terjemahan: "Akan selalu ada sekelompok dari umatku yang tampak di atas agama ini, mengalahkan musuh-musuh mereka... di Baitul Maqdis dan di sekitar Baitul Maqdis."
+        perawi: "HR. Ibnu Majah",
+        arabicText: "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",
+        matan: "Thalabul 'ilmi faridhatun 'ala kulli Muslim",
+        terjemahan: "Menuntut ilmu itu wajib atas setiap Muslim."
       }
     ],
     refleksi: {
-      hikmah: "Ketabahan warga Al-Quds menjaga Masjid Al-Aqsa adalah wujud nyata hadits kenabian tentang kelompok *Murabitun* yang tak pernah padam membela kebenaran.",
+      hikmah: "Penemuan Aljabar dan sistem angka nol oleh ilmuwan Muslim membuktikan bahwa integrasi tauhid dan sains dapat memicu revolusi matematika dunia.",
       pertanyaanReflektif: [
-        "Apa kontribusi nyata yang dapat kita berikan untuk mendukung perjuangan dan kemerdekaan Al-Aqsa hari ini?"
+        "Bagaimana pemikiran matematis Al-Khawarizmi menginspirasi kemajuan teknologi digital era modern?"
       ],
-      pesanAksi: "Terus menyuarakan kebenaran, menyalurkan bantuan kemanusiaan, dan mendoakan kebebasan Baitul Maqdis."
+      pesanAksi: "Mengembangkan ketekunan intelektual dan ilmu pengetahuan sains sebagai bentuk ibadah."
     },
-    sources: ["Dr. Raghib As-Sirjani, Baitul Maqdis", "Pew Research Center / Journal of Palestine Studies"]
+    sources: ["Roshdi Rashed, Development of Arabic Mathematics", "George Saliba, A History of Arabic Astronomy"]
+  },
+  {
+    id: "h-sains-ibnu-sina-kedokteran",
+    label: "Ibnu Sina (Avicenna) & Al-Qanun fi at-Tibb",
+    category: "abbasiyah",
+    timeLabel: "1025 M (416 H)",
+    timeValue: 1025,
+    description: "Abu Ali al-Husain ibn Abdallah ibn Sina (Avicenna), ilmuwan polymath terbesar peradaban Islam, menyelesaikan kitab pengobatan monumental **Al-Qanun fi at-Tibb** (*The Canon of Medicine*). Karya 5 jilid ini merangkum ilmu kedokteran anatomi, farmakologi, karantina penyakit menular, dan psikologi medis.\n\n*Al-Qanun* menjadi rujukan wajib di fakultas kedokteran universitas-universitas Eropa selama lebih dari 600 tahun hingga abad ke-17.",
+    branch: "jalur-sains",
+    quranRefs: [
+      {
+        surah: "Asy-Syu'ara",
+        ayat: 80,
+        arabicText: "وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ",
+        paraphrase: "Dan apabila aku sakit, Dialah yang menyembuhkan aku."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Bukhari",
+        arabicText: "مَا أَنْزَلَ اللَّهُ دَاءً إِلاَّ أَنْزَلَ لَهُ شِفَاءً",
+        matan: "Ma anzalallahu da'an illa anzala lahu syifa'an",
+        terjemahan: "Tidaklah Allah menurunkan suatu penyakit melainkan Dia juga menurunkan obatnya."
+      }
+    ],
+    refleksi: {
+      hikmah: "Ilmu kedokteran Islam menempatkan penyelamatan jiwa (*Hifz an-Nafs*) sebagai prioritas kemanusiaan tertinggi.",
+      pertanyaanReflektif: [
+        "Mengapa Avicenna mampu memadukan filsafat medis dengan kepedulian kemanusiaan yang tinggi?"
+      ],
+      pesanAksi: "Menjaga kesehatan tubuh dan berkontribusi dalam perbaikan kualitas hidup sesama."
+    },
+    sources: ["Seyyed Hossein Nasr, Science and Civilization in Islam", "Edward G. Browne, Arabian Medicine"]
+  },
+  {
+    id: "h-sains-ibnu-haytham-optik",
+    label: "Ibnu al-Haytham: Bapak Optik Modern & Metode Ilmiah",
+    category: "abbasiyah",
+    timeLabel: "1021 M (412 H)",
+    timeValue: 1021,
+    description: "Al-Hasan ibn al-Haytham (Alhazen) menulis karya revolusioner **Kitab al-Manazir** (*Book of Optics*). Ia membuktikan secara eksperimental bahwa penglihatan terjadi karena cahaya masuk ke mata, merancang prinsip **Camera Obscura**, dan diakui sebagai **Bapak Metode Ilmiah Modern** karena penekanannya pada bukti empiris berbasis eksperimen berulang.",
+    branch: "jalur-sains",
+    quranRefs: [
+      {
+        surah: "An-Nur",
+        ayat: 35,
+        arabicText: "اللَّهُ نُورُ السَّمَاوَاتِ وَالأَرْضِ",
+        paraphrase: "Allah (Pemberi) cahaya (kepada) langit dan bumi."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Tirmidzi",
+        matan: "Man salaka thariqan yaltamisu fihi 'ilman sahhalallahu lahu thariqan ilal jannah",
+        terjemahan: "Barangsiapa menempuh jalan untuk menuntut ilmu, Allah mudahkan baginya jalan menuju surga."
+      }
+    ],
+    refleksi: {
+      hikmah: "Pencarian kebenaran sains berbasis eksperimen empiris adalah wujud tadabbur atas tanda-tanda kebesaran Allah di alam semesta.",
+      pertanyaanReflektif: [
+        "Bagaimana metode ilmiah objektif Ibnu al-Haytham meletakkan dasar bagi sains modern?"
+      ],
+      pesanAksi: "Bersikap objektif, kritis, dan berpegang pada fakta empiris."
+    },
+    sources: ["A. I. Sabra, The Optics of Ibn al-Haytham", "Jim Al-Khalili, Pathfinders"]
+  },
+  {
+    id: "h-sosiologi-ibnu-khaldun",
+    label: "Ibnu Khaldun & Muqaddimah: Bapak Sosiologi & Sejarah",
+    category: "andalusia",
+    timeLabel: "1377 M (779 H)",
+    timeValue: 1377,
+    description: "Abdurrahman Ibnu Khaldun menulis karya monumental **Muqaddimah** di Afrika Utara & Al-Andalus. Ia merumuskan ilmu baru: **Ilm al-Umran** (Sosiologi Peradaban) dan teori **'Asabiyyah** (Solidaritas Sosial). Ia menjelaskan hukum pasang surut peradaban dan sirkulasi elit politik.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      {
+        surah: "Ali 'Imran",
+        ayat: 140,
+        arabicText: "وَتِلْكَ الأَيَّامُ نُدَاوِلُهَا بَيْنَ النَّاسِ",
+        paraphrase: "Dan masa (kejayaan dan kehancuran) itu Kami pergilirkan di antara manusia."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Muslim",
+        matan: "Al-Mu'minu lil mu'mini kal bunyani yasyuddu ba'dhuhu ba'dha",
+        terjemahan: "Seorang mukmin dengan mukmin lainnya bagaikan satu bangunan yang saling menguatkan."
+      }
+    ],
+    refleksi: {
+      hikmah: "Peradaban hancur bukan hanya karena serangan luar, melainkan karena krisis keadilan sosial dan kelemahan moralitas internal.",
+      pertanyaanReflektif: [
+        "Bagaimana konsep 'Asabiyyah Ibnu Khaldun relevan untuk menjaga persatuan bangsa saat ini?"
+      ],
+      pesanAksi: "Memperkuat keadilan sosial dan integritas moral dalam masyarakat."
+    },
+    sources: ["Ibn Khaldun, The Muqaddimah (trans. Franz Rosenthal)", "Robert Irwin, Ibn Khaldun"]
+  },
+  {
+    id: "h-andalusia-zahrawi-bedah",
+    label: "Al-Zahrawi (Albucasis): Pelopor Ilmu Bedah Modern",
+    category: "andalusia",
+    timeLabel: "1000 M (390 H)",
+    timeValue: 1000,
+    description: "Abu al-Qasim al-Zahrawi (Albucasis) dari Kordoba menulis ensiklopedia medis 30 jilid **Kitab al-Tasrif**. Jilid ke-30 mendedikasikan teknik pembedahan modern, merancang 200+ instrumen bedah (termasuk pisau bedah, jarum, dan catgut usus hewan untuk jahitan).",
+    branch: "jalur-sains",
+    quranRefs: [
+      {
+        surah: "Al-Ma'idah",
+        ayat: 32,
+        arabicText: "وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا",
+        paraphrase: "Dan barangsiapa yang memelihara kehidupan seorang manusia, maka seolah-olah dia telah memelihara kehidupan manusia semuanya."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Abu Dawud",
+        matan: "Innellaha anzala ad-da'a wad-dawa'a wa ja'ala likulli da'in dawa'an",
+        terjemahan: "Sesungguhnya Allah telah menurunkan penyakit dan obat, serta menjadikan obat bagi setiap penyakit."
+      }
+    ],
+    refleksi: {
+      hikmah: "Inovasi instrumen medis Al-Zahrawi lahir dari rasa empati dan dorongan untuk meringankan penderitaan fisik sesama.",
+      pertanyaanReflektif: [
+        "Bagaimana integrasi keahlian medis dan nilai kemanusiaan mampu melintasi batas abad?"
+      ],
+      pesanAksi: "Bekerja dengan keahlian presisi tinggi demi kemaslahatan manusia."
+    },
+    sources: ["MS Spink & GL Lewis, Albucasis on Surgery", "Sami Hamarneh, Health Development in Islam"]
+  },
+  {
+    id: "h-nusantara-aceh-utsmani",
+    label: "Diplomasi Kesultanan Aceh & Khilafah Utsmaniyah",
+    category: "nusantara",
+    timeLabel: "1567 M (975 H)",
+    timeValue: 1567,
+    description: "Sultan Aceh Darussalam **Alauddin Riayat Syah Al-Kahar** mengutus delegasi ke Istanbul memohon bantuan militer melawan perompak Portugis di Selat Malaka. Khilafah Utsmaniyah mengirim pakar artileri, prajurit, dan meriam monumental **Lada Sicerek**, memperkuat kedaulatan maritim Islam Nusantara.",
+    branch: "jalur-politik",
+    quranRefs: [
+      {
+        surah: "Al-Anfal",
+        ayat: 60,
+        arabicText: "وَأَعِدُّوا لَهُمْ مَا اسْتَطَعْتُمْ مِنْ قُوَّةٍ",
+        paraphrase: "Dan siapkanlah untuk menghadapi mereka kekuatan apa saja yang kamu sanggupi."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Muslim",
+        matan: "Al-Muslimu akhul muslim la yazhlimuhu wa la yuslimuh",
+        terjemahan: "Seorang Muslim adalah saudara bagi Muslim lainnya, tidak boleh menzaliminya dan tidak boleh membiarkannya teraniaya."
+      }
+    ],
+    refleksi: {
+      hikmah: "Jejaring persaudaraan Aceh-Utsmani menunjukkan solidaritas global dan posisi penting Nusantara dalam geopolitik dunia Islam.",
+      pertanyaanReflektif: [
+        "Bagaimana peran maritim Nusantara membangun hubungan internasional abad ke-16?"
+      ],
+      pesanAksi: "Membangun jejaring persaudaraan dan kolaborasi positif antar-komunitas."
+    },
+    sources: ["Anthony Reid, Southeast Asia in the Age of Commerce", "Hikayat Aceh"]
+  },
+  {
+    id: "h-nusantara-resolusi-jihad",
+    label: "Resolusi Jihad NU 1945: Membela Kemerdekaan Indonesia",
+    category: "nusantara",
+    timeLabel: "22 Oktober 1945 M",
+    timeValue: 1945,
+    description: "Pada 22 Oktober 1945 di Surabaya, **K.H. Hasyim Asy'ari** bersama para ulama Nahdlatul Ulama mencetuskan **Resolusi Jihad**. Fatwa ini menetapkan bahwa membela Tanah Air dari agresi Sekutu/NICA adalah kewajiban agama (*Fardhu 'Ain*), memicu Pertempuran 10 November 1945 di Surabaya.",
+    branch: "jalur-utama",
+    quranRefs: [
+      {
+        surah: "Al-Hajj",
+        ayat: 39,
+        arabicText: "أُذِنَ لِلَّذِينَ يُقَاتَلُونَ بِأَنَّهُمْ ظُلِمُوا",
+        paraphrase: "Telah diizinkan (berperang) bagi orang-orang yang diperangi, karena sesungguhnya mereka telah dizalimi."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "Ungkapan Hikmah Ulama",
+        matan: "Hubbul wathan minal iman",
+        terjemahan: "Cinta tanah air adalah bagian dari keimanan."
+      }
+    ],
+    refleksi: {
+      hikmah: "Nasionalisme dan keimanan di Indonesia saling menguatkan dalam mempertahankan kemerdekaan dan kedaulatan bangsa.",
+      pertanyaanReflektif: [
+        "Bagaimana fatwa Resolusi Jihad menyatukan semangat keagamaan dan kebangsaan?"
+      ],
+      pesanAksi: "Menjaga keutuhan NKRI dan memberikan kontribusi terbaik bagi bangsa."
+    },
+    sources: ["KH. Saifuddin Zuhri, Berangkat dari Pesantren", "Martin van Bruinessen, NU: Tradisi & Relasi Kuasa"]
+  },
+  {
+    id: "h-nusantara-muhammadiyah-nu",
+    label: "Kebangkitan Ormas Islam: Muhammadiyah & NU",
+    category: "modern",
+    timeLabel: "1912 M & 1926 M",
+    timeValue: 1912,
+    description: "Dua organisasi Islam terbesar lahir di Indonesia sebagai pilar peradaban:\n- **Muhammadiyah** (1912) didirikan oleh **K.H. Ahmad Dahlan** di Yogyakarta, berfokus pada pemurnian akidah, modernisasi sekolah, dan rumah sakit (*PKU*).\n- **Nahdlatul Ulama** (1926) didirikan oleh **K.H. Hasyim Asy'ari** di Surabaya, menjaga tradisi bermazhab *Ahlussunnah wal Jama'ah* dan jaringan pesantren.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      {
+        surah: "Ali 'Imran",
+        ayat: 104,
+        arabicText: "وَلْتَكُنْ مِنْكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ",
+        paraphrase: "Dan hendaklah ada di antara kamu segolongan umat yang menyeru kepada kebajikan."
+      }
+    ],
+    hadithRefs: [
+      {
+        perawi: "HR. Thabrani",
+        matan: "Khairunnas anfa'uhum linnas",
+        terjemahan: "Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya."
+      }
+    ],
+    refleksi: {
+      hikmah: "Muhammadiyah dan NU menjadi dua pilar utama peradaban Islam Nusantara yang membawa kemajuan sosial dan kerukunan berbangsa.",
+      pertanyaanReflektif: [
+        "Bagaimana model keorganisasian Islam Nusantara memberikan teladan keharmonisan bagi dunia kontemporer?"
+      ],
+      pesanAksi: "Menghormati keragaman pemikiran sosial-keagamaan dan mengutamakan persatuan."
+    },
+    sources: ["Deliar Noer, Gerakan Modern Islam di Indonesia", "Mitsuo Nakamura, The Crescent Arises"]
+  },
+  {
+    id: "h-kenabian-darul-arqam",
+    label: "Darul Arqam: Pusat Kaderisasi Generasi Awal Islam",
+    category: "kenabian",
+    timeLabel: "611 M (12 SM)",
+    timeValue: 611,
+    description: "Rumah sahabat Arqam bin Abil Arqam di bukit Shafa menjadi markas rahasia pembinaan tauhid, tazkiyatun nafs, dan pengajaran wahyu Al-Qur'an generasi awal (*As-Sabiqunal Awwalun*). Dari rumah sederhana ini lahir tokoh-tokoh pembawa perubahan peradaban Islam.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "At-Taubah", ayat: 100, arabicText: "وَالسَّابِقُونَ الأَوَّلُونَ مِنَ الْمُهَاجِرِينَ وَالأَنصَارِ", paraphrase: "Orang-orang yang terdahulu lagi yang pertama-tama (masuk Islam) di antara orang-orang muhajirin dan anshar." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Khairun nasi qarni thummal ladzina yalunahum", terjemahan: "Sebaik-baik manusia adalah generasiku, kemudian generasi setelahnya." }
+    ],
+    refleksi: {
+      hikmah: "Kekuatan peradaban diawali dari pembinaan karakter dan keimanan generasi muda dalam komunitas kecil yang solid.",
+      pertanyaanReflektif: ["Bagaimana model kaderisasi Darul Arqam membentuk jiwa para sahabat Nabi?"],
+      pesanAksi: "Membangun ruang kajian dan pembinaan karakter berbasis nilai-nilai kebaikan."
+    },
+    sources: ["Mubarakpuri, Ar-Raheeq Al-Makhtum", "Ibnu Hisyam, As-Sirah An-Nabawiyyah"]
+  },
+  {
+    id: "h-kenabian-thaif-dakwah",
+    label: "Ketabahan Dakwah ke Tha'if & Doa Pengampunan Nabi",
+    category: "kenabian",
+    timeLabel: "619 M (3 SM)",
+    timeValue: 619,
+    description: "Pasca wafatnya Abu Thalib & Khadijah, Nabi Muhammad ﷺ berjalan kaki ke Tha'if meminta perlindungan suku Tsaqif. Namun beliau dilempari batu hingga berdarah. Saat Malaikat Gunung menawarkan untuk meratakan Tha'if, Nabi memilih mendoakan petunjuk bagi keturunan mereka.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Anbiya", ayat: 107, arabicText: "وَمَا أَرْسَلْنَاكَ إِلاَّ رَحْمَةً لِلْعَالَمِينَ", paraphrase: "Dan tiadalah Kami mengutus kamu, melainkan untuk (menjadi) rahmat bagi semesta alam." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari & Muslim", matan: "Allahumma-hdi qaumi fa-innahum la ya'lamun", terjemahan: "Ya Allah berilah petunjuk kepada kaumku, karena sesungguhnya mereka tidak mengetahui." }
+    ],
+    refleksi: {
+      hikmah: "Puncak keagungan akhlak kenabian adalah membalas kezaliman ekstrem dengan doa kasih sayang dan pengampunan.",
+      pertanyaanReflektif: ["Bagaimana kelapangan dada Nabi di Tha'if menginspirasi kepemimpinan berwawasan panjang?"],
+      pesanAksi: "Menjauhi dendam dan mengedepankan kasih sayang dalam berinteraksi."
+    },
+    sources: ["Safiur Rahman Mubarakpuri, Ar-Raheeq Al-Makhtum"]
+  },
+  {
+    id: "h-madinah-muakhah-pasar",
+    label: "Mu'akhah & Pendirian Pasar Bebas Riba Madinah",
+    category: "kenabian",
+    timeLabel: "622 M (1 H)",
+    timeValue: 622,
+    description: "Nabi Muhammad ﷺ persaudarakan Kaum Muhajirin dan Anshar (*Mu'akhah*) serta mendirikan **Pasar Madinah** yang bebas monopoli, bebas kecurangan, dan bebas riba untuk membebaskan kemandirian ekonomi Muslim dari hegemoni tengkulak.",
+    branch: "jalur-sains",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 275, arabicText: "وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا", paraphrase: "Padahal Allah telah menghalalkan jual beli dan mengharamkan riba." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Ibnu Majah", matan: "Hatha suqukum la yuntaqashu wa la yudhribu 'alaihi kharaj", terjemahan: "Inilah pasar kalian, tidak boleh dikurangi ukurannya dan tidak boleh ditarik pajak padanya." }
+    ],
+    refleksi: {
+      hikmah: "Kemandirian ekonomi berbasis keadilan sosial dan kejujuran pasar adalah pilar utama kedaulatan peradaban.",
+      pertanyaanReflektif: ["Bagaimana model pasar Madinah membangun etika bisnis syariah tanpa riba?"],
+      pesanAksi: "Menerapkan kejujuran dan etika keadilan dalam setiap transaksi ekonomi."
+    },
+    sources: ["Ira M. Lapidus, A History of Islamic Societies", "Ibnu Sa'ad, At-Thabaqat Al-Kubra"]
+  },
+  {
+    id: "h-rasyidin-perang-yamamah",
+    label: "Perang Yamamah & Pengorbanan para Huffaz Al-Qur'an",
+    category: "khulafaur-rasyidin",
+    timeLabel: "632 M (11 H)",
+    timeValue: 632,
+    description: "Pertempuran paling sengit dalam Perang Ridda di mana pasukan Abu Bakar yang dipimpin Khalid bin Walid menumpas nabi palsu Musailamah Al-Kazzab. Gugurnya 70+ penghafal Al-Qur'an (*Huffaz*) memicu keputusan bersejarah pengumpulan mushaf Al-Qur'an.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Hijr", ayat: 9, arabicText: "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ", paraphrase: "Sesungguhnya Kamilah yang menurunkan Al-Qur'an, dan sesungguhnya Kami benar-benar memeliharanya." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Innas qatla isytadda yaumal Yamamahi bi qurra'il Qur'an...", terjemahan: "Sesungguhnya korban gugur sangat banyak pada hari Yamamah di kalangan para penghafal Al-Qur'an." }
+    ],
+    refleksi: {
+      hikmah: "Pengorbanan para Huffaz di Yamamah mengabadikan firman Allah dalam lembaran Mushaf yang kita baca hari ini.",
+      pertanyaanReflektif: ["Bagaimana kesadaran para sahabat merespon krisis Yamamah untuk menyelamatkan otentisitas Al-Qur'an?"],
+      pesanAksi: "Mencintai, menghafal, dan mengamalkan ajaran Al-Qur'an."
+    },
+    sources: ["Ibnu Katsir, Al-Bidayah wan-Nihayah", "At-Thabari, Tarikh ar-Rusul wal Muluk"]
+  },
+  {
+    id: "h-rasyidin-perang-qadisiyyah",
+    label: "Perang Al-Qadisiyyah & Tumbangnya Sassanid Persia",
+    category: "khulafaur-rasyidin",
+    timeLabel: "636 M (15 H)",
+    timeValue: 636,
+    description: "Pasukan Muslim pimpinan **Sa'ad bin Abi Waqqas** mengalahkan tentara Kekaisaran Sassanid Persia di bawah Panglima Rustam pada Pertempuran Al-Qadisiyyah. Kemenangan ini mengakhiri rintangan ekspansi ke wilayah timur dan membuka jalan Islam di Persia.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Ahzab", ayat: 22, paraphrase: "Dan ketika orang-orang mumin melihat golongan-golongan yang bersekutu itu, mereka berkata : Inilah yang dijanjikan Allah dan Rasul-Nya kepada kita." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Idza halaka Kisra fala Kisra ba'dahu", terjemahan: "Apabila Chosroes (Persia) hancur, maka tidak akan ada Chosroes setelahnya." }
+    ],
+    refleksi: {
+      hikmah: "Kepemimpinan yang bertawakal dan pasukan yang berdisiplin tinggi mampu meruntuhkan imperium adidaya kuno.",
+      pertanyaanReflektif: ["Bagaimana dialog diplomasi Rib'i bin Amir di hadapan Rustam menunjukkan keteguhan akidah?"],
+      pesanAksi: "Memiliki keberanian moral dalam membela kebenaran di manapun berada."
+    },
+    sources: ["Tabari, History of the Prophets and Kings", "Hugh Kennedy, The Great Arab Conquests"]
+  },
+  {
+    id: "h-rasyidin-dzatus-sawari",
+    label: "Perang Dzatus Sawari & Angkatan Laut Muslim Pertama",
+    category: "khulafaur-rasyidin",
+    timeLabel: "655 M (35 H)",
+    timeValue: 655,
+    description: "Pertempuran Laut Dzatus Sawari (*Battle of the Masts*) di Laut Tengah di mana armada laut Muslim di bawah Muawiyah bin Abi Sufyan dan Abdullah bin Sa'ad mengalahkan 500 kapal perang Bizantium di bawah Kaisar Constans II, menegaskan supremasi maritim Islam.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Ar-Rum", ayat: 41, paraphrase: "Telah tampak kerusakan di darat dan di laut disebabkan karena perbuatan tangan manusia." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Awwalu jaisyin min ummati yaghzunal bahra qad aujabu", terjemahan: "Pasukan pertama dari umatku yang berperang di lautan sungguh telah dipastikan surga bagi mereka." }
+    ],
+    refleksi: {
+      hikmah: "Inovasi kebaharian dan penguasaan laut menjadi kunci perlindungan kedaulatan peradaban.",
+      pertanyaanReflektif: ["Bagaimana pembentukan armada laut pertama Utsman mengubah peta strategi militer Mediterania?"],
+      pesanAksi: "Terus berinovasi dan menguasai teknologi strategis modern."
+    },
+    sources: ["Aly Mohamed Fahmy, Muslim Sea-Power in the Eastern Mediterranean"]
+  },
+  {
+    id: "h-umayyah-tariq-gibraltar",
+    label: "Tariq bin Ziyad & Penaklukan Selat Gibraltar Andalusia",
+    category: "umayyah",
+    timeLabel: "711 M (92 H)",
+    timeValue: 711,
+    description: "Panglima **Tariq bin Ziyad** menyeberangi selat antara Afrika Utara dan Spanyol (*Jabal Tariq* / Gibraltar), mengalahkan Raja Visigoth Roderic pada Pertempuran Guadalete (711 M). Peristiwa ini membuka gerbang 800 tahun peradaban Islam Al-Andalus di Spanyol.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Ali 'Imran", ayat: 139, arabicText: "وَلاَ تَهِنُوا وَلاَ تَحْزَنُوا وَأَنْتُمُ الأَعْلَوْنَ إِنْ كُنْتُمْ مُؤْمِنِينَ", paraphrase: "Janganlah kamu bersikap lemah, dan janganlah (pula) kamu bersedih hati, padahal kamulah orang-orang yang paling tinggi (derajatnya), jika kamu orang-orang yang beriman." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Innal aradha zuyi-yat li fa-ra'aitu masyaariqaha wa maghaatibaha", terjemahan: "Sesungguhnya bumi dilihatkan kepadaku, maka aku melihat timur dan baratnya." }
+    ],
+    refleksi: {
+      hikmah: "Keberanian melangkah menyeberangi lautan membuka babak baru pusat peradaban ilmu pengetahuan di Eropa.",
+      pertanyaanReflektif: ["Bagaimana pidato monumental Tariq bin Ziyad meyakinkan pasukannya untuk pantang menyerah?"],
+      pesanAksi: "Fokus pada cita-cita besar dan tidak ragu mengambil tindakan terukur."
+    },
+    sources: ["W. Montgomery Watt, A History of Islamic Spain", "Ibnu Abdul Hakam, Futuh Mishr wal Maghrib"]
+  },
+  {
+    id: "h-abbasiyah-pembangunan-baghdad",
+    label: "Pembangunan Baghdad: Kota Perdamaian Madinat as-Salam",
+    category: "abbasiyah",
+    timeLabel: "762 M (145 H)",
+    timeValue: 762,
+    description: "Khalifah Abbasiyah **Abu Ja'far Al-Mansur** mendirikan kota melingkar megah **Baghdad** (*Madinat as-Salam*) di tepi Sungai Tigris. Baghdad tumbuh menjadi kota metropolitan terbesar di dunia dengan sistem perairan canggih, rumah sakit, perpustakaan, dan pusat sains global.",
+    branch: "jalur-sains",
+    quranRefs: [
+      { surah: "Yunus", ayat: 25, arabicText: "وَاللَّهُ يَدْعُو إِلَى دَارِ السَّلامِ", paraphrase: "Dan Allah menyeru (manusia) ke Darussalam (surga/negeri kedamaian)." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Abu Dawud", matan: "Innama al-imamu zhummu-n yutaqatalu min wara'ih", terjemahan: "Sesungguhnya penguasa itu adalah perisai pelindung rakyatnya." }
+    ],
+    refleksi: {
+      hikmah: "Tata kota yang dirancang dengan keindahan arsitektur dan pusat keilmuan melahirkan zaman keemasan peradaban.",
+      pertanyaanReflektif: ["Mengapa rancangan bundar Kota Baghdad Al-Mansur diakui sebagai keajaiban tata kota abad pertengahan?"],
+      pesanAksi: "Merencanakan dan membangun fasilitas umum dengan nilai efisiensi dan estetika tinggi."
+    },
+    sources: ["Gaston Wiet, Baghdad: Metropolis of the Abbasid Caliphate", "Ira M. Lapidus"]
+  },
+  {
+    id: "h-abbasiyah-al-kindi-filsafat",
+    label: "Al-Kindi: Filsuf Arab Pertama & Integrasi Rasionalitas",
+    category: "abbasiyah",
+    timeLabel: "850 M (235 H)",
+    timeValue: 850,
+    description: "Abu Yusuf Ya'qub ibn Ishaq al-Kindi (*Alkindus*), filsuf Arab pertama di Baghdad, memelopori integrasi filsafat Aristoteles & Neoplatonisme dengan akidah tauhid. Ia menulis risalah optik, kriptografi, musik, dan pengobatan.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 269, arabicText: "يُؤْتِي الْحِكْمَةَ مَنْ يَشَاءُ وَمَنْ يُؤْتَ الْحِكْمَةَ فَقَدْ أُوتِيَ خَيْرًا كَثِيرًا", paraphrase: "Allah menganugerahkan Al-Hikmah (kepahaman yang dalam tentang Al-Qur'an dan As-Sunnah) kepada siapa yang dikehendaki-Nya." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Tirmidzi", matan: "Al-Hikmatu dhallatul mu'min fahuwa ahaqqu biha haithu wajadaha", terjemahan: "Hikmah kebenaran adalah barang hilang milik orang mukmin, di manapun ia menemukannya maka ia paling berhak mengambilnya." }
+    ],
+    refleksi: {
+      hikmah: "Kebenaran dari manapun datangnya adalah milik keimanan yang harus diserap secara kritis dan rasional.",
+      pertanyaanReflektif: ["Bagaimana Al-Kindi menunjukkan sikap terbuka terhadap warisan pemikiran peradaban Yunani kuno?"],
+      pesanAksi: "Bersikap terbuka terhadap ilmu pengetahuan global seraya menyaringnya dengan keimanan."
+    },
+    sources: ["Peter Adamson, Al-Kindi", "Henry Corbin, History of Islamic Philosophy"]
+  },
+  {
+    id: "h-abbasiyah-al-farabi-musik",
+    label: "Al-Farabi (Alpharabius): Guru Kedua & Negara Utama",
+    category: "abbasiyah",
+    timeLabel: "950 M (339 H)",
+    timeValue: 950,
+    description: "Abu Nashr Al-Farabi dijuluki *Al-Mu'allim Ats-Tsani* (Guru Kedua setelah Aristoteles). Karya politiknya **Ara' Ahl al-Madinah al-Fadhilah** merumuskan teori negara ideal berkeadilan, serta kitab **Kitab al-Musiqa al-Kabir** merumuskan teori musik dan frekuensi suara.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "Al-A'raf", ayat: 96, paraphrase: "Jikalau sekiranya penduduk negeri-negeri beriman dan bertakwa, pastilah Kami akan melimpahkan kepada mereka berkah dari langit dan bumi." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Innellaha kataba al-ihsana 'ala kulli syai'", terjemahan: "Sesungguhnya Allah mewajibkan kebaikan (keunggulan) atas segala sesuatu." }
+    ],
+    refleksi: {
+      hikmah: "Negara utama adalah negara yang dipimpin oleh pemimpin berilmu, berakhlak mulia, dan berorientasi pada kebahagiaan warga.",
+      pertanyaanReflektif: ["Bagaimana gagasan Al-Madinah Al-Fadhilah Al-Farabi mengilhami konsep tata kelola negara modern?"],
+      pesanAksi: "Mewujudkan keharmonisan sosial dan integritas dalam kepemimpinan."
+    },
+    sources: ["F.W. Zimmermann, Al-Farabi's Commentary", "Majid Fakhry, A History of Islamic Philosophy"]
+  },
+  {
+    id: "h-abbasiyah-madrasah-nizamiyah",
+    label: "Nizam al-Mulk & Pendirian Madrasah Nizamiyah Baghdad",
+    category: "abbasiyah",
+    timeLabel: "1065 M (457 H)",
+    timeValue: 1065,
+    description: "Wazir Dinasti Seljuk **Nizam al-Mulk** mendirikan jaringan universitas publik pertama **Madrasah Nizamiyah** di Baghdad dan Nishapur. Lembaga ini menyediakan pendidikan gratis, beasiswa mahasiswa, perpustakaan riset, dan melahirkan ulama besar seperti Imam Al-Ghazali.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "Al-Mujadilah", ayat: 11, arabicText: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ", paraphrase: "Niscaya Allah akan meninggikan orang-orang yang beriman di antara kamu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Idza mata ibn Adama inqatha'a 'amaluhu illa min thalathin... 'ilmin yuntafa'u bih", terjemahan: "Apabila manusia meninggal dunia, terputuslah amalnya kecuali tiga perkara... salah satunya ilmu yang bermanfaat." }
+    ],
+    refleksi: {
+      hikmah: "Institusionalisasi pendidikan publik dan beasiswa mahasiswa adalah fondasi utama keberlanjutan peradaban.",
+      pertanyaanReflektif: ["Bagaimana sistem asrama dan beasiswa Madrasah Nizamiyah menginspirasi universitas modern?"],
+      pesanAksi: "Mendukung wakaf pendidikan dan pemerataan akses ilmu pengetahuan."
+    },
+    sources: ["George Makdisi, The Rise of Colleges: Institutions of Learning in Islam"]
+  },
+  {
+    id: "h-andalusia-abdurrahman-dakhil",
+    label: "Abdurrahman Ad-Dakhil & Pendirian Keamiran Kordoba",
+    category: "andalusia",
+    timeRange: "756 M (138 H)",
+    timeValue: 756,
+    description: "Abdurrahman I (*Ad-Dakhil* / Elang Quraisy), satu-satunya pangeran Umayyah yang selamat dari pembantaian Abbasiyah, menyeberang ke Spanyol dan mendirikan Keamiran Umayyah Kordoba (756 M). Ia membangun Masjid Agung Kordoba (*Mezquita*) dan meletakkan dasar zaman keemasan Islam Spanyol.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Qasas", ayat: 5, paraphrase: "Dan Kami hendak memberi karunia kepada orang-orang yang tertindas di bumi itu dan hendak menjadikan mereka pemimpin dan menjadikan mereka orang-orang yang mewarisi (bumi)." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Tirmidzi", matan: "Al-Mu'minu al-qawiyyu khairun wa ahabbu ilallahi min al-mu'mini adh-dha'if", terjemahan: "Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah." }
+    ],
+    refleksi: {
+      hikmah: "Resiliensi pribadi di tengah krisis ekstrem mampu mengubah kejatuhan menjadi kebangkitan imperium sains megah.",
+      pertanyaanReflektif: ["Bagaimana ketangguhan jiwa Abdurrahman Ad-Dakhil membantunya mendirikan Kordoba dari nol?"],
+      pesanAksi: "Pantang menyerah saat menghadapi kegagalan dan memulai kembali dengan visi baru."
+    },
+    sources: ["Hugh Kennedy, Muslim Spain and Portugal", "Ibnu Hayyan, Al-Muqtabis"]
+  },
+  {
+    id: "h-andalusia-ibnu-tufail",
+    label: "Ibnu Tufail & Novel Filosofis Hayy ibn Yaqdhan",
+    category: "andalusia",
+    timeLabel: "1185 M (581 H)",
+    timeValue: 1185,
+    description: "Filsuf Al-Andalus Abu Bakr Ibnu Tufail menulis **Hayy ibn Yaqdhan** (*Alive, Son of Awake*), novel alegoris sains-filsafat pertama di dunia. Novel ini menceritakan anak manusia yang tumbuh sendirian di pulau terpencil dan berhasil menemukan kebenaran Tauhid & sains murni hanya melalui observasi akal rasional.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "Fussilat", ayat: 53, arabicText: "سَنُرِيهِمْ آيَاتِنَا فِي الآفَاقِ وَفِي أَنْفُسِهِمْ حَتَّى يَتَبَيَّنَ لَهُمْ أَنَّهُ الْحَقُّ", paraphrase: "Kami akan memperlihatkan kepada mereka tanda-tanda (kekuasaan) Kami di segenap ufuk dan pada diri mereka sendiri, sehingga jelaslah bagi mereka bahwa Al-Qur'an itu adalah benar." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Kullu mauludin yuladu 'alal fithrah", terjemahan: "Setiap anak dilahirkan di atas fitrah (kesucian akal dan iman)." }
+    ],
+    refleksi: {
+      hikmah: "Akal rasional yang jernih dan tadabbur alam secara alamiah akan membimbing manusia menuju kebenaran Sang Pencipta.",
+      pertanyaanReflektif: ["Mengapa novel Hayy ibn Yaqdhan diterjemahkan ke bahasa Latin dan mempengaruhi filsuf Eropa seperti John Locke?"],
+      pesanAksi: "Melatih daya pikir mandiri dan mengamati tanda-tanda kebesaran Ilahi di alam sekitar."
+    },
+    sources: ["Lenn E. Goodman, Ibn Tufayl's Hayy Ibn Yaqzan", "Sami S. Hawi, Islamic Naturalism"]
+  },
+  {
+    id: "h-andalusia-alhambra-granada",
+    label: "Istana Alhambra Granada: Puncak Seni Arsitektur Spanyol",
+    category: "andalusia",
+    timeLabel: "1238 M (635 H)",
+    timeValue: 1238,
+    description: "Sultan Nasrid **Muhammad I ibn al-Ahmar** mulai membangun kompleks istana benteng **Alhambra** (*Al-Hamra*) di puncak bukit Granada. Alhambra menjadi mahakarya arsitektur, kaligrafi ukir *'La Ghaliba Illallah'*, dan sistem taman irigasi air terjun terindah di Eropa.",
+    branch: "jalur-sains",
+    quranRefs: [
+      { surah: "An-Naml", ayat: 40, paraphrase: "Ini termasuk kurnia Tuhanku untuk mencoba aku apakah aku bersyukur atau mengingkari (akan nikmat-Nya)." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Innellaha jamilun yuhibbul jamal", terjemahan: "Sesungguhnya Allah itu Maha Indah dan menyukai keindahan." }
+    ],
+    refleksi: {
+      hikmah: "Keindahan seni arsitektur Alhambra diukiri pesan kerendahan hati: 'Tidak ada pemenang selain Allah'.",
+      pertanyaanReflektif: ["Bagaimana peradaban Granada mengekspresikan nilai spiritualitas melalui seni ukir arsitektur?"],
+      pesanAksi: "Menghadirkan nilai estetika dan kesucian dalam setiap karya cipta."
+    },
+    sources: ["Oleg Grabar, The Alhambra", "Robert Irwin, The Alhambra"]
+  },
+  {
+    id: "h-mamluk-qutuz-baibars",
+    label: "Sultan Qutuz & Panglima Baibars: Penyelamat di Ain Jalut",
+    category: "andalusia",
+    timeLabel: "1260 M (658 H)",
+    timeValue: 1260,
+    description: "Pasca jatuhnya Baghdad oleh Mongol 1258 M, Sultan Mamluk Mesir **Saifuddin Qutuz** dan Panglima **Ruknuddin Baibars** menyatukan tentara Muslim dan menyerukan seruan *'Wa Islamah!'*. Di Lembah Ain Jalut (Palestina), mereka melancarkan taktik pura-pura mundur dan memukul hancur pasukan Mongol.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 249, arabicText: "كَمْ مِنْ فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ", paraphrase: "Berapa banyak terjadi golongan yang sedikit dapat mengalahkan golongan yang banyak dengan izin Allah." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Ahmad", matan: "Man qatala tahta rayatin 'immiyyatin... fa qitlatuhu jahiliyyah", terjemahan: "Niat perjuangan haruslah murni menegakkan keadilan dan kebenaran Ilahi." }
+    ],
+    refleksi: {
+      hikmah: "Keberanian pemimpin menyatukan barisan di saat krisis kritis mampu menyelamatkan peradaban dari kepunahan.",
+      pertanyaanReflektif: ["Mengapa Kemenangan Ain Jalut diakui sebagai titik balik terpenting dalam sejarah militer dunia?"],
+      pesanAksi: "Bersatu dalam kebaikan dan teguh berdiri membela kebenaran di masa sulit."
+    },
+    sources: ["Reuven Amitai-Preiss, Mongols and Mamluks", "Steven Runciman, A History of the Crusades"]
+  },
+  {
+    id: "h-utsmani-kanun-sulaiman",
+    label: "Sultan Sulaiman Al-Qanuni & Kodifikasi Kanun Utsmani",
+    category: "tiga-kerajaan",
+    timeLabel: "1520 M (926 H)",
+    timeValue: 1520,
+    description: "Sultan Utsmani **Sulaiman I** (*Suleiman the Magnificent / Al-Qanuni*) merumuskan kitab undang-undang **Kanun-i Osmani**. Undang-undang ini menyelaraskan Fiqh Syariah dengan hukum administrasi negara, menjamin hak minoritas Kristen/Yahudi, dan merestrukturisasi pajak imperium.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "An-Nisa", ayat: 58, arabicText: "وَإِذَا حَكَمْتُمْ بَيْنَ النَّاسِ أَنْ تَحْكُمُوا بِالْعَدْلِ", paraphrase: "Dan (apabila) menetapkan hukum di antara manusia supaya kamu menetapkan dengan adil." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Inna al-muqsithina 'indallahi 'ala manabira min nur", terjemahan: "Sesungguhnya orang-orang yang berlaku adil dalam hukum berada di atas mimbar-mimbar cahaya di sisi Allah." }
+    ],
+    refleksi: {
+      hikmah: "Kepastian hukum yang adil dan inklusif bagi seluruh warga adalah kunci stabilitas kekaisaran multi-etnis.",
+      pertanyaanReflektif: ["Mengapa Sultan Sulaiman lebih dikenal di dunia Islam sebagai 'Al-Qanuni' (Pembuat Undang-undang) daripada penakluk militer?"],
+      pesanAksi: "Menegakkan aturan hukum dengan penuh keadilan dan tanpa pandang bulu."
+    },
+    sources: ["Halil Inalcik, The Ottoman Empire: The Classical Age", "Colin Imber, The Ottoman Empire"]
+  },
+  {
+    id: "h-utsmani-mimar-sinan",
+    label: "Mimar Sinan & Arsitektur Megah Masjid Suleymaniye",
+    category: "tiga-kerajaan",
+    timeLabel: "1557 M (964 H)",
+    timeValue: 1557,
+    description: "Arsitek genius Kekaisaran Utsmani **Mimar Sinan** merancang mahakarya arsitektur **Masjid Suleymaniye** di Istanbul dan Masjid Selimiye di Edirne. Sinan menyempurnakan kubah raksasa, akustik suara, dan ketahanan gempa bumi yang bertahan selama lebih dari 400 tahun.",
+    branch: "jalur-sains",
+    quranRefs: [
+      { surah: "At-Taubah", ayat: 18, arabicText: "إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الآخِرِ", paraphrase: "Hanya yang memakmurkan masjid-masjid Allah ialah orang-orang yang beriman kepada Allah dan Hari kemudian." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Man bana masjidan lillahi bana allahu lahu baithan fil jannah", terjemahan: "Barangsiapa membangun masjid karena Allah, Allah bangunkan baginya rumah di surga." }
+    ],
+    refleksi: {
+      hikmah: "Keahlian teknik arsitektur yang dipadukan dengan keikhlasan niat melahirkan karya fisik yang menginspirasi peradaban.",
+      pertanyaanReflektif: ["Bagaimana teknik peredam gempa dan sirkulasi udara Mimar Sinan mendahului teknologi bangunan modern?"],
+      pesanAksi: "Melakukan setiap pekerjaan teknik dan seni dengan standar profesionalisme tertinggi (*Ihsan*)."
+    },
+    sources: ["Dogan Kuban, Ottoman Architecture", "J.M. Rogers, Sinan"]
+  },
+  {
+    id: "h-safawi-shah-abbas-isfahan",
+    label: "Shah Abbas I & Kemegahan Isfahan Setengah Dunia",
+    category: "tiga-kerajaan",
+    timeLabel: "1598 M (1007 H)",
+    timeValue: 1598,
+    description: "Penguasa Dinasti Safawi Persia **Shah Abbas I** memindahkan ibu kota ke **Isfahan** dan membangun Alun-alun monumental **Naqsh-e Jahan**, Masjid Shah berukir keramik biru pirus, dan Istana Ali Qapu. Isfahan dijuluki '*Isfahan Nisf-e Jahan*' (Isfahan adalah Setengah Dunia).",
+    branch: "jalur-sains",
+    quranRefs: [
+      { surah: "Al-A'raf", ayat: 32, paraphrase: "Katakanlah: Siapakah yang mengharamkan perhiasan dari Allah yang telah Dikeluarkan-Nya untuk hamba-hamba-Nya dan (siapa pulakah yang mengharamkan) rezeki yang baik?" }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Innellaha yuhibbu idza 'amila ahadukum 'amalan an yutqinah", terjemahan: "Sesungguhnya Allah menyukai jika salah seorang dari kalian melakukan suatu pekerjaan, ia melakukannya secara tekun dan sempurna (Itqan)." }
+    ],
+    refleksi: {
+      hikmah: "Pencapaian seni arsitektur dan kerajinan keramik Persia membuktikan kekayaan ekspresi budaya dalam peradaban Islam.",
+      pertanyaanReflektif: ["Bagaimana rancangan Naqsh-e Jahan Isfahan memadukan pusat pemerintahan, ibadah, dan perdagangan pasar?"],
+      pesanAksi: "Mengembangkan karya seni dan budaya bernilai tinggi yang memperhalus budi pekerja."
+    },
+    sources: ["Roger Savory, Iran Under the Safavids", "Stephen P. Blake, Half the World: Isfahan"]
+  },
+  {
+    id: "h-mughal-shah-jahan-tajmahal",
+    label: "Shah Jahan & Mahakarya Arsitektur Taj Mahal Agra",
+    category: "tiga-kerajaan",
+    timeLabel: "1632 M (1042 H)",
+    timeValue: 1632,
+    description: "Kaisar Dinasti Mughal India **Shah Jahan** membangun **Taj Mahal** di Agra dari marmer putih berukir seni kaligrafi Al-Qur'an sebagai monumen kenangan bagi permaisurinya Mumtaz Mahal. Taj Mahal diakui sebagai salah satu Keajaiban Dunia terindah.",
+    branch: "jalur-sains",
+    quranRefs: [
+      { surah: "Fajr", ayat: 27, arabicText: "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ﴿٢٧﴾ ارْجِعِي إِلَى رَبِّكِ رَاضِيَةً مَرْضِيَّةً", paraphrase: "Wahai jiwa yang tenang, kembalilah kepada Tuhanmu dengan hati yang puas lagi diridhai-Nya." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Tirmidzi", matan: "Al-Arwahu junudun mujannadah...", terjemahan: "Ruh-ruh manusia adalah pasukan yang terhimpun dalam ikatan kasih sayang." }
+    ],
+    refleksi: {
+      hikmah: "Seni pahat kaligrafi dan arsitektur marmer Taj Mahal memanifestasikan keindahan cinta dan pengingat akan keabadian akhirat.",
+      pertanyaanReflektif: ["Mengapa ayat-ayat Al-Qur'an tentang Surah Surga dipahat menghiasi dinding marmer Taj Mahal?"],
+      pesanAksi: "Mewariskan karya dan kebaikan yang membawa manfaat berkesinambungan."
+    },
+    sources: ["Ebba Koch, The Complete Taj Mahal", "Catherine B. Asher, Architecture of Mughal India"]
+  },
+  {
+    id: "h-nusantara-barus-teori",
+    label: "Pelabuhan Barus Sumatra: Pintu Masuk Islam Abad 7 M",
+    category: "nusantara",
+    timeLabel: "650 M (30 H)",
+    timeValue: 650,
+    description: "Kota pelabuhan kuno **Barus** di pesisir barat Sumatra Utara menjadi titik awal persinggahan pedagang Arab dan Persia sejak abad ke-7 M (masa Khulafaur Rasyidin). Penemuan makam kuno *Papan Tinggi* beraksara Arab membuktikan Islam telah hadir di Nusantara sejak era awal kenabian.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Hujurat", ayat: 13, arabicText: "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا", paraphrase: "Dan Kami jadikan kamu berbangsa-bangsa dan bersuku-suku supaya kamu saling kenal-mengenal." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Ballighu 'anni walau ayah", terjemahan: "Sampaikanlah dariku walau hanya satu ayat." }
+    ],
+    refleksi: {
+      hikmah: "Jalur perdagangan rempah-rempah maritim menjadi jembatan awal penyebaran Islam secara damai di Nusantara.",
+      pertanyaanReflektif: ["Bagaimana bukti arkeologis situs Barus mendukung Teori Makkah kedatangan Islam di Indonesia?"],
+      pesanAksi: "Menjalin persaudaraan dan perdagangan yang jujur lintas bangsa."
+    },
+    sources: ["Hamka, Sejarah Umat Islam", "Claude Guillot, Histoire de Barus"]
+  },
+  {
+    id: "h-nusantara-samudera-pasai",
+    label: "Sultan Malik al-Saleh & Kesultanan Samudera Pasai",
+    category: "nusantara",
+    timeLabel: "1267 M (665 H)",
+    timeValue: 1267,
+    description: "Meurah Silu memeluk Islam dan bergelar **Sultan Malik al-Saleh**, mendirikan Kesultanan Samudera Pasai di Aceh sebagai kesultanan Islam pertama di Nusantara. Pasai menjadi pusat studi Fiqh Mazhab Syafi'i dan pusat perdagangan lada internasional.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "An-Nahl", ayat: 90, paraphrase: "Sesungguhnya Allah menyuruh (kamu) berlaku adil dan berbuat kebajikan, memberi kepada kaum kerabat." }
+    ],
+    hadithRefs: [
+      { perawi: "Catatan Ibnu Battuta", matan: "Sultan Pasai al-Malik azh-Zhahir adalah raja yang rendah hati dan mencintai ulama", terjemahan: "Kesultanan Pasai menjadi benteng kajian Fiqh Mazhab Syafi'i di Asia Tenggara." }
+    ],
+    refleksi: {
+      hikmah: "Pembentukan institusi kesultanan Islam pertama meletakkan fondasi tradisi intelektual Fiqh Syafi'iyah di Nusantara.",
+      pertanyaanReflektif: ["Bagaimana Ibnu Battuta menggambarkan kesalehan dan keterbukaan intelektual Kesultanan Pasai saat berkunjung tahun 1345 M?"],
+      pesanAksi: "Mendukung pengembangan ilmu keislaman dan tata kelola berkeadilan."
+    },
+    sources: ["Ibnu Battuta, Rihlah Ibn Battuta", "A. Hasjmy, Sejarah Kebudayaan Islam di Indonesia"]
+  },
+  {
+    id: "h-nusantara-kesultanan-demak",
+    label: "Raden Patah & Kesultanan Islam Demak Bintoro",
+    category: "nusantara",
+    timeLabel: "1478 M (883 H)",
+    timeValue: 1478,
+    description: "Putra Brawijaya V, **Raden Patah**, dengan bimbingan Wali Songo mendirikan Kesultanan Demak Bintoro sebagai kesultanan Islam pertama di Jawa. Pembangunan **Masjid Agung Demak** dengan tiang *Tatal* Sunan Kalijaga menjadi simbol persatuan dakwah Islam.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 193, paraphrase: "Dan perangilah mereka itu, sehingga tidak ada fitnah lagi dan ketaatan itu hanya semata-mata untuk Allah." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Man sanna fil islami sunnatan hasanatan falahu ajruha...", terjemahan: "Barangsiapa memelopori suatu tradisi kebaikan dalam Islam, baginya pahala tradisi tersebut dan pahala orang yang mengamalkannya." }
+    ],
+    refleksi: {
+      hikmah: "Transisi kekuasaan secara damai berbasis akulturasi budaya mempercepat penerimaan Islam di masyarakat Jawa.",
+      pertanyaanReflektif: ["Bagaimana struktur kepemimpinan Demak memadukan otoritas politik dan bimbingan spiritual Wali Songo?"],
+      pesanAksi: "Merawat warisan tradisi luhur dan menggunakannya untuk kebaikan bersama."
+    },
+    sources: ["H.J. de Graaf & T.G.Th. Pigeaud, Kerajaan-Kerajaan Islam di Jawa", "Babad Tanah Jawi"]
+  },
+  {
+    id: "h-nusantara-sultan-agung-mataram",
+    label: "Sultan Agung Mataram: Kalender Jawa & Serangan Batavia",
+    category: "nusantara",
+    timeLabel: "1628 M (1038 H)",
+    timeValue: 1628,
+    description: "Sultan Mataram Islam **Sultan Agung Hanyokrokusumo** (1613–1645) menciptakan **Kalender Jawa** (integrasi Saka & Hijriah), menulis karya sastra filsafat *Serat Sastra Gendhing*, dan memimpin dua kali serangan militer besar ke Batavia melawan VOC (1628 & 1629).",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Jumu'ah", ayat: 10, paraphrase: "Apabila telah ditunaikan shalat, maka bertebaranlah kamu di muka bumi; dan carilah karunia Allah dan ingatlah Allah banyak-banyak supaya kamu beruntung." }
+    ],
+    hadithRefs: [
+      { perawi: "Gelar Diplomasi Utsmani", matan: "Sultan Ratu Abdul Fattah Al-Matarami", terjemahan: "Pengakuannya sebagai Sultan Mataram Islam yang menjalin hubungan dengan Mekkah & Utsmani." }
+    ],
+    refleksi: {
+      hikmah: "Kepemimpinan Sultan Agung memadukan keahlian strategi militer, kebijakan kebudayaan Jawa-Islam, dan keteguhan anti-kolonialisme.",
+      pertanyaanReflektif: ["Mengapa penciptaan Kalender Jawa oleh Sultan Agung diakui sebagai bentuk genius akulturasi budaya?"],
+      pesanAksi: "Menjaga kedaulatan bangsa dan melestarikan kekayaan budaya lokal yang bernilai religius."
+    },
+    sources: ["H.J. de Graaf, Puncak Kekuasaan Mataram", "M.C. Ricklefs, A History of Modern Indonesia"]
+  },
+  {
+    id: "h-nusantara-sultan-babullah-ternate",
+    label: "Sultan Babullah Ternate: Pengusiran Portugis & 72 Pulau",
+    category: "nusantara",
+    timeLabel: "1575 M (983 H)",
+    timeValue: 1575,
+    description: "Sultan Kesultanan Ternate **Sultan Babullah** memimpin perlawanan bersenjata mengusir penjajah Portugis dari Benteng Kastela (1575 M) setelah gugurnya Sultan Khairun. Ia memperluas pengaruh Kesultanan Ternate mencakup 72 pulau di Maluku, Sulawesi, hingga Filipina Selatan.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "An-Nisa", ayat: 75, paraphrase: "Mengapa kamu tidak mau berperang di jalan Allah dan (membela) orang-orang yang lemah di antara laki-laki, wanita-wanita maupun anak-anak." }
+    ],
+    hadithRefs: [
+      { perawi: "Catatan Sejarah Maluku", matan: "Penguasa 72 Pulau yang mengibarkan panji kebebasan dari penjajahan barat", terjemahan: "Perjuangan mengusir penderitaan monopoli perdagangan rempah Portugis." }
+    ],
+    refleksi: {
+      hikmah: "Kekuatan maritim Indonesia timur membuktikan keberanian mengusir imperialisme asing demi kehormatan tanah air.",
+      pertanyaanReflektif: ["Bagaimana Sultan Babullah membangun simpul persatuan 72 pulau di Indonesia timur?"],
+      pesanAksi: "Menjaga persatuan wilayah Nusantara dan menolak segala bentuk penindasan."
+    },
+    sources: ["M. Adnan Amal, Sejarah Maluku Utara", "Willard A. Hanna, Turbulent Times in Ternate"]
+  },
+  {
+    id: "h-renovasi-kabah-hajar",
+    label: "Renovasi Ka'bah & Kebijaksanaan Peletakan Hajar Aswad",
+    category: "pra-islam",
+    timeLabel: "605 M (15 SM)",
+    timeValue: 605,
+    description: "Banjir besar merusak bangunan Ka'bah. Suku-suku Quraisy bergotong royong merenovasi Ka'bah, namun berselisih hampir bertumpah darah memperebutkan kehormatan memindahkan **Hajar Aswad**.\n\nNabi Muhammad ﷺ (saat berusia 35 tahun) ditunjuk sebagai hakim. Beliau menggelar kainnya, meletakkan Hajar Aswad di tengah, dan meminta setiap pemuka suku memegang tepi kain bersama-sama. Kebijaksanaan damai ini menghindarkan perang saudara di Makkah.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 127, paraphrase: "Dan (ingatlah), ketika Ibrahim meninggikan (membina) dasar-dasar Baitullah bersama Ismail." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Ahmad & Ibnu Hasyim", matan: "Hadza al-amin, radhina bih, hadza Muhammad", terjemahan: "Inilah al-Amin (yang terpercaya), kami ridha dengannya, inilah Muhammad." }
+    ],
+    refleksi: {
+      hikmah: "Kepemimpinan yang adil dan berwawasan luas mampu menyatukan kelompok-kelompok yang bertikai tanpa menimbulkan pemenang dan pecundang.",
+      pertanyaanReflektif: ["Bagaimana solusi kain sorban Nabi Muhammad ﷺ menyelesaikan perselisihan suku Quraisy?"],
+      pesanAksi: "Mengutamakan solusi inklusif yang mengayomi semua pihak saat menghadapi perbedaan."
+    },
+    sources: ["Safiur Rahman Mubarakpuri, Ar-Raheeq Al-Makhtum", "Ibnu Hasyim, As-Sirah An-Nabawiyyah"]
+  },
+  {
+    id: "h-tragedi-rajih-maunah",
+    label: "Tragedi Al-Raji' & Bi'r Ma'unah: Pembantaian 70 Huffaz",
+    category: "kenabian",
+    timeLabel: "625 M (4 H)",
+    timeValue: 625,
+    description: "Suku Adhal, Qarah, dan Amir ibn Sha'sha'ah berpura-pura meminta pengajar Al-Qur'an. Nabi mengutus puluhan sahabat penghafal Al-Qur'an (*Qurra'*). Di Al-Raji' dan Bi'r Ma'unah, para utusan dakwah ditipu dan dibantai secara zalim. Peristiwa ini memicu kesedihan mendalam dan Doa Qunut Nazilah selama sebulan.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Ali 'Imran", ayat: 169, arabicText: "وَلاَ تَحْسَبَنَّ الَّذِينَ قُتِلُوا فِي سَبِيلِ اللَّهِ أَمْوَاتًا بَلْ أَحْيَاءٌ عِنْدَ رَبِّهِمْ يُرْزَقُونَ", paraphrase: "Janganlah kamu mengira bahwa orang-orang yang gugur di jalan Allah itu mati; bahkan mereka itu hidup di sisi Tuhannya dengan mendapat rezeki." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Ma ra'aitu Rasullallahi ﷺ wajada 'ala syai'in kat-tawajjudi 'ala as-habi Bi'ri Ma'unah", terjemahan: "Aku tidak pernah melihat Rasulullah ﷺ berduka atas sesuatu seperti duka beliau atas pembantaian sahabat Bi'r Ma'unah." }
+    ],
+    refleksi: {
+      hikmah: "Pengorbanan para Da'i awal mengalirkan ketabahan dan keteguhan iman yang abadi bagi sejarah peradaban Islam.",
+      pertanyaanReflektif: ["Mengapa Rasulullah ﷺ melakukan Qunut Nazilah secara konsisten pasca tragedi Bi'r Ma'unah?"],
+      pesanAksi: "Menghormati perjuangan para ulama dan guru yang mendedikasikan hidupnya untuk dakwah kebaikan."
+    },
+    sources: ["Ibnu Sa'ad, At-Thabaqat Al-Kubra", "Bukhari, Shahih Bukhari - Kitab Al-Maghazi"]
+  },
+  {
+    id: "h-bani-qurayzhah",
+    label: "Peristiwa Pengepungan & Eksekusi Makar Bani Qurayzhah",
+    category: "kenabian",
+    timeLabel: "627 M (5 H)",
+    timeValue: 627,
+    description: "Saat Perang Khandaq berlangsung, Suku Bani Qurayzhah mengkhianati Piagam Madinah dan bersekutu dengan 10.000 Pasukan Ahzab untuk menyerang kaum Muslimin dari belakang. Pasca penarikan Ahzab, Nabi mengepung benteng Bani Qurayzhah dan menyerahkan vonis hukuman kepada hakim kesepakatan mereka, **Sa'ad bin Mu'adz**.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Ahzab", ayat: 26, arabicText: "وَأَنْزَلَ الَّذِينَ ظَاهَرُوهُمْ مِنْ أَهْلِ الْكِتَابِ مِنْ صَيَاصِيهِمْ", paraphrase: "Dan Dia menurunkan orang-orang Ahli Kitab (Bani Qurayzhah) yang membantu golongan-golongan yang bersekutu itu dari benteng-benteng mereka." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "La yushalliyanna ahadukum al-'ashra illa fi Bani Qurayzhah", terjemahan: "Janganlah ada seorang pun yang shalat Ashar kecuali di perkampungan Bani Qurayzhah." }
+    ],
+    refleksi: {
+      hikmah: "Pengkhianatan atas pakta pertahanan bersama (*Madinah Charter*) di saat krisis kedaulatan negara membawa konsekuensi hukum yang tegas.",
+      pertanyaanReflektif: ["Mengapa vonis Sa'ad bin Mu'adz diputuskan berdasarkan hukum Taurat yang diakui Bani Qurayzhah sendiri?"],
+      pesanAksi: "Menjaga integritas komitmen kesepakatan dan tidak melakukan pengkhianatan."
+    },
+    sources: ["Mubarakpuri, Ar-Raheeq Al-Makhtum", "Tabari, History of the Prophets and Kings"]
+  },
+  {
+    id: "h-umrah-qadha",
+    label: "Umrah Qadha' & Dampak Dakwah Simpatik di Makkah",
+    category: "kenabian",
+    timeLabel: "629 M (7 H)",
+    timeValue: 629,
+    description: "Sesuai isi Perjanjian Hudaibiyyah, Rasulullah ﷺ dan 2.000 Muslimin melaksanakan **Umrah Qadha'** ke Makkah selama 3 hari. Ketertiban, kedisiplinan ibadah, dan keagungan akhlak Muslimin mengetuk hati para ksatria Quraisy seperti **Khalid bin Walid** dan **Amr bin Ash** untuk masuk Islam.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Fath", ayat: 27, arabicText: "لَقَدْ صَدَقَ اللَّهُ رَسُولَهُ الرُّؤْيَا بِالْحَقِّ لَتَدْخُلُنَّ الْمَسْجِدَ الْحَرَامَ إِنْ شَاءَ اللَّهُ آمِنِينَ", paraphrase: "Sesungguhnya Allah akan membuktikan kepada Rasul-Nya, tentang kebenaran mimpinya dengan sebenarnya (yaitu) bahwa sesungguhnya kamu pasti akan memasuki Masjidil Haram, insya Allah dalam keadaan aman." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Inna Makkata al-yauma la-yadharuhu fiha ash-shirk", terjemahan: "Kedamaian dan keindahan ibadah di Makkah melembutkan hati-hati manusia." }
+    ],
+    refleksi: {
+      hikmah: "Keteladanan sikap religius dan kedisiplinan kolektif adalah sarana dakwah paling efektif dalam memikat simpati manusia.",
+      pertanyaanReflektif: ["Bagaimana pelaksanaan Umrah Qadha' mengubah pandangan masyarakat Makkah terhadap umat Islam?"],
+      pesanAksi: "Menampilkan akhlak mulia dan kedisiplinan sebagai cerminan nilai-nilai keimanan."
+    },
+    sources: ["Ibnu Hasyim, As-Sirah An-Nabawiyyah"]
+  },
+  {
+    id: "h-perang-hunain",
+    label: "Perang Hunain & Autas: Kemenangan Atas Suku Hawazin",
+    category: "kenabian",
+    timeLabel: "630 M (8 H)",
+    timeValue: 630,
+    description: "Pasca Fathu Makkah, 12.000 Pasukan Muslim dihadang hujan panah oleh gabungan suku Hawazin & Thaqif di Lembah Hunain. Sempat berantakan karena ujub akan jumlah pasukan yang besar, seruan Nabi ﷺ menyatukan kembali barisan hingga meraih kemenangan mutlak dan ghanimah melimpah.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "At-Taubah", ayat: 25, arabicText: "وَيَوْمَ حُنَيْنٍ إِذْ أَعْجَبَتْكُمْ كَثْرَتُكُمْ فَلَمْ تُغْنِ عَنْكُمْ شَيْئًا", paraphrase: "Dan (ingatlah) peperangan Hunain, yaitu diwaktu kamu merasa bangga karena banyaknya jumlah(mu), maka jumlah yang banyak itu tidak memberi manfaat kepadamu sedikit pun." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "Ana an-nabiyyu la kadzib, ana ibn 'Abdul Mutthalib!", terjemahan: "Aku adalah seorang Nabi yang tidak berdusta, aku adalah putra Abdul Muthalib!" }
+    ],
+    refleksi: {
+      hikmah: "Kemenangan sejati tidak ditentukan oleh besarnya jumlah atau kelengkapan sarana, melainkan oleh keikhlasan tawakal kepada Allah.",
+      pertanyaanReflektif: ["Mengapa Al-Qur'an menegur perasaan ujub atas jumlah pasukan pada peristiwa Hunain?"],
+      pesanAksi: "Menjauhi kesombongan atas pencapaian materi dan selalu bersikap tawadhu."
+    },
+    sources: ["Safiur Rahman Mubarakpuri, Ar-Raheeq Al-Makhtum"]
+  },
+  {
+    id: "h-pengepungan-thaif",
+    label: "Pengepungan Kota Tha'if & Pengislaman Suku Thaqif",
+    category: "kenabian",
+    timeLabel: "630 M (8 H)",
+    timeValue: 630,
+    description: "Sisa-sisa pasukan Hawazin bertahan di dalam benteng kokoh Kota Tha'if. Nabi ﷺ menggunakan alat pengepung *Manjaniq* (Ketapel Meriam) dan *Dabbabah* (Kereta Pelindung). Meski benteng tidak ditembus saat itu, kebijaksanaan diplomasi Nabi akhirnya membuat seluruh suku Thaqif datang memeluk Islam secara sukarela.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "An-Nasr", ayat: 1, arabicText: "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ﴿١﴾ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا", paraphrase: "Apabila telah datang pertolongan Allah dan kemenangan, Dan kamu lihat manusia masuk agama Allah dengan berbondong-bondong." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Irji'u fa-inna Allah sa-ya'ti bi-Thaqif", terjemahan: "Kembalilah kalian, sesungguhnya Allah akan mendatangkan suku Thaqif dalam keadaan tunduk memeluk Islam." }
+    ],
+    refleksi: {
+      hikmah: "Kombinasi strategi militer terukur dan kesabaran diplomasi mengantarkan pada konversi damai tanpa pertumpahan darah berlarut.",
+      pertanyaanReflektif: ["Bagaimana penghentian pengepungan Tha'if membuka jalan keinsafan sukarela suku Thaqif?"],
+      pesanAksi: "Mengutamakan kesabaran dan solusi damai jangka panjang."
+    },
+    sources: ["Ibnu Katsir, Al-Bidayah wan-Nihayah"]
+  },
+  {
+    id: "h-rasyidin-perang-nahavand",
+    label: "Perang Nahavand: Fathul Futuh Kemenangan Atas Persia",
+    category: "khulafaur-rasyidin",
+    timeLabel: "642 M (21 H)",
+    timeValue: 642,
+    description: "Pertempuran penentu di pegunungan Nahavand di mana 30.000 pasukan Muslim pimpinan **Nu'man bin Muqarrin** mengalahkan 150.000 tentara Kekaisaran Sassanid Persia. Pertempuran ini dijuluki **Fathul Futuh** (*Victory of Victories*) karena meruntuhkan benteng pertahanan terakhir Persia.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Fath", ayat: 1, arabicText: "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُبِينًا", paraphrase: "Sesungguhnya Kami telah memberikan kepadamu kemenangan yang nyata." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Tabari", matan: "Hadza Fathul Futuh la takunu ba'dahu lil Majusi jama'ah", terjemahan: "Inilah Kemenangan di atas segala Kemenangan, setelah ini imperium Majusi tidak akan pernah dapat bersatu kembali." }
+    ],
+    refleksi: {
+      hikmah: "Taktik penyergapan dan ketahanan fisik di medan pegunungan mematahkan dominasi militer jumlah raksasa.",
+      pertanyaanReflektif: ["Mengapa perang Nahavand dinamai para sejarawan sebagai Fathul Futuh (Kemenangan Atas Kemenangan)?"],
+      pesanAksi: "Menjaga fokus dan stamina perjuangan hingga tujuan akhir tercapai."
+    },
+    sources: ["Tabari, History of the Prophets and Kings", "Hugh Kennedy"]
+  },
+  {
+    id: "h-perang-nahrawan",
+    label: "Perang Nahrawan: Penumpasan Kelompok Radikal Khawarij",
+    category: "khulafaur-rasyidin",
+    timeLabel: "658 M (38 H)",
+    timeValue: 658,
+    description: "Khalifah **Ali bin Abi Thalib** berhadapan dengan kelompok ekstremis Khawarij di Nahrawan. Kelompok ini mengafirkan mayoritas sahabat Nabi dan melegalkan pertumpahan darah Muslimin berbasis penafsiran teks yang kaku dan sempit (*Takfiri*).",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "Al-Hujurat", ayat: 9, paraphrase: "Dan jika ada dua golongan dari orang-orang mu'min berperang maka damaikanlah antara keduanya. Jika salah satu dari kedua golongan itu berbuat penganiayaan... maka perangilah golongan yang berbuat penganiayaan itu." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari & Muslim", matan: "Yaqra'unal Qur'an la yujawizu taraqiyahum, yamruquna minad dini kama yamruquas sahmu minas ramiyyah", terjemahan: "Membaca Al-Qur'an namun tidak melewati kerongkongan mereka, meluncur keluar dari agama seperti anak panah menembus sasarannya." }
+    ],
+    refleksi: {
+      hikmah: "Bahaya ideologi pemikiran radikal takfiri yang mengafirkan sesama harus dihadapi dengan ketegasan hukum dan penjelasan keilmuan yang lurus.",
+      pertanyaanReflektif: ["Bagaimana bahaya pemikiran kaku Khawarij merusak ukhuwah dan kestabilan masyarakat?"],
+      pesanAksi: "Menjauhi radikalisme, moderasi beragama (*Wasathiyah*), dan merawat ikatan persaudaraan."
+    },
+    sources: ["Ibnu Katsir, Al-Bidayah wan-Nihayah", "Muhamad Abu Zahrah, Tarikh Al-Madzahib Al-Islamiyyah"]
+  },
+  {
+    id: "h-perang-harrah",
+    label: "Peristiwa Al-Harrah & Pengepungan Makkah",
+    category: "umayyah",
+    timeLabel: "683 M (63 H)",
+    timeValue: 683,
+    description: "Krisis politik pasca Karbala di mana pasukan Umayyah di bawah Yazid I mengepung kota Madinah (Peristiwa Al-Harrah) dan Makkah di bawah kepemimpinan **Abdullah bin Az-Zubair**. Peristiwa ini menjadi salah satu periode fitnah terbesar era Umayyah awal.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 191, paraphrase: "Dan fitnah (kekacauan/penindasan) itu lebih besar bahayanya dari pembunuhan." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Bukhari", matan: "La tahillu Makkata li ahadin qabli wa la tahillu li ahadin ba'di", terjemahan: "Kota Makkah adalah tanah haram suci yang tidak dihalalkan pertumpahan darah di dalamnya bagi siapapun." }
+    ],
+    refleksi: {
+      hikmah: "Pentingnya menjaga kesucian tempat ibadah dan mencegah konflik politik internal yang mengorbankan jiwa rakyat sipil.",
+      pertanyaanReflektif: ["Bagaimana keteguhan Abdullah bin Az-Zubair mempertahankan kedaulatan tanah suci Makkah?"],
+      pesanAksi: "Menjaga perdamaian dan keselamatan masyarakat dari gejolak konflik."
+    },
+    sources: ["Tabari, History of the Prophets and Kings", "G.R. Hawting, The First Dynasty of Islam"]
+  },
+  {
+    id: "h-perang-tours-poitiers",
+    label: "Pertempuran Tours / Poitiers: Abdul Rahman Al-Ghafiqi",
+    category: "umayyah",
+    timeLabel: "732 M (114 H)",
+    timeValue: 732,
+    description: "Gubernur Al-Andalus **Abdul Rahman Al-Ghafiqi** memimpin pasukan Muslim menembus Prancis bagian selatan. Di antara Tours dan Poitiers, mereka berhadapan dengan pasukan Franks di bawah **Charles Martel** pada Pertempuran Poitiers (732 M), menetapkan batas utara perluasan wilayah Islam di Eropa Barat.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Baqarah", ayat: 216, paraphrase: "Boleh jadi kamu membenci sesuatu, padahal ia amat baik bagimu, dan boleh jadi (pula) kamu menyukai sesuatu, padahal ia amat buruk bagimu; Allah mengetahui, sedang kamu tidak mengetahui." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Lituftahanna Al-Qustantiniyyah...", terjemahan: "Penyebaran dakwah membawa nilai-nilai peradaban ke seluruh pelosok benua." }
+    ],
+    refleksi: {
+      hikmah: "Batas geografis teritorial mengajarkan pentingnya pemeliharaan internal dan penguatan kualitas peradaban di wilayah yang ada.",
+      pertanyaanReflektif: ["Mengapa Pertempuran Tours / Poitiers diulas secara khusus oleh para sejarawan Eropa dan Islam?"],
+      pesanAksi: "Membangun ketahanan keilmuan dan kebudayaan yang kuat dari dalam."
+    },
+    sources: ["W. Montgomery Watt, A History of Islamic Spain", "Edward Gibbon, Decline and Fall of the Roman Empire"]
+  },
+  {
+    id: "h-utsmani-perang-mohats",
+    label: "Pertempuran Mohács 1526 M & Pengepungan Wina Pertama",
+    category: "tiga-kerajaan",
+    timeLabel: "1526 M (932 H)",
+    timeValue: 1526,
+    description: "Sultan Utsmani **Sulaiman Al-Qanuni** mengalahkan pasukan Kerajaan Hungaria di bawah Raja Louis II pada Pertempuran Mohács (1526 M) hanya dalam waktu 2 jam berkat formasi meriam Janissary. Peristiwa ini membawa Eropa Tengah ke bawah pengaruh Utsmaniyah dan dilanjutkan Pengepungan Wina (1529 M).",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Al-Anfal", ayat: 46, paraphrase: "Dan taatlah kepada Allah dan Rasul-Nya dan janganlah kamu berbantah-bantahan, yang menyebabkan kamu menjadi gentar dan hilang kekuatanmu." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Ahmad", matan: "Lituftahanna ar-Rumiyyah...", terjemahan: "Nubuat perluasan peradaban dan interaksi diplomasi dengan benua Eropa." }
+    ],
+    refleksi: {
+      hikmah: "Penguasaan kombinasi taktik persenjataan artileri modern dan disiplin taktis menjadi penentu keunggulan di lapangan.",
+      pertanyaanReflektif: ["Bagaimana taktik meriam terikat Janissary di Mohács menginspirasi strategi militer Eropa abad 16?"],
+      pesanAksi: "Menguasai sains dan teknologi mutakhir untuk memperkuat daya saing."
+    },
+    sources: ["Halil Inalcik, The Ottoman Empire", "John Freely, History of the Ottoman Empire"]
+  },
+  {
+    id: "h-utsmani-perang-lepanto",
+    label: "Pertempuran Laut Lepanto 1571 M",
+    category: "tiga-kerajaan",
+    timeLabel: "1571 M (979 H)",
+    timeValue: 1571,
+    description: "Pertempuran laut raksasa di Teluk Patras Yunani antara armada Utsmani di bawah Ali Pasha melawan Liga Suci Katolik (Spanyol, Venesia, Vatikan) di bawah Don Juan dari Austria. Walau Utsmani kehilangan banyak kapal, mereka berhasil membangun kembali armada baru dalam waktu kurang dari satu tahun.",
+    branch: "jalur-politik",
+    quranRefs: [
+      { surah: "Ali 'Imran", ayat: 140, paraphrase: "Jika kamu mendapat luka, maka sesungguhnya kaum itu pun mendapat luka yang serupa. Dan masa (kejayaan dan kehancuran) itu Kami pergilirkan di antara manusia." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Muslim", matan: "Ad-Dunya duwalun", terjemahan: "Dinamika kehidupan dunia berputar dan mempergiliran kejayaan." }
+    ],
+    refleksi: {
+      hikmah: "Kemampuan merekonstruksi kekuatan dan industri galangan kapal dalam waktu singkat menunjukkan daya pulih (*resilience*) imperium Utsmani.",
+      pertanyaanReflektif: ["Bagaimana respon Wazir Sokollu Mehmed Pasha membangun kembali armada Utsmani pasca Lepanto?"],
+      pesanAksi: "Bangkit dengan cepat dari kekalahan dan memperbaiki kelemahan strategi."
+    },
+    sources: ["Niccolò Capponi, Victory of the West: The Great Christian-Muslim Dragon Fight at Lepanto"]
+  },
+  {
+    id: "h-mughal-akbar-toleransi",
+    label: "Sultan Akbar Agung & Kebijakan Toleransi Sulh-i Kul",
+    category: "tiga-kerajaan",
+    timeLabel: "1556 M (963 H)",
+    timeValue: 1556,
+    description: "Kaisar Mughal ketiga **Akbar Agung** (1556–1605) menerapkan prinsip **Sulh-i Kul** (Toleransi Universal), menghapuskan pajak Jizyah bagi non-Muslim, melibatkan cendekiawan Hindu/Sikh dalam istana, serta membangun *Ibadat Khana* (Rumah Dialog Agama) di Fatehpur Sikri.",
+    branch: "jalur-pemikiran",
+    quranRefs: [
+      { surah: "Al-Mumtahanah", ayat: 8, paraphrase: "Allah tidak melarang kamu untuk berbuat baik dan berlaku adil terhadap orang-orang yang tiada memerangimu karena agama." }
+    ],
+    hadithRefs: [
+      { perawi: "HR. Abu Dawud", matan: "Ala man zhalama mu'ahadan au intaqashahu... fa-ana hajiijuhu yaumal qiyamah", terjemahan: "Ingatlah, barangsiapa menzalimi warga non-Muslim yang dilindungi... maka aku akan menjadi penuntutnya di hari kiamat." }
+    ],
+    refleksi: {
+      hikmah: "Toleransi dan perlindungan hak warga non-Muslim dalam imperium Islam mewujudkan kedamaian sosial di benua India.",
+      pertanyaanReflektif: ["Bagaimana kebijakan Sulh-i Kul Sultan Akbar membantu mengonsolidasikan kekaisaran Mughal di India?"],
+      pesanAksi: "Merawat sikap inklusif, toleran, dan adil kepada seluruh warga tanpa membeda-bedakan."
+    },
+    sources: ["J.F. Richards, The Mughal Empire", "Annemarie Schimmel, The Empire of the Great Mughals"]
+  },
+  {
+    id: "h-nusantara-fatahillah-sunda-kelapa",
+    label: "Fatahillah & Pembebasan Sunda Kelapa menjadi Jayakarta",
+    category: "nusantara",
+    timeLabel: "22 Juni 1527 M",
+    timeValue: 1527,
+    description: "Panglima armada Kesultanan Demak & Cirebon **Fatahillah** (Fadhlullah Khan) menggagalkan perjanjian persekutuan Pajajaran-Portugis dan membebaskan pelabuhan Sunda Kelapa pada 22 Juni 1527 M. Nama kota diganti menjadi **Jayakarta** ('Kemenangan yang Sempurna', diilhami QS. Al-Fath), yang menjadi cikal bakal Kota Jakarta.",
+    branch: "jalur-utama",
+    quranRefs: [
+      { surah: "Al-Fath", ayat: 1, arabicText: "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُبِينًا", paraphrase: "Sesungguhnya Kami telah memberikan kepadamu kemenangan yang nyata." }
+    ],
+    hadithRefs: [
+      { perawi: "Sejarah Kota Jakarta", matan: "Jayakarta diabadikan dari ungkapan Fathan Mubina (Kemenangan Yang Nyata)", terjemahan: "Simbol kemerdekaan pelabuhan maritim Nusantara dari penjajahan Portugis." }
+    ],
+    refleksi: {
+      hikmah: "Pembebasan Jayakarta menjadi tonggak sejarah perjuangan mempertahankan wilayah maritim Nusantara dari imperium kolonial.",
+      pertanyaanReflektif: ["Bagaimana keterkaitan antara nama Kota Jayakarta dengan penafsiran Surah Al-Fath oleh Fatahillah?"],
+      pesanAksi: "Menghargai sejarah perjuangan para pahlawan dan merawat identitas kebangsaan."
+    },
+    sources: ["Solichin Salam, Fatahillah Pendiri Jakarta", "Uka Tjandrasasmita, Arkeologi Islam Nusantara"]
   }
 ];

@@ -21,6 +21,7 @@ interface FlowState {
   traversalIndex: number;
   traversalNodeId: string | null;
   focusNodeId: string | null;
+  expandedClusterId: string | null;
 
   setBranch: (b: ActiveBranch) => void;
   setSearchQuery: (q: string) => void;
@@ -33,6 +34,7 @@ interface FlowState {
   setTraversalIndex: (i: number) => void;
   setTraversalNodeId: (id: string | null) => void;
   setFocusNode: (id: string | null) => void;
+  setExpandedClusterId: (id: string | null) => void;
 }
 
 export const useFlowStore = create<FlowState>((set) => ({
@@ -57,6 +59,7 @@ export const useFlowStore = create<FlowState>((set) => ({
   traversalIndex: 0,
   traversalNodeId: null,
   focusNodeId: null,
+  expandedClusterId: null,
 
   setBranch: (b) => set({ activeBranch: b }),
   setSearchQuery: (q) => set({ searchQuery: q }),
@@ -78,4 +81,5 @@ export const useFlowStore = create<FlowState>((set) => ({
   setTraversalIndex: (i) => set({ traversalIndex: i }),
   setTraversalNodeId: (id) => set({ traversalNodeId: id }),
   setFocusNode: (id) => set({ focusNodeId: id }),
+  setExpandedClusterId: (id) => set({ expandedClusterId: id }),
 }));
